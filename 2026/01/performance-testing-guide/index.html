@@ -1,1 +1,522 @@
-<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><meta name="author"><title>performance-testing-guide · 韩老魔的博客</title><meta name="description" content=""><meta name="og:description" content=""><meta name="twitter:site" content="韩老魔的博客"><meta name="twitter:title" content="performance-testing-guide"><meta name="twitter:card" content="summary"><meta name="keywords" content=""><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="renderer" content="webkit"><link rel="short icon" href="/images/favicon.png" type="image/x-icon"><link rel="stylesheet" href="/css/bootstrap.min.css"><link rel="stylesheet" href="/css/font-awesome.min.css"><link rel="stylesheet" href="/css/style.css"><link rel="alternate" type="application/atom+xml" title="ATOM 1.0" href="/atom.xml"><meta name="generator" content="Hexo 7.3.0"></head><body><div class="container" id="stage"><div class="row"><div class="col-sm-3 col-xs-12 side-container invisible" id="side-bar"><div class="vertical-text site-title"><h3 class="site-title-small" tabindex="-1"><a class="a-title" href="/">0xHanniba1's blog</a></h3><h1 class="site-title-large" tabindex="-1"><a class="a-title" href="/">慢就是快 ｜ 自律 ｜ 坚持</a></h1><!--h6(onclick="triggerSiteNav()") Trigger--></div><br class="visible-lg visible-md visible-sm"><div class="site-title-links" id="site-nav"><ul><li><a href="/">Home</a></li><li><a href="/archives">Archive</a></li><li><a href="/tags">Tags</a></li><li class="soc"><a href="https://github.com/0xHanniba1" target="_blank" rel="noopener noreferrer" aria-label="Github"><i class="fa fa-github">&nbsp;</i></a><a href="https://0xhanniba1.github.io/atom.xml" target="_blank" rel="noopener noreferrer" aria-label="RSS"><i class="fa fa-rss">&nbsp;</i></a></li></ul><div class="visible-lg visible-md visible-sm site-nav-footer"><br class="site-nav-footer-br"><footer><p>&copy;&nbsp;2026&nbsp;<a target="_blank" href="https://0xhanniba1.github.io" rel="noopener noreferrer">0xHanniba1</a></p><p>Theme&nbsp;<a target="_blank" href="https://github.com/SumiMakito/hexo-theme-typography" rel="noopener noreferrer">Typography</a>&nbsp;by&nbsp;<a target="_blank" href="https://www.keep.moe" rel="noopener noreferrer">Makito</a></p><p>Proudly published with&nbsp;<a target="_blank" href="https://hexo.io" rel="noopener noreferrer">Hexo</a></p></footer></div></div></div><div class="col-sm-9 col-xs-12 main-container invisible" id="main-container"><div class="autopagerize_page_element"><div class="content"><div class="post-page"><div class="post-container"><p class="post-title"><a>performance-testing-guide</a></p><p class="post-meta"><span class="date meta-item">Posted at&nbsp;2026-01-10</span></p><p class="post-abstract"></p></div><div class="share"><span>Share</span>&nbsp;<span class="soc"><a class="fa fa-bookmark" href="javascript:(function(){EN_CLIP_HOST='http://www.evernote.com';try{var%20x=document.createElement('SCRIPT');x.type='text/javascript';x.src=EN_CLIP_HOST+'/public/bookmarkClipper.js?'+(new%20Date().getTime()/100000);document.getElementsByTagName('head')[0].appendChild(x);}catch(e){location.href=EN_CLIP_HOST+'/clip.action?url='+encodeURIComponent(location.href)+'&amp;title='+encodeURIComponent(document.title);}})();" ref="nofollow" target="_blank"></a></span><span class="soc"><a class="fa fa-weibo" href="javascript:void((function(s,d,e){try{}catch(e){}var f='http://service.weibo.com/share/share.php?',u=d.location.href,p=['url=',e(u),'&amp;title=',e(d.title),'&amp;appkey=2924220432'].join('');function a(){if(!window.open([f,p].join(''),'mb',['toolbar=0,status=0,resizable=1,width=620,height=450,left=',(s.width-620)/2,',top=',(s.height-450)/2].join('')))u.href=[f,p].join('');};if(/Firefox/.test(navigator.userAgent)){setTimeout(a,0)}else{a()}})(screen,document,encodeURIComponent));"></a></span><span class="soc"><a class="fa fa-twitter" target="_blank" rel="noopener" href="http://twitter.com/home?status=https://0xhanniba1.github.io/2026/01/performance-testing-guide/%20韩老魔的博客%20performance-testing-guide"></a></span></div><div class="pagination"><p class="clearfix"><span>&nbsp;</span><span class="next pagbuttons"><a role="navigation" href="/2026/01/PSB-guide/" title="系统性地使用Claude Code编写新项目">Next post: 系统性地使用Claude Code编写新项目&nbsp;<i class="fa fa-angle-double-right"></i></a></span></p></div></div></div></div><div class="visible-xs site-bottom-footer"><footer><p>&copy;&nbsp;2026&nbsp;<a target="_blank" href="https://0xhanniba1.github.io" rel="noopener noreferrer">0xHanniba1</a></p><p>Theme&nbsp;<a target="_blank" href="https://github.com/SumiMakito/hexo-theme-typography" rel="noopener noreferrer">Typography</a>&nbsp;by&nbsp;<a target="_blank" href="https://www.keep.moe" rel="noopener noreferrer">Makito</a></p><p>Proudly published with&nbsp;<a target="_blank" href="https://hexo.io" rel="noopener noreferrer">Hexo</a></p></footer></div></div></div></div><script src="/js/jquery-3.1.0.min.js"></script><script src="/js/bootstrap.min.js"></script><script src="/js/jquery-migrate-1.2.1.min.js"></script><script src="/js/jquery.appear.js"></script><script src="/js/google-analytics.js"></script><script src="/js/typography.js"></script></body></html>
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><meta name="author"><title>性能测试 · 韩老魔的博客</title><meta name="description" content="一、性能测试是什么性能测试的核心目标是回答一个问题：系统能扛多大压力，瓶颈在哪里？
+它不是简单地”压一下看看”，而是通过科学的方法，找到系统的能力边界和优化方向。
+
+二、测试类型（按目的分）
+
+
+类型
+目的
+做法
+典型产出
+
+
+
+基准测试
+摸清系统正常能力
+单接口&amp;#x2F;单场景，逐步加压
+最大 "><meta name="og:description" content="一、性能测试是什么性能测试的核心目标是回答一个问题：系统能扛多大压力，瓶颈在哪里？
+它不是简单地”压一下看看”，而是通过科学的方法，找到系统的能力边界和优化方向。
+
+二、测试类型（按目的分）
+
+
+类型
+目的
+做法
+典型产出
+
+
+
+基准测试
+摸清系统正常能力
+单接口&amp;#x2F;单场景，逐步加压
+最大 "><meta name="twitter:site" content="韩老魔的博客"><meta name="twitter:title" content="性能测试"><meta name="twitter:card" content="summary"><meta name="keywords" content=""><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="renderer" content="webkit"><link rel="short icon" href="/images/favicon.png" type="image/x-icon"><link rel="stylesheet" href="/css/bootstrap.min.css"><link rel="stylesheet" href="/css/font-awesome.min.css"><link rel="stylesheet" href="/css/style.css"><link rel="alternate" type="application/atom+xml" title="ATOM 1.0" href="/atom.xml"><meta name="generator" content="Hexo 7.3.0"></head><body><div class="container" id="stage"><div class="row"><div class="col-sm-3 col-xs-12 side-container invisible" id="side-bar"><div class="vertical-text site-title"><h3 class="site-title-small" tabindex="-1"><a class="a-title" href="/">0xHanniba1's blog</a></h3><h1 class="site-title-large" tabindex="-1"><a class="a-title" href="/">慢就是快 ｜ 自律 ｜ 坚持</a></h1><!--h6(onclick="triggerSiteNav()") Trigger--></div><br class="visible-lg visible-md visible-sm"><div class="site-title-links" id="site-nav"><ul><li><a href="/">Home</a></li><li><a href="/archives">Archive</a></li><li><a href="/tags">Tags</a></li><li class="soc"><a href="https://github.com/0xHanniba1" target="_blank" rel="noopener noreferrer" aria-label="Github"><i class="fa fa-github">&nbsp;</i></a><a href="https://0xhanniba1.github.io/atom.xml" target="_blank" rel="noopener noreferrer" aria-label="RSS"><i class="fa fa-rss">&nbsp;</i></a></li></ul><div class="visible-lg visible-md visible-sm site-nav-footer"><br class="site-nav-footer-br"><footer><p>&copy;&nbsp;2026&nbsp;<a target="_blank" href="https://0xhanniba1.github.io" rel="noopener noreferrer">0xHanniba1</a></p><p>Theme&nbsp;<a target="_blank" href="https://github.com/SumiMakito/hexo-theme-typography" rel="noopener noreferrer">Typography</a>&nbsp;by&nbsp;<a target="_blank" href="https://www.keep.moe" rel="noopener noreferrer">Makito</a></p><p>Proudly published with&nbsp;<a target="_blank" href="https://hexo.io" rel="noopener noreferrer">Hexo</a></p></footer></div></div></div><div class="col-sm-9 col-xs-12 main-container invisible" id="main-container"><div class="autopagerize_page_element"><div class="content"><div class="post-page"><div class="post-container"><p class="post-title"><a>性能测试</a></p><p class="post-meta"><span class="date meta-item">Posted at&nbsp;2026-01-10</span></p><p class="post-abstract"><h2 id="一、性能测试是什么"><a href="#一、性能测试是什么" class="headerlink" title="一、性能测试是什么"></a>一、性能测试是什么</h2><p>性能测试的核心目标是回答一个问题：<strong>系统能扛多大压力，瓶颈在哪里？</strong></p>
+<p>它不是简单地”压一下看看”，而是通过科学的方法，找到系统的能力边界和优化方向。</p>
+<hr>
+<h2 id="二、测试类型（按目的分）"><a href="#二、测试类型（按目的分）" class="headerlink" title="二、测试类型（按目的分）"></a>二、测试类型（按目的分）</h2><table>
+<thead>
+<tr>
+<th>类型</th>
+<th>目的</th>
+<th>做法</th>
+<th>典型产出</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>基准测试</strong></td>
+<td>摸清系统正常能力</td>
+<td>单接口&#x2F;单场景，逐步加压</td>
+<td>最大 TPS、RT 基线</td>
+</tr>
+<tr>
+<td><strong>负载测试</strong></td>
+<td>验证能否满足预期目标</td>
+<td>按目标值压（如 1000 TPS）</td>
+<td>通过&#x2F;不通过</td>
+</tr>
+<tr>
+<td><strong>压力测试</strong></td>
+<td>找系统极限，什么时候崩</td>
+<td>持续加压直到崩溃</td>
+<td>极限值、崩溃表现</td>
+</tr>
+<tr>
+<td><strong>稳定性测试</strong></td>
+<td>长时间运行有无问题</td>
+<td>中等压力跑 2~24 小时</td>
+<td>内存泄漏、GC 问题</td>
+</tr>
+<tr>
+<td><strong>容量测试</strong></td>
+<td>当前配置能支撑多少用户</td>
+<td>阶梯加压 + 资源监控</td>
+<td>容量规划建议</td>
+</tr>
+<tr>
+<td><strong>浪涌测试</strong></td>
+<td>突发流量能否扛住</td>
+<td>瞬间拉高再降低</td>
+<td>系统恢复能力</td>
+</tr>
+</tbody></table>
+<h3 id="怎么选择测试类型？"><a href="#怎么选择测试类型？" class="headerlink" title="怎么选择测试类型？"></a>怎么选择测试类型？</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">新系统上线前 → 基准测试 + 负载测试</span><br><span class="line">大促活动前 → 压力测试 + 容量测试  </span><br><span class="line">日常迭代   → 基准测试（回归）</span><br><span class="line">核心系统   → 稳定性测试</span><br><span class="line">秒杀场景   → 浪涌测试</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="三、测试场景（按业务分）"><a href="#三、测试场景（按业务分）" class="headerlink" title="三、测试场景（按业务分）"></a>三、测试场景（按业务分）</h2><h3 id="3-1-基础场景"><a href="#3-1-基础场景" class="headerlink" title="3.1 基础场景"></a>3.1 基础场景</h3><table>
+<thead>
+<tr>
+<th>场景</th>
+<th>说明</th>
+<th>适用情况</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>单接口测试</strong></td>
+<td>对单个 API 压测</td>
+<td>性能摸底、问题定位</td>
+</tr>
+<tr>
+<td><strong>单业务流程</strong></td>
+<td>完整链路（如下单&#x3D;查库存→创建订单→扣款）</td>
+<td>链路性能验证</td>
+</tr>
+</tbody></table>
+<h3 id="3-2-进阶场景"><a href="#3-2-进阶场景" class="headerlink" title="3.2 进阶场景"></a>3.2 进阶场景</h3><table>
+<thead>
+<tr>
+<th>场景</th>
+<th>说明</th>
+<th>关键点</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>混合场景</strong></td>
+<td>模拟真实流量比例</td>
+<td>接口比例要贴近生产</td>
+</tr>
+<tr>
+<td><strong>秒杀&#x2F;抢购</strong></td>
+<td>瞬间高并发打同一资源</td>
+<td>集合点、库存一致性、限流</td>
+</tr>
+<tr>
+<td><strong>大数据量</strong></td>
+<td>处理大量数据（导出、批量）</td>
+<td>单请求处理能力、超时</td>
+</tr>
+<tr>
+<td><strong>长连接</strong></td>
+<td>WebSocket、消息推送</td>
+<td>连接数上限、心跳、断连</td>
+</tr>
+<tr>
+<td><strong>文件上传下载</strong></td>
+<td>大文件传输</td>
+<td>带宽、超时、断点续传</td>
+</tr>
+</tbody></table>
+<h3 id="3-3-混合场景设计示例"><a href="#3-3-混合场景设计示例" class="headerlink" title="3.3 混合场景设计示例"></a>3.3 混合场景设计示例</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">电商网站真实流量比例：</span><br><span class="line">├── 首页浏览    40%</span><br><span class="line">├── 商品搜索    25%</span><br><span class="line">├── 商品详情    20%</span><br><span class="line">├── 加入购物车   8%</span><br><span class="line">├── 下单支付    5%</span><br><span class="line">└── 用户登录    2%</span><br></pre></td></tr></table></figure>
+
+<p>混合场景的价值：单接口都没问题，混合起来可能有资源竞争。</p>
+<hr>
+<h2 id="四、性能指标体系"><a href="#四、性能指标体系" class="headerlink" title="四、性能指标体系"></a>四、性能指标体系</h2><h3 id="4-1-业务指标（用户视角）"><a href="#4-1-业务指标（用户视角）" class="headerlink" title="4.1 业务指标（用户视角）"></a>4.1 业务指标（用户视角）</h3><table>
+<thead>
+<tr>
+<th>指标</th>
+<th>全称</th>
+<th>含义</th>
+<th>关注点</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>RT</strong></td>
+<td>Response Time</td>
+<td>响应时间</td>
+<td>P90&#x2F;P99 比平均值重要</td>
+</tr>
+<tr>
+<td><strong>TPS</strong></td>
+<td>Transactions Per Second</td>
+<td>每秒事务数</td>
+<td>业务处理能力</td>
+</tr>
+<tr>
+<td><strong>QPS</strong></td>
+<td>Queries Per Second</td>
+<td>每秒请求数</td>
+<td>接口吞吐量</td>
+</tr>
+<tr>
+<td><strong>并发数</strong></td>
+<td>Concurrency</td>
+<td>同时在处理的请求数</td>
+<td>系统承载能力</td>
+</tr>
+<tr>
+<td><strong>错误率</strong></td>
+<td>Error Rate</td>
+<td>失败请求占比</td>
+<td>压力大了是否报错</td>
+</tr>
+<tr>
+<td><strong>吞吐量</strong></td>
+<td>Throughput</td>
+<td>单位时间处理的数据量</td>
+<td>网络&#x2F;IO 能力</td>
+</tr>
+</tbody></table>
+<h4 id="响应时间的正确理解"><a href="#响应时间的正确理解" class="headerlink" title="响应时间的正确理解"></a>响应时间的正确理解</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">平均 RT = 100ms  ← 看起来不错？</span><br><span class="line">P90 RT = 150ms   ← 90% 的请求在 150ms 内</span><br><span class="line">P99 RT = 800ms   ← 有 1% 的请求要 800ms！</span><br><span class="line"></span><br><span class="line">结论：平均值会掩盖长尾问题，要看分位数</span><br></pre></td></tr></table></figure>
+
+<h4 id="TPS-vs-QPS"><a href="#TPS-vs-QPS" class="headerlink" title="TPS vs QPS"></a>TPS vs QPS</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">TPS：一个事务可能包含多个请求（下单=查库存+扣款+创建订单）</span><br><span class="line">QPS：纯粹的请求数量</span><br><span class="line"></span><br><span class="line">接口压测一般说 QPS</span><br><span class="line">业务压测一般说 TPS</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-2-系统资源指标（服务器视角）"><a href="#4-2-系统资源指标（服务器视角）" class="headerlink" title="4.2 系统资源指标（服务器视角）"></a>4.2 系统资源指标（服务器视角）</h3><table>
+<thead>
+<tr>
+<th>指标</th>
+<th>监控命令</th>
+<th>瓶颈信号</th>
+<th>可能原因</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>CPU</strong></td>
+<td><code>top</code>, <code>vmstat</code></td>
+<td>持续 &gt; 80%</td>
+<td>计算密集、死循环、GC</td>
+</tr>
+<tr>
+<td><strong>内存</strong></td>
+<td><code>free</code>, <code>top</code></td>
+<td>持续上涨不释放</td>
+<td>内存泄漏、缓存过大</td>
+</tr>
+<tr>
+<td><strong>磁盘 I&#x2F;O</strong></td>
+<td><code>iostat</code>, <code>iotop</code></td>
+<td>iowait 高、util 100%</td>
+<td>大量读写、日志过多</td>
+</tr>
+<tr>
+<td><strong>网络</strong></td>
+<td><code>iftop</code>, <code>netstat</code></td>
+<td>带宽打满、连接数耗尽</td>
+<td>数据量大、连接泄漏</td>
+</tr>
+</tbody></table>
+<h4 id="CPU-指标详解"><a href="#CPU-指标详解" class="headerlink" title="CPU 指标详解"></a>CPU 指标详解</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">%user   - 用户态 CPU（应用代码）</span><br><span class="line">%system - 内核态 CPU（系统调用）</span><br><span class="line">%iowait - 等待 IO 的 CPU（磁盘慢）</span><br><span class="line">%idle   - 空闲 CPU</span><br><span class="line"></span><br><span class="line">iowait 高 → 瓶颈在磁盘，不是 CPU</span><br><span class="line">user 高   → 瓶颈在应用代码</span><br></pre></td></tr></table></figure>
+
+<h4 id="内存指标详解"><a href="#内存指标详解" class="headerlink" title="内存指标详解"></a>内存指标详解</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">used     - 已使用内存</span><br><span class="line">free     - 完全空闲</span><br><span class="line">buff/cache - 系统缓存（可回收）</span><br><span class="line">available - 实际可用 = free + 可回收的 cache</span><br><span class="line"></span><br><span class="line">看 available，不是 free</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-3-中间件指标（组件视角）"><a href="#4-3-中间件指标（组件视角）" class="headerlink" title="4.3 中间件指标（组件视角）"></a>4.3 中间件指标（组件视角）</h3><h4 id="数据库（MySQL）"><a href="#数据库（MySQL）" class="headerlink" title="数据库（MySQL）"></a>数据库（MySQL）</h4><table>
+<thead>
+<tr>
+<th>指标</th>
+<th>含义</th>
+<th>关注点</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>QPS&#x2F;TPS</td>
+<td>查询和事务数</td>
+<td>数据库压力</td>
+</tr>
+<tr>
+<td>慢查询数</td>
+<td>超过阈值的 SQL</td>
+<td>需要优化的 SQL</td>
+</tr>
+<tr>
+<td>连接数</td>
+<td>当前连接 &#x2F; 最大连接</td>
+<td>连接池是否够用</td>
+</tr>
+<tr>
+<td>锁等待</td>
+<td>行锁、表锁等待时间</td>
+<td>并发冲突</td>
+</tr>
+<tr>
+<td>缓冲池命中率</td>
+<td>Buffer Pool Hit Ratio</td>
+<td>内存是否够用</td>
+</tr>
+</tbody></table>
+<h4 id="Redis"><a href="#Redis" class="headerlink" title="Redis"></a>Redis</h4><table>
+<thead>
+<tr>
+<th>指标</th>
+<th>含义</th>
+<th>关注点</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>命中率</td>
+<td>Hit &#x2F; (Hit + Miss)</td>
+<td>缓存有效性</td>
+</tr>
+<tr>
+<td>内存使用</td>
+<td>used_memory</td>
+<td>是否接近上限</td>
+</tr>
+<tr>
+<td>连接数</td>
+<td>connected_clients</td>
+<td>连接池配置</td>
+</tr>
+<tr>
+<td>阻塞 Key</td>
+<td>blocked_clients</td>
+<td>慢操作</td>
+</tr>
+</tbody></table>
+<h4 id="消息队列（Kafka-RabbitMQ）"><a href="#消息队列（Kafka-RabbitMQ）" class="headerlink" title="消息队列（Kafka&#x2F;RabbitMQ）"></a>消息队列（Kafka&#x2F;RabbitMQ）</h4><table>
+<thead>
+<tr>
+<th>指标</th>
+<th>含义</th>
+<th>关注点</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>堆积量</td>
+<td>未消费消息数</td>
+<td>消费者是否跟得上</td>
+</tr>
+<tr>
+<td>生产速率</td>
+<td>每秒写入消息数</td>
+<td>生产压力</td>
+</tr>
+<tr>
+<td>消费速率</td>
+<td>每秒消费消息数</td>
+<td>消费能力</td>
+</tr>
+<tr>
+<td>延迟</td>
+<td>消息从生产到消费的时间</td>
+<td>实时性</td>
+</tr>
+</tbody></table>
+<h3 id="4-4-JVM-指标（Java-应用）"><a href="#4-4-JVM-指标（Java-应用）" class="headerlink" title="4.4 JVM 指标（Java 应用）"></a>4.4 JVM 指标（Java 应用）</h3><table>
+<thead>
+<tr>
+<th>指标</th>
+<th>含义</th>
+<th>关注点</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>堆内存</td>
+<td>Heap 使用量</td>
+<td>是否频繁接近上限</td>
+</tr>
+<tr>
+<td>GC 次数</td>
+<td>Young GC &#x2F; Full GC</td>
+<td>Full GC 频繁说明有问题</td>
+</tr>
+<tr>
+<td>GC 时间</td>
+<td>每次 GC 耗时</td>
+<td>影响 RT</td>
+</tr>
+<tr>
+<td>线程数</td>
+<td>活跃线程数量</td>
+<td>线程池是否够用</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="五、常用工具"><a href="#五、常用工具" class="headerlink" title="五、常用工具"></a>五、常用工具</h2><h3 id="5-1-压测工具"><a href="#5-1-压测工具" class="headerlink" title="5.1 压测工具"></a>5.1 压测工具</h3><table>
+<thead>
+<tr>
+<th>工具</th>
+<th>特点</th>
+<th>适用场景</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>JMeter</strong></td>
+<td>GUI + 脚本，功能全</td>
+<td>复杂业务场景、协议多</td>
+</tr>
+<tr>
+<td><strong>Locust</strong></td>
+<td>Python 编写脚本</td>
+<td>开发友好、灵活</td>
+</tr>
+<tr>
+<td><strong>wrk</strong></td>
+<td>命令行，性能极高</td>
+<td>简单接口、极限压测</td>
+</tr>
+<tr>
+<td><strong>ab</strong></td>
+<td>Apache 自带，简单</td>
+<td>快速验证</td>
+</tr>
+<tr>
+<td><strong>k6</strong></td>
+<td>JS 脚本，现代化</td>
+<td>CI&#x2F;CD 集成</td>
+</tr>
+<tr>
+<td><strong>Gatling</strong></td>
+<td>Scala，报告漂亮</td>
+<td>自动化、报告要求高</td>
+</tr>
+</tbody></table>
+<h3 id="5-2-监控工具"><a href="#5-2-监控工具" class="headerlink" title="5.2 监控工具"></a>5.2 监控工具</h3><table>
+<thead>
+<tr>
+<th>工具</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Prometheus + Grafana</strong></td>
+<td>指标采集 + 可视化</td>
+</tr>
+<tr>
+<td><strong>node_exporter</strong></td>
+<td>主机资源监控</td>
+</tr>
+<tr>
+<td><strong>cAdvisor</strong></td>
+<td>容器监控</td>
+</tr>
+<tr>
+<td><strong>Arthas</strong></td>
+<td>Java 应用诊断</td>
+</tr>
+<tr>
+<td><strong>perf &#x2F; FlameGraph</strong></td>
+<td>CPU 火焰图</td>
+</tr>
+</tbody></table>
+<h3 id="5-3-分析工具"><a href="#5-3-分析工具" class="headerlink" title="5.3 分析工具"></a>5.3 分析工具</h3><table>
+<thead>
+<tr>
+<th>工具</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>慢查询日志</strong></td>
+<td>定位慢 SQL</td>
+</tr>
+<tr>
+<td><strong>Explain</strong></td>
+<td>分析 SQL 执行计划</td>
+</tr>
+<tr>
+<td><strong>jstack</strong></td>
+<td>Java 线程 dump</td>
+</tr>
+<tr>
+<td><strong>jmap</strong></td>
+<td>Java 内存 dump</td>
+</tr>
+<tr>
+<td><strong>MAT</strong></td>
+<td>内存泄漏分析</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="六、性能测试流程"><a href="#六、性能测试流程" class="headerlink" title="六、性能测试流程"></a>六、性能测试流程</h2><h3 id="6-1-标准流程"><a href="#6-1-标准流程" class="headerlink" title="6.1 标准流程"></a>6.1 标准流程</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">1. 需求分析</span><br><span class="line">   ├── 测试目标是什么？（TPS 达到 1000？RT &lt; 200ms？）</span><br><span class="line">   ├── 测试哪些场景？</span><br><span class="line">   └── 测试环境要求？</span><br><span class="line"></span><br><span class="line">2. 环境准备</span><br><span class="line">   ├── 测试环境搭建（尽量接近生产）</span><br><span class="line">   ├── 监控部署（Prometheus + Grafana）</span><br><span class="line">   ├── 数据准备（测试数据量级）</span><br><span class="line">   └── 压测工具准备</span><br><span class="line"></span><br><span class="line">3. 脚本开发</span><br><span class="line">   ├── 接口脚本编写</span><br><span class="line">   ├── 参数化配置</span><br><span class="line">   ├── 关联处理</span><br><span class="line">   └── 脚本调试验证</span><br><span class="line"></span><br><span class="line">4. 执行测试</span><br><span class="line">   ├── 基准测试（摸底）</span><br><span class="line">   ├── 负载测试（验证目标）</span><br><span class="line">   ├── 压力测试（找极限）</span><br><span class="line">   └── 稳定性测试（长时间）</span><br><span class="line"></span><br><span class="line">5. 结果分析</span><br><span class="line">   ├── 指标是否达标</span><br><span class="line">   ├── 瓶颈在哪里</span><br><span class="line">   └── 优化建议</span><br><span class="line"></span><br><span class="line">6. 测试报告</span><br><span class="line">   ├── 测试结论</span><br><span class="line">   ├── 数据图表</span><br><span class="line">   └── 问题和建议</span><br></pre></td></tr></table></figure>
+
+<h3 id="6-2-瓶颈定位思路"><a href="#6-2-瓶颈定位思路" class="headerlink" title="6.2 瓶颈定位思路"></a>6.2 瓶颈定位思路</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">RT 变长 / TPS 上不去</span><br><span class="line">    │</span><br><span class="line">    ├─ CPU 高？</span><br><span class="line">    │   ├─ user 高 → 代码问题（算法、死循环）</span><br><span class="line">    │   └─ iowait 高 → 磁盘问题</span><br><span class="line">    │</span><br><span class="line">    ├─ 内存高？</span><br><span class="line">    │   ├─ 持续上涨 → 内存泄漏</span><br><span class="line">    │   └─ GC 频繁 → 堆内存不够</span><br><span class="line">    │</span><br><span class="line">    ├─ CPU/内存都不高？</span><br><span class="line">    │   ├─ 数据库慢查询？</span><br><span class="line">    │   ├─ 连接池打满？</span><br><span class="line">    │   ├─ 锁竞争？</span><br><span class="line">    │   └─ 外部依赖慢？</span><br><span class="line">    │</span><br><span class="line">    └─ 网络？</span><br><span class="line">        ├─ 带宽打满</span><br><span class="line">        └─ 连接数耗尽</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="七、Q-A"><a href="#七、Q-A" class="headerlink" title="七、Q&amp;A"></a>七、Q&amp;A</h2><h3 id="7-1-基础问题"><a href="#7-1-基础问题" class="headerlink" title="7.1 基础问题"></a>7.1 基础问题</h3><p><strong>Q：你们性能测试关注哪些指标？</strong></p>
+<blockquote>
+<p>三层：业务指标（RT、TPS、错误率）、系统资源（CPU、内存、IO、网络）、中间件指标（数据库、缓存）。重点是把指标放在同一时间轴上看，找到瓶颈。</p>
+</blockquote>
+<p><strong>Q：RT 看平均值还是 P99？</strong></p>
+<blockquote>
+<p>P99 更重要。平均值会被大量正常请求拉低，掩盖长尾问题。比如平均 100ms，但 P99 是 2s，说明有 1% 用户体验很差。</p>
+</blockquote>
+<p><strong>Q：TPS 和 QPS 的区别？</strong></p>
+<blockquote>
+<p>TPS 是事务，一个事务可能包含多个请求；QPS 是纯请求数。接口压测一般说 QPS，业务压测说 TPS。</p>
+</blockquote>
+<h3 id="7-2-场景问题"><a href="#7-2-场景问题" class="headerlink" title="7.2 场景问题"></a>7.2 场景问题</h3><p><strong>Q：你们预估的 QPS 是怎么得出的？</strong></p>
+<blockquote>
+<p>两种方法：1）看生产监控历史峰值；2）业务推算：日活 × 人均请求数 ÷ 集中时段秒数，再乘 2~3 倍余量。</p>
+</blockquote>
+<p><strong>Q：混合场景怎么设计？</strong></p>
+<blockquote>
+<p>分析生产日志或埋点数据，统计各接口调用比例，按比例配置并发。比如浏览 60%、搜索 25%、下单 5%。</p>
+</blockquote>
+<p><strong>Q：秒杀场景怎么测？</strong></p>
+<blockquote>
+<p>用集合点让请求同时发出，关注：1）限流是否生效；2）库存一致性；3）系统是否雪崩。</p>
+</blockquote>
+<p><strong>Q：稳定性测试发现过什么问题？</strong></p>
+<blockquote>
+<p>内存泄漏（内存持续上涨不释放）、连接泄漏（连接数持续增长）、GC 时间变长、RT 逐渐上涨。</p>
+</blockquote>
+<h3 id="7-3-定位问题"><a href="#7-3-定位问题" class="headerlink" title="7.3 定位问题"></a>7.3 定位问题</h3><p><strong>Q：TPS 上不去，怎么排查？</strong></p>
+<blockquote>
+<p>先看资源：CPU、内存、IO 哪个高。如果都不高，看数据库慢查询、连接池、锁竞争、外部依赖。</p>
+</blockquote>
+<p><strong>Q：CPU 高怎么定位？</strong></p>
+<blockquote>
+<p>看是 user 高还是 iowait 高。user 高用火焰图找热点代码；iowait 高说明磁盘是瓶颈。</p>
+</blockquote>
+<p><strong>Q：内存泄漏怎么定位？</strong></p>
+<blockquote>
+<p>多次 dump 内存快照，用 MAT 对比，看哪些对象持续增长。</p>
+</blockquote>
+<hr>
+<h2 id="八、实战检查清单"><a href="#八、实战检查清单" class="headerlink" title="八、实战检查清单"></a>八、实战检查清单</h2><h3 id="测试前"><a href="#测试前" class="headerlink" title="测试前"></a>测试前</h3><ul>
+<li><input disabled="" type="checkbox"> 明确测试目标（TPS、RT、错误率要求）</li>
+<li><input disabled="" type="checkbox"> 测试环境配置记录（CPU、内存、带宽）</li>
+<li><input disabled="" type="checkbox"> 监控部署完成（能看到实时数据）</li>
+<li><input disabled="" type="checkbox"> 测试数据准备（数量级合理）</li>
+<li><input disabled="" type="checkbox"> 脚本调试通过（单次请求正常）</li>
+</ul>
+<h3 id="测试中"><a href="#测试中" class="headerlink" title="测试中"></a>测试中</h3><ul>
+<li><input disabled="" type="checkbox"> 逐步加压，不要一上来就拉满</li>
+<li><input disabled="" type="checkbox"> 实时观察监控，发现异常及时记录</li>
+<li><input disabled="" type="checkbox"> 每轮测试记录：并发数、TPS、RT、错误率、资源使用</li>
+<li><input disabled="" type="checkbox"> 出现拐点时停下来分析</li>
+</ul>
+<h3 id="测试后"><a href="#测试后" class="headerlink" title="测试后"></a>测试后</h3><ul>
+<li><input disabled="" type="checkbox"> 整理各轮数据，画趋势图</li>
+<li><input disabled="" type="checkbox"> 定位瓶颈点</li>
+<li><input disabled="" type="checkbox"> 输出测试报告</li>
+<li><input disabled="" type="checkbox"> 提出优化建议</li>
+</ul>
+<hr>
+<h2 id="九、附录：常用命令速查"><a href="#九、附录：常用命令速查" class="headerlink" title="九、附录：常用命令速查"></a>九、附录：常用命令速查</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># CPU</span></span><br><span class="line">top                    <span class="comment"># 整体情况</span></span><br><span class="line">vmstat 1               <span class="comment"># 每秒刷新</span></span><br><span class="line">mpstat -P ALL 1        <span class="comment"># 每个核心</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 内存</span></span><br><span class="line">free -h                <span class="comment"># 内存概况</span></span><br><span class="line">top -o %MEM            <span class="comment"># 按内存排序</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 磁盘</span></span><br><span class="line">iostat -x 1            <span class="comment"># IO 详情</span></span><br><span class="line">iotop                  <span class="comment"># IO 排行</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 网络</span></span><br><span class="line">iftop                  <span class="comment"># 带宽监控</span></span><br><span class="line">netstat -ant | <span class="built_in">wc</span> -l   <span class="comment"># 连接数</span></span><br><span class="line">ss -s                  <span class="comment"># 连接统计</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 进程</span></span><br><span class="line">ps aux --<span class="built_in">sort</span>=-%cpu    <span class="comment"># CPU 排行</span></span><br><span class="line">ps aux --<span class="built_in">sort</span>=-%mem    <span class="comment"># 内存排行</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Java</span></span><br><span class="line">jstat -gc &lt;pid&gt; 1000   <span class="comment"># GC 监控</span></span><br><span class="line">jstack &lt;pid&gt;           <span class="comment"># 线程 dump</span></span><br><span class="line">jmap -heap &lt;pid&gt;       <span class="comment"># 堆内存概况</span></span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>性能测试的本质是：<strong>给系统施加压力，观察表现，找到瓶颈，指导优化。</strong></p>
+<p>记住这个思考框架：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">目标 → 场景 → 指标 → 执行 → 分析 → 优化</span><br></pre></td></tr></table></figure>
+
+<p>不是为了压测而压测，而是为了回答业务问题：系统能不能扛住？扛不住的话问题在哪？</p>
+</p></div><div class="share"><span>Share</span>&nbsp;<span class="soc"><a class="fa fa-bookmark" href="javascript:(function(){EN_CLIP_HOST='http://www.evernote.com';try{var%20x=document.createElement('SCRIPT');x.type='text/javascript';x.src=EN_CLIP_HOST+'/public/bookmarkClipper.js?'+(new%20Date().getTime()/100000);document.getElementsByTagName('head')[0].appendChild(x);}catch(e){location.href=EN_CLIP_HOST+'/clip.action?url='+encodeURIComponent(location.href)+'&amp;title='+encodeURIComponent(document.title);}})();" ref="nofollow" target="_blank"></a></span><span class="soc"><a class="fa fa-weibo" href="javascript:void((function(s,d,e){try{}catch(e){}var f='http://service.weibo.com/share/share.php?',u=d.location.href,p=['url=',e(u),'&amp;title=',e(d.title),'&amp;appkey=2924220432'].join('');function a(){if(!window.open([f,p].join(''),'mb',['toolbar=0,status=0,resizable=1,width=620,height=450,left=',(s.width-620)/2,',top=',(s.height-450)/2].join('')))u.href=[f,p].join('');};if(/Firefox/.test(navigator.userAgent)){setTimeout(a,0)}else{a()}})(screen,document,encodeURIComponent));"></a></span><span class="soc"><a class="fa fa-twitter" target="_blank" rel="noopener" href="http://twitter.com/home?status=https://0xhanniba1.github.io/2026/01/performance-testing-guide/%20韩老魔的博客%20性能测试"></a></span></div><div class="pagination"><p class="clearfix"><span>&nbsp;</span><span class="next pagbuttons"><a role="navigation" href="/2026/01/PSB-guide/" title="系统性地使用Claude Code编写新项目">Next post: 系统性地使用Claude Code编写新项目&nbsp;<i class="fa fa-angle-double-right"></i></a></span></p></div></div></div></div><div class="visible-xs site-bottom-footer"><footer><p>&copy;&nbsp;2026&nbsp;<a target="_blank" href="https://0xhanniba1.github.io" rel="noopener noreferrer">0xHanniba1</a></p><p>Theme&nbsp;<a target="_blank" href="https://github.com/SumiMakito/hexo-theme-typography" rel="noopener noreferrer">Typography</a>&nbsp;by&nbsp;<a target="_blank" href="https://www.keep.moe" rel="noopener noreferrer">Makito</a></p><p>Proudly published with&nbsp;<a target="_blank" href="https://hexo.io" rel="noopener noreferrer">Hexo</a></p></footer></div></div></div></div><script src="/js/jquery-3.1.0.min.js"></script><script src="/js/bootstrap.min.js"></script><script src="/js/jquery-migrate-1.2.1.min.js"></script><script src="/js/jquery.appear.js"></script><script src="/js/google-analytics.js"></script><script src="/js/typography.js"></script></body></html>
