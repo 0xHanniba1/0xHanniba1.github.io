@@ -1,1 +1,70 @@
-<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><meta name="author"><title>CI/CD ding_feishu_notify · 韩老魔的博客</title><meta name="description" content=""><meta name="og:description" content=""><meta name="twitter:site" content="韩老魔的博客"><meta name="twitter:title" content="CI/CD ding_feishu_notify"><meta name="twitter:card" content="summary"><meta name="keywords" content=""><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="renderer" content="webkit"><link rel="short icon" href="/images/favicon.png" type="image/x-icon"><link rel="stylesheet" href="/css/bootstrap.min.css"><link rel="stylesheet" href="/css/font-awesome.min.css"><link rel="stylesheet" href="/css/style.css"><link rel="alternate" type="application/atom+xml" title="ATOM 1.0" href="/atom.xml"><meta name="generator" content="Hexo 7.3.0"></head><body><div class="container" id="stage"><div class="row"><div class="col-sm-3 col-xs-12 side-container invisible" id="side-bar"><div class="vertical-text site-title"><h3 class="site-title-small" tabindex="-1"><a class="a-title" href="/">0xHanniba1's blog</a></h3><h1 class="site-title-large" tabindex="-1"><a class="a-title" href="/">慢就是快 ｜ 自律 ｜ 坚持</a></h1><!--h6(onclick="triggerSiteNav()") Trigger--></div><br class="visible-lg visible-md visible-sm"><div class="site-title-links" id="site-nav"><ul><li><a href="/">Home</a></li><li><a href="/archives">Archive</a></li><li><a href="/tags">Tags</a></li><li class="soc"><a href="https://github.com/0xHanniba1" target="_blank" rel="noopener noreferrer" aria-label="Github"><i class="fa fa-github">&nbsp;</i></a><a href="https://0xhanniba1.github.io/atom.xml" target="_blank" rel="noopener noreferrer" aria-label="RSS"><i class="fa fa-rss">&nbsp;</i></a></li></ul><div class="visible-lg visible-md visible-sm site-nav-footer"><br class="site-nav-footer-br"><footer><p>&copy;&nbsp;2026&nbsp;<a target="_blank" href="https://0xhanniba1.github.io" rel="noopener noreferrer">0xHanniba1</a></p><p>Theme&nbsp;<a target="_blank" href="https://github.com/SumiMakito/hexo-theme-typography" rel="noopener noreferrer">Typography</a>&nbsp;by&nbsp;<a target="_blank" href="https://www.keep.moe" rel="noopener noreferrer">Makito</a></p><p>Proudly published with&nbsp;<a target="_blank" href="https://hexo.io" rel="noopener noreferrer">Hexo</a></p></footer></div></div></div><div class="col-sm-9 col-xs-12 main-container invisible" id="main-container"><div class="autopagerize_page_element"><div class="content"><div class="post-page"><div class="post-container"><p class="post-title"><a>CI/CD ding_feishu_notify</a></p><p class="post-meta"><span class="date meta-item">Posted at&nbsp;2026-01-10</span></p><p class="post-abstract"></p></div><div class="share"><span>Share</span>&nbsp;<span class="soc"><a class="fa fa-bookmark" href="javascript:(function(){EN_CLIP_HOST='http://www.evernote.com';try{var%20x=document.createElement('SCRIPT');x.type='text/javascript';x.src=EN_CLIP_HOST+'/public/bookmarkClipper.js?'+(new%20Date().getTime()/100000);document.getElementsByTagName('head')[0].appendChild(x);}catch(e){location.href=EN_CLIP_HOST+'/clip.action?url='+encodeURIComponent(location.href)+'&amp;title='+encodeURIComponent(document.title);}})();" ref="nofollow" target="_blank"></a></span><span class="soc"><a class="fa fa-weibo" href="javascript:void((function(s,d,e){try{}catch(e){}var f='http://service.weibo.com/share/share.php?',u=d.location.href,p=['url=',e(u),'&amp;title=',e(d.title),'&amp;appkey=2924220432'].join('');function a(){if(!window.open([f,p].join(''),'mb',['toolbar=0,status=0,resizable=1,width=620,height=450,left=',(s.width-620)/2,',top=',(s.height-450)/2].join('')))u.href=[f,p].join('');};if(/Firefox/.test(navigator.userAgent)){setTimeout(a,0)}else{a()}})(screen,document,encodeURIComponent));"></a></span><span class="soc"><a class="fa fa-twitter" target="_blank" rel="noopener" href="http://twitter.com/home?status=https://0xhanniba1.github.io/2026/01/CI-CD-ding-feishu-notify/%20韩老魔的博客%20CI/CD ding_feishu_notify"></a></span></div><div class="pagination"><p class="clearfix"><span>&nbsp;</span><span class="next pagbuttons"><a role="navigation" href="/2026/01/performance-testing-guide/" title="性能测试">Next post: 性能测试&nbsp;<i class="fa fa-angle-double-right"></i></a></span></p></div></div></div></div><div class="visible-xs site-bottom-footer"><footer><p>&copy;&nbsp;2026&nbsp;<a target="_blank" href="https://0xhanniba1.github.io" rel="noopener noreferrer">0xHanniba1</a></p><p>Theme&nbsp;<a target="_blank" href="https://github.com/SumiMakito/hexo-theme-typography" rel="noopener noreferrer">Typography</a>&nbsp;by&nbsp;<a target="_blank" href="https://www.keep.moe" rel="noopener noreferrer">Makito</a></p><p>Proudly published with&nbsp;<a target="_blank" href="https://hexo.io" rel="noopener noreferrer">Hexo</a></p></footer></div></div></div></div><script src="/js/jquery-3.1.0.min.js"></script><script src="/js/bootstrap.min.js"></script><script src="/js/jquery-migrate-1.2.1.min.js"></script><script src="/js/jquery.appear.js"></script><script src="/js/google-analytics.js"></script><script src="/js/typography.js"></script></body></html>
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><meta name="author"><title>CI/CD 自动化通知配置指南 (钉钉/飞书) · 韩老魔的博客</title><meta name="description" content="第一步：项目结构整理
+为了保持项目整洁，建议按照以下目录归档文件：
+
+在项目根目录下新建一个文件夹，命名为 scripts。
+将通知用的 Python 脚本（如 ding_notify.py 或 feishu_notify.py）放入该文件夹。
+根目录保留 Jenkinsfile 和 require"><meta name="og:description" content="第一步：项目结构整理
+为了保持项目整洁，建议按照以下目录归档文件：
+
+在项目根目录下新建一个文件夹，命名为 scripts。
+将通知用的 Python 脚本（如 ding_notify.py 或 feishu_notify.py）放入该文件夹。
+根目录保留 Jenkinsfile 和 require"><meta name="twitter:site" content="韩老魔的博客"><meta name="twitter:title" content="CI/CD 自动化通知配置指南 (钉钉/飞书)"><meta name="twitter:card" content="summary"><meta name="keywords" content=""><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="renderer" content="webkit"><link rel="short icon" href="/images/favicon.png" type="image/x-icon"><link rel="stylesheet" href="/css/bootstrap.min.css"><link rel="stylesheet" href="/css/font-awesome.min.css"><link rel="stylesheet" href="/css/style.css"><link rel="alternate" type="application/atom+xml" title="ATOM 1.0" href="/atom.xml"><meta name="generator" content="Hexo 7.3.0"></head><body><div class="container" id="stage"><div class="row"><div class="col-sm-3 col-xs-12 side-container invisible" id="side-bar"><div class="vertical-text site-title"><h3 class="site-title-small" tabindex="-1"><a class="a-title" href="/">0xHanniba1's blog</a></h3><h1 class="site-title-large" tabindex="-1"><a class="a-title" href="/">慢就是快 ｜ 自律 ｜ 坚持</a></h1><!--h6(onclick="triggerSiteNav()") Trigger--></div><br class="visible-lg visible-md visible-sm"><div class="site-title-links" id="site-nav"><ul><li><a href="/">Home</a></li><li><a href="/archives">Archive</a></li><li><a href="/tags">Tags</a></li><li class="soc"><a href="https://github.com/0xHanniba1" target="_blank" rel="noopener noreferrer" aria-label="Github"><i class="fa fa-github">&nbsp;</i></a><a href="https://0xhanniba1.github.io/atom.xml" target="_blank" rel="noopener noreferrer" aria-label="RSS"><i class="fa fa-rss">&nbsp;</i></a></li></ul><div class="visible-lg visible-md visible-sm site-nav-footer"><br class="site-nav-footer-br"><footer><p>&copy;&nbsp;2026&nbsp;<a target="_blank" href="https://0xhanniba1.github.io" rel="noopener noreferrer">0xHanniba1</a></p><p>Theme&nbsp;<a target="_blank" href="https://github.com/SumiMakito/hexo-theme-typography" rel="noopener noreferrer">Typography</a>&nbsp;by&nbsp;<a target="_blank" href="https://www.keep.moe" rel="noopener noreferrer">Makito</a></p><p>Proudly published with&nbsp;<a target="_blank" href="https://hexo.io" rel="noopener noreferrer">Hexo</a></p></footer></div></div></div><div class="col-sm-9 col-xs-12 main-container invisible" id="main-container"><div class="autopagerize_page_element"><div class="content"><div class="post-page"><div class="post-container"><p class="post-title"><a>CI/CD 自动化通知配置指南 (钉钉/飞书)</a></p><p class="post-meta"><span class="date meta-item">Posted at&nbsp;2026-01-10</span><span class="meta-item"><i class="fa fa-tag"></i><span>&nbsp;</span><a class="a-tag" href="/tags/测试/" title="-测试">-测试</a><span>&nbsp;</span></span></p><p class="post-abstract"><h3 id="第一步：项目结构整理">第一步：项目结构整理</h3>
+<p>为了保持项目整洁，建议按照以下目录归档文件：</p>
+<ol>
+<li>在项目根目录下新建一个文件夹，命名为 <strong><code>scripts</code></strong>。</li>
+<li>将通知用的 Python 脚本（如 <code>ding_notify.py</code> 或 <code>feishu_notify.py</code>）放入该文件夹。</li>
+<li>根目录保留 <code>Jenkinsfile</code> 和 <code>requirements.txt</code>（如果有）。</li>
+</ol>
+<hr>
+<h3 id="第二步：配置群机器人-获取-Webhook">第二步：配置群机器人 (获取 Webhook)</h3>
+<h4 id="选项-A：钉钉-DingTalk">选项 A：钉钉 (DingTalk)</h4>
+<ol>
+<li>进入钉钉群，点击右上角 <strong>群设置</strong> -&gt; <strong>智能群助手</strong>。</li>
+<li>点击 <strong>添加机器人</strong> -&gt; 选择 <strong>自定义 (通过Webhook接入)</strong>。</li>
+<li><strong>安全设置 (必选)</strong>：推荐选择 <strong>“自定义关键词”</strong>，填入 <strong>“构建通知”</strong> (或你脚本中定义的其他词)。</li>
+<li>完成添加，<strong>复制并保存 Webhook 地址</strong> (重点是 <code>access_token</code> 部分)。</li>
+</ol>
+<h4 id="选项-B：飞书-Feishu-Lark">选项 B：飞书 (Feishu/Lark)</h4>
+<ol>
+<li>进入飞书群，点击右上角 <strong>设置</strong> -&gt; <strong>群机器人</strong>。</li>
+<li>点击 <strong>添加机器人</strong> -&gt; 选择 <strong>自定义机器人</strong>。</li>
+<li><strong>安全设置 (必选)</strong>：推荐选择 <strong>“关键词”</strong>，填入 <strong>“构建通知”</strong>。</li>
+<li>完成添加，<strong>复制并保存 Webhook 地址</strong>。</li>
+</ol>
+<hr>
+<h3 id="第三步：脚本功能准备-Python-逻辑">第三步：脚本功能准备 (Python 逻辑)</h3>
+<p>你需要准备的脚本应具备以下逻辑（无需贴代码，确认功能即可）：</p>
+<ol>
+<li><strong>依赖库</strong>：使用 <code>requests</code> 库发送 HTTP 请求。</li>
+<li><strong>获取 Token</strong>：优先从系统环境变量读取 Webhook 地址或 Token，也可以在脚本中设置默认值。</li>
+<li><strong>状态判断</strong>：接收命令行传入的 <code>SUCCESS</code> 或 <code>FAILURE</code> 状态。
+<ul>
+<li><strong>成功</strong>：消息标头显示绿色，文案提示“构建成功”。</li>
+<li><strong>失败</strong>：消息标头显示红色，文案提示“构建失败”。</li>
+</ul>
+</li>
+<li><strong>消息组装</strong>：包含项目名称、构建耗时、结束时间，以及<strong>跳转链接</strong>（Console 日志或测试报告）。</li>
+<li><strong>发送请求</strong>：将组装好的 JSON 数据 POST 给机器人的 Webhook 地址。</li>
+</ol>
+<hr>
+<h3 id="第四步：Jenkins-流水线集成-Jenkinsfile-逻辑">第四步：Jenkins 流水线集成 (Jenkinsfile 逻辑)</h3>
+<p>在 Jenkinsfile 中配置以下流程：</p>
+<ol>
+<li><strong>Stage: 环境准备与测试</strong>
+<ul>
+<li><strong>检查环境</strong>：判断 <code>venv</code> 文件夹是否存在。</li>
+<li><strong>创建环境</strong>：如果不存在，执行命令自动创建虚拟环境。</li>
+<li><strong>激活环境</strong>：执行 <code>source venv/bin/activate</code>。</li>
+<li><strong>安装依赖</strong>：安装 <code>requests</code> (发通知用) 和 <code>selenium</code>/<code>pytest</code> (测试用)。</li>
+<li><strong>执行测试</strong>：运行自动化测试命令并生成报告数据。</li>
+</ul>
+</li>
+<li><strong>Post: 构建后操作 (通知核心)</strong>
+<ul>
+<li>配置 <strong><code>success</code> (成功块)</strong> 和 <strong><code>failure</code> (失败块)</strong>。</li>
+<li><strong>再次激活环境</strong>：在发送通知前，<strong>必须</strong>再次执行 <code>source venv/bin/activate</code>。</li>
+<li><strong>执行脚本</strong>：调用 Python 脚本，并传入 Jenkins 的环境变量（任务名、构建URL、耗时等）。</li>
+</ul>
+</li>
+</ol>
+</p></div><div class="share"><span>Share</span>&nbsp;<span class="soc"><a class="fa fa-bookmark" href="javascript:(function(){EN_CLIP_HOST='http://www.evernote.com';try{var%20x=document.createElement('SCRIPT');x.type='text/javascript';x.src=EN_CLIP_HOST+'/public/bookmarkClipper.js?'+(new%20Date().getTime()/100000);document.getElementsByTagName('head')[0].appendChild(x);}catch(e){location.href=EN_CLIP_HOST+'/clip.action?url='+encodeURIComponent(location.href)+'&amp;title='+encodeURIComponent(document.title);}})();" ref="nofollow" target="_blank"></a></span><span class="soc"><a class="fa fa-weibo" href="javascript:void((function(s,d,e){try{}catch(e){}var f='http://service.weibo.com/share/share.php?',u=d.location.href,p=['url=',e(u),'&amp;title=',e(d.title),'&amp;appkey=2924220432'].join('');function a(){if(!window.open([f,p].join(''),'mb',['toolbar=0,status=0,resizable=1,width=620,height=450,left=',(s.width-620)/2,',top=',(s.height-450)/2].join('')))u.href=[f,p].join('');};if(/Firefox/.test(navigator.userAgent)){setTimeout(a,0)}else{a()}})(screen,document,encodeURIComponent));"></a></span><span class="soc"><a class="fa fa-twitter" target="_blank" rel="noopener" href="http://twitter.com/home?status=https://0xhanniba1.github.io/2026/01/CI-CD-ding-feishu-notify/%20韩老魔的博客%20CI/CD 自动化通知配置指南 (钉钉/飞书)"></a></span></div><div class="pagination"><p class="clearfix"><span>&nbsp;</span><span class="next pagbuttons"><a role="navigation" href="/2026/01/performance-testing-guide/" title="性能测试">Next post: 性能测试&nbsp;<i class="fa fa-angle-double-right"></i></a></span></p></div></div></div></div><div class="visible-xs site-bottom-footer"><footer><p>&copy;&nbsp;2026&nbsp;<a target="_blank" href="https://0xhanniba1.github.io" rel="noopener noreferrer">0xHanniba1</a></p><p>Theme&nbsp;<a target="_blank" href="https://github.com/SumiMakito/hexo-theme-typography" rel="noopener noreferrer">Typography</a>&nbsp;by&nbsp;<a target="_blank" href="https://www.keep.moe" rel="noopener noreferrer">Makito</a></p><p>Proudly published with&nbsp;<a target="_blank" href="https://hexo.io" rel="noopener noreferrer">Hexo</a></p></footer></div></div></div></div><script src="/js/jquery-3.1.0.min.js"></script><script src="/js/bootstrap.min.js"></script><script src="/js/jquery-migrate-1.2.1.min.js"></script><script src="/js/jquery.appear.js"></script><script src="/js/google-analytics.js"></script><script src="/js/typography.js"></script></body></html>
