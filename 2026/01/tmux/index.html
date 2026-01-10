@@ -1,5 +1,9 @@
-<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><meta name="author"><title>tmux命令 · 韩老魔的博客</title><meta name="description" content="Tmux 常用命令速查表核心机制：前缀键 (Prefix Key)所有快捷键操作前，必须先按下“扳机”：Ctrl + b (松开后再按后续按键)。
-1. 会话管理 (Session Management)在普通终端 (Terminal) 中执行：
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><meta name="author"><title>tmux命令 · 韩老魔的博客</title><meta name="description" content="Tmux 常用命令速查表
+核心机制：前缀键 (Prefix Key)
+所有快捷键操作前，必须先按下“扳机”：Ctrl + b (松开后再按后续按键)。
+1. 会话管理 (Session Management)
+在普通终端 (Terminal) 中执行：
+
 
 
 动作
@@ -8,9 +12,14 @@
 
 
 
+
 新建会话
-tmux ne"><meta name="og:description" content="Tmux 常用命令速查表核心机制：前缀键 (Prefix Key)所有快捷键操作前，必须先按下“扳机”：Ctrl + b (松开后再按后续按键)。
-1. 会话管理 (Session Management)在普通终端 (Terminal) 中执行：
+tm"><meta name="og:description" content="Tmux 常用命令速查表
+核心机制：前缀键 (Prefix Key)
+所有快捷键操作前，必须先按下“扳机”：Ctrl + b (松开后再按后续按键)。
+1. 会话管理 (Session Management)
+在普通终端 (Terminal) 中执行：
+
 
 
 动作
@@ -19,80 +28,94 @@ tmux ne"><meta name="og:description" content="Tmux 常用命令速查表核心�
 
 
 
+
 新建会话
-tmux ne"><meta name="twitter:site" content="韩老魔的博客"><meta name="twitter:title" content="tmux命令"><meta name="twitter:card" content="summary"><meta name="keywords" content=""><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="renderer" content="webkit"><link rel="short icon" href="/images/favicon.png" type="image/x-icon"><link rel="stylesheet" href="/css/bootstrap.min.css"><link rel="stylesheet" href="/css/font-awesome.min.css"><link rel="stylesheet" href="/css/style.css"><link rel="stylesheet" href="/css/custom.css"><link rel="alternate" type="application/atom+xml" title="ATOM 1.0" href="/atom.xml"><meta name="generator" content="Hexo 7.3.0"></head><body><div class="container" id="stage"><div class="row"><div class="col-sm-3 col-xs-12 side-container invisible" id="side-bar"><div class="vertical-text site-title"><h3 class="site-title-small" tabindex="-1"><a class="a-title" href="/">0xHanniba1's blog</a></h3><h1 class="site-title-large" tabindex="-1"><a class="a-title" href="/">慢就是快 ｜ 自律 ｜ 坚持</a></h1><!--h6(onclick="triggerSiteNav()") Trigger--></div><br class="visible-lg visible-md visible-sm"><div class="site-title-links" id="site-nav"><ul><li><a href="/">Home</a></li><li><a href="/archives">Archive</a></li><li><a href="/tags">Tags</a></li><li class="soc"><a href="https://github.com/0xHanniba1" target="_blank" rel="noopener noreferrer" aria-label="Github"><i class="fa fa-github">&nbsp;</i></a><a href="https://0xhanniba1.github.io/atom.xml" target="_blank" rel="noopener noreferrer" aria-label="RSS"><i class="fa fa-rss">&nbsp;</i></a></li></ul><div class="visible-lg visible-md visible-sm site-nav-footer"><br class="site-nav-footer-br"><footer><p>&copy;&nbsp;2026&nbsp;<a target="_blank" href="https://0xhanniba1.github.io" rel="noopener noreferrer">0xHanniba1</a></p><p>Theme&nbsp;<a target="_blank" href="https://github.com/SumiMakito/hexo-theme-typography" rel="noopener noreferrer">Typography</a>&nbsp;by&nbsp;<a target="_blank" href="https://www.keep.moe" rel="noopener noreferrer">Makito</a></p><p>Proudly published with&nbsp;<a target="_blank" href="https://hexo.io" rel="noopener noreferrer">Hexo</a></p></footer></div></div></div><div class="col-sm-9 col-xs-12 main-container invisible" id="main-container"><div class="autopagerize_page_element"><div class="content"><div class="post-page"><div class="post-container"><p class="post-title"><a>tmux命令</a></p><p class="post-meta"><span class="date meta-item">Posted at&nbsp;2026-01-05</span></p><p class="post-abstract"><h1 id="Tmux-常用命令速查表"><a href="#Tmux-常用命令速查表" class="headerlink" title="Tmux 常用命令速查表"></a>Tmux 常用命令速查表</h1><h2 id="核心机制：前缀键-Prefix-Key"><a href="#核心机制：前缀键-Prefix-Key" class="headerlink" title="核心机制：前缀键 (Prefix Key)"></a>核心机制：前缀键 (Prefix Key)</h2><p>所有快捷键操作前，必须先按下“扳机”：<strong><code>Ctrl</code> + <code>b</code></strong> (松开后再按后续按键)。</p>
-<h2 id="1-会话管理-Session-Management"><a href="#1-会话管理-Session-Management" class="headerlink" title="1. 会话管理 (Session Management)"></a>1. 会话管理 (Session Management)</h2><h3 id="在普通终端-Terminal-中执行："><a href="#在普通终端-Terminal-中执行：" class="headerlink" title="在普通终端 (Terminal) 中执行："></a>在普通终端 (Terminal) 中执行：</h3><table>
-<thead>
-<tr>
-<th align="left">动作</th>
-<th align="left">命令</th>
-<th align="left">说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left"><strong>新建会话</strong></td>
-<td align="left"><code>tmux new -s &lt;名字&gt;</code></td>
-<td align="left">创建一个有名字的房间 (例如 <code>tmux new -s claude</code>)</td>
-</tr>
-<tr>
-<td align="left"><strong>列出会话</strong></td>
-<td align="left"><code>tmux ls</code></td>
-<td align="left">查看后台有哪些房间在运行</td>
-</tr>
-<tr>
-<td align="left"><strong>回到会话</strong></td>
-<td align="left"><code>tmux attach -t &lt;名字&gt;</code></td>
-<td align="left">重新连接回指定的房间 (简写 <code>tmux a -t &lt;名字&gt;</code>)</td>
-</tr>
-<tr>
-<td align="left"><strong>彻底删除</strong></td>
-<td align="left"><code>tmux kill-session -t &lt;名字&gt;</code></td>
-<td align="left">在外部强制关闭某个房间</td>
-</tr>
-</tbody></table>
-<h3 id="在-Tmux-内部操作："><a href="#在-Tmux-内部操作：" class="headerlink" title="在 Tmux 内部操作："></a>在 Tmux 内部操作：</h3><table>
-<thead>
-<tr>
-<th align="left">动作</th>
-<th align="left">快捷键&#x2F;命令</th>
-<th align="left">说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left"><strong>暂时离开</strong></td>
-<td align="left"><code>前缀键</code> + <code>d</code></td>
-<td align="left"><strong>Detach</strong>。人走，房间留着，程序继续跑</td>
-</tr>
-<tr>
-<td align="left"><strong>彻底结束</strong></td>
-<td align="left">输入 <code>exit</code> 或 <code>Ctrl</code>+<code>d</code></td>
-<td align="left">关门熄灯，结束当前面板&#x2F;会话</td>
-</tr>
-</tbody></table>
-<h2 id="2-屏幕切分-Pane-Management"><a href="#2-屏幕切分-Pane-Management" class="headerlink" title="2. 屏幕切分 (Pane Management)"></a>2. 屏幕切分 (Pane Management)</h2><p><em>注意：操作前需先按前缀键 <code>Ctrl</code> + <code>b</code></em></p>
+tm"><meta name="twitter:site" content="韩老魔的博客"><meta name="twitter:title" content="tmux命令"><meta name="twitter:card" content="summary"><meta name="keywords" content=""><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="renderer" content="webkit"><link rel="short icon" href="/images/favicon.png" type="image/x-icon"><link rel="stylesheet" href="/css/bootstrap.min.css"><link rel="stylesheet" href="/css/font-awesome.min.css"><link rel="stylesheet" href="/css/style.css"><link rel="alternate" type="application/atom+xml" title="ATOM 1.0" href="/atom.xml"><meta name="generator" content="Hexo 7.3.0"></head><body><div class="container" id="stage"><div class="row"><div class="col-sm-3 col-xs-12 side-container invisible" id="side-bar"><div class="vertical-text site-title"><h3 class="site-title-small" tabindex="-1"><a class="a-title" href="/">0xHanniba1's blog</a></h3><h1 class="site-title-large" tabindex="-1"><a class="a-title" href="/">慢就是快 ｜ 自律 ｜ 坚持</a></h1><!--h6(onclick="triggerSiteNav()") Trigger--></div><br class="visible-lg visible-md visible-sm"><div class="site-title-links" id="site-nav"><ul><li><a href="/">Home</a></li><li><a href="/archives">Archive</a></li><li><a href="/tags">Tags</a></li><li class="soc"><a href="https://github.com/0xHanniba1" target="_blank" rel="noopener noreferrer" aria-label="Github"><i class="fa fa-github">&nbsp;</i></a><a href="https://0xhanniba1.github.io/atom.xml" target="_blank" rel="noopener noreferrer" aria-label="RSS"><i class="fa fa-rss">&nbsp;</i></a></li></ul><div class="visible-lg visible-md visible-sm site-nav-footer"><br class="site-nav-footer-br"><footer><p>&copy;&nbsp;2026&nbsp;<a target="_blank" href="https://0xhanniba1.github.io" rel="noopener noreferrer">0xHanniba1</a></p><p>Theme&nbsp;<a target="_blank" href="https://github.com/SumiMakito/hexo-theme-typography" rel="noopener noreferrer">Typography</a>&nbsp;by&nbsp;<a target="_blank" href="https://www.keep.moe" rel="noopener noreferrer">Makito</a></p><p>Proudly published with&nbsp;<a target="_blank" href="https://hexo.io" rel="noopener noreferrer">Hexo</a></p></footer></div></div></div><div class="col-sm-9 col-xs-12 main-container invisible" id="main-container"><div class="autopagerize_page_element"><div class="content"><div class="post-page"><div class="post-container"><p class="post-title"><a>tmux命令</a></p><p class="post-meta"><span class="date meta-item">Posted at&nbsp;2026-01-05</span></p><p class="post-abstract"><h1>Tmux 常用命令速查表</h1>
+<h2 id="核心机制：前缀键-Prefix-Key">核心机制：前缀键 (Prefix Key)</h2>
+<p>所有快捷键操作前，必须先按下“扳机”：<strong><code>Ctrl</code> + <code>b</code></strong> (松开后再按后续按键)。</p>
+<h2 id="1-会话管理-Session-Management">1. 会话管理 (Session Management)</h2>
+<h3 id="在普通终端-Terminal-中执行：">在普通终端 (Terminal) 中执行：</h3>
 <table>
 <thead>
 <tr>
-<th align="left">动作</th>
-<th align="left">快捷键</th>
-<th align="left">记忆法</th>
+<th style="text-align:left">动作</th>
+<th style="text-align:left">命令</th>
+<th style="text-align:left">说明</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="left"><strong>左右切分</strong></td>
-<td align="left"><code>%</code> (<code>Shift</code> + <code>5</code>)</td>
-<td align="left">斜杠 <code>/</code> 把屏幕分两半</td>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>新建会话</strong></td>
+<td style="text-align:left"><code>tmux new -s &lt;名字&gt;</code></td>
+<td style="text-align:left">创建一个有名字的房间 (例如 <code>tmux new -s claude</code>)</td>
 </tr>
 <tr>
-<td align="left"><strong>上下切分</strong></td>
-<td align="left"><code>&quot;</code> (<code>Shift</code> + <code>&#39;</code>)</td>
-<td align="left">引号上下两点，代表上下分</td>
+<td style="text-align:left"><strong>列出会话</strong></td>
+<td style="text-align:left"><code>tmux ls</code></td>
+<td style="text-align:left">查看后台有哪些房间在运行</td>
 </tr>
 <tr>
-<td align="left"><strong>切换光标</strong></td>
-<td align="left"><code>方向键</code> (⬆️⬇️⬅️➡️)</td>
-<td align="left">想去哪边按哪边</td>
+<td style="text-align:left"><strong>回到会话</strong></td>
+<td style="text-align:left"><code>tmux attach -t &lt;名字&gt;</code></td>
+<td style="text-align:left">重新连接回指定的房间 (简写 <code>tmux a -t &lt;名字&gt;</code>)</td>
 </tr>
-</tbody></table>
-<h2 id="3-设置鼠标移动"><a href="#3-设置鼠标移动" class="headerlink" title="3.设置鼠标移动!!!"></a>3.设置鼠标移动!!!</h2><p><code>tmux set -g mouse on</code> 回车后，你就可以直接用鼠标滚轮滚动查看历史了，点击面板也会自动切换焦点</p>
+<tr>
+<td style="text-align:left"><strong>彻底删除</strong></td>
+<td style="text-align:left"><code>tmux kill-session -t &lt;名字&gt;</code></td>
+<td style="text-align:left">在外部强制关闭某个房间</td>
+</tr>
+</tbody>
+</table>
+<h3 id="在-Tmux-内部操作：">在 Tmux 内部操作：</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">动作</th>
+<th style="text-align:left">快捷键/命令</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>暂时离开</strong></td>
+<td style="text-align:left"><code>前缀键</code> + <code>d</code></td>
+<td style="text-align:left"><strong>Detach</strong>。人走，房间留着，程序继续跑</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>彻底结束</strong></td>
+<td style="text-align:left">输入 <code>exit</code> 或 <code>Ctrl</code>+<code>d</code></td>
+<td style="text-align:left">关门熄灯，结束当前面板/会话</td>
+</tr>
+</tbody>
+</table>
+<h2 id="2-屏幕切分-Pane-Management">2. 屏幕切分 (Pane Management)</h2>
+<p><em>注意：操作前需先按前缀键 <code>Ctrl</code> + <code>b</code></em></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">动作</th>
+<th style="text-align:left">快捷键</th>
+<th style="text-align:left">记忆法</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>左右切分</strong></td>
+<td style="text-align:left"><code>%</code> (<code>Shift</code> + <code>5</code>)</td>
+<td style="text-align:left">斜杠 <code>/</code> 把屏幕分两半</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>上下切分</strong></td>
+<td style="text-align:left"><code>&quot;</code> (<code>Shift</code> + <code>'</code>)</td>
+<td style="text-align:left">引号上下两点，代表上下分</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>切换光标</strong></td>
+<td style="text-align:left"><code>方向键</code> (⬆️⬇️⬅️➡️)</td>
+<td style="text-align:left">想去哪边按哪边</td>
+</tr>
+</tbody>
+</table>
+<h2 id="3-设置鼠标移动">3.设置鼠标移动!!!</h2>
+<p><code>tmux set -g mouse on</code> 回车后，你就可以直接用鼠标滚轮滚动查看历史了，点击面板也会自动切换焦点</p>
 </p></div><div class="share"><span>Share</span>&nbsp;<span class="soc"><a class="fa fa-bookmark" href="javascript:(function(){EN_CLIP_HOST='http://www.evernote.com';try{var%20x=document.createElement('SCRIPT');x.type='text/javascript';x.src=EN_CLIP_HOST+'/public/bookmarkClipper.js?'+(new%20Date().getTime()/100000);document.getElementsByTagName('head')[0].appendChild(x);}catch(e){location.href=EN_CLIP_HOST+'/clip.action?url='+encodeURIComponent(location.href)+'&amp;title='+encodeURIComponent(document.title);}})();" ref="nofollow" target="_blank"></a></span><span class="soc"><a class="fa fa-weibo" href="javascript:void((function(s,d,e){try{}catch(e){}var f='http://service.weibo.com/share/share.php?',u=d.location.href,p=['url=',e(u),'&amp;title=',e(d.title),'&amp;appkey=2924220432'].join('');function a(){if(!window.open([f,p].join(''),'mb',['toolbar=0,status=0,resizable=1,width=620,height=450,left=',(s.width-620)/2,',top=',(s.height-450)/2].join('')))u.href=[f,p].join('');};if(/Firefox/.test(navigator.userAgent)){setTimeout(a,0)}else{a()}})(screen,document,encodeURIComponent));"></a></span><span class="soc"><a class="fa fa-twitter" target="_blank" rel="noopener" href="http://twitter.com/home?status=https://0xhanniba1.github.io/2026/01/tmux/%20韩老魔的博客%20tmux命令"></a></span></div><div class="pagination"><p class="clearfix"><span class="pre pagbuttons"><a role="navigation" href="/2026/01/PSB-guide/" title="系统性地使用Claude Code编写新项目"><i class="fa fa-angle-double-left"></i>&nbsp;Previous post: 系统性地使用Claude Code编写新项目</a></span><span>&nbsp;</span><span class="next pagbuttons"><a role="navigation" href="/2026/01/2026-W02/" title="2026-W02">Next post: 2026-W02&nbsp;<i class="fa fa-angle-double-right"></i></a></span></p></div></div></div></div><div class="visible-xs site-bottom-footer"><footer><p>&copy;&nbsp;2026&nbsp;<a target="_blank" href="https://0xhanniba1.github.io" rel="noopener noreferrer">0xHanniba1</a></p><p>Theme&nbsp;<a target="_blank" href="https://github.com/SumiMakito/hexo-theme-typography" rel="noopener noreferrer">Typography</a>&nbsp;by&nbsp;<a target="_blank" href="https://www.keep.moe" rel="noopener noreferrer">Makito</a></p><p>Proudly published with&nbsp;<a target="_blank" href="https://hexo.io" rel="noopener noreferrer">Hexo</a></p></footer></div></div></div></div><script src="/js/jquery-3.1.0.min.js"></script><script src="/js/bootstrap.min.js"></script><script src="/js/jquery-migrate-1.2.1.min.js"></script><script src="/js/jquery.appear.js"></script><script src="/js/google-analytics.js"></script><script src="/js/typography.js"></script></body></html>

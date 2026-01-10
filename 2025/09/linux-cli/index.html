@@ -1,65 +1,85 @@
-<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><meta name="author"><title>Linux常用命令 · 韩老魔的博客</title><meta name="description" content="第一部分：基础技能 - 构建可信赖的测试环境根本问题： 如何确保我的测试环境是干净、正确、且可重复的？ 核心原则： 任何测试的有效性都建立在一个稳定且配置正确的环境之上。以下命令是构建和维护这种环境的基石。
-A. 文件系统：管理测试资产这是我们的数字化工作台，存放着代码、数据、日志和脚本。
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><meta name="author"><title>Linux常用命令 · 韩老魔的博客</title><meta name="description" content="第一部分：基础技能 - 构建可信赖的测试环境
+根本问题： 如何确保我的测试环境是干净、正确、且可重复的？ 核心原则： 任何测试的有效性都建立在一个稳定且配置正确的环境之上。以下命令是构建和维护这种环境的基石。
+A. 文件系统：管理测试资产
+这是我们的数字化工作台，存放着代码、数据、日志和脚本。
 
-导航与"><meta name="og:description" content="第一部分：基础技能 - 构建可信赖的测试环境根本问题： 如何确保我的测试环境是干净、正确、且可重复的？ 核心原则： 任何测试的有效性都建立在一个稳定且配置正确的环境之上。以下命令是构建和维护这种环境的基石。
-A. 文件系统：管理测试资产这是我们的数字化工作台，存放着代码、数据、日志和脚本。
+导"><meta name="og:description" content="第一部分：基础技能 - 构建可信赖的测试环境
+根本问题： 如何确保我的测试环境是干净、正确、且可重复的？ 核心原则： 任何测试的有效性都建立在一个稳定且配置正确的环境之上。以下命令是构建和维护这种环境的基石。
+A. 文件系统：管理测试资产
+这是我们的数字化工作台，存放着代码、数据、日志和脚本。
 
-导航与"><meta name="twitter:site" content="韩老魔的博客"><meta name="twitter:title" content="Linux常用命令"><meta name="twitter:card" content="summary"><meta name="keywords" content=""><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="renderer" content="webkit"><link rel="short icon" href="/images/favicon.png" type="image/x-icon"><link rel="stylesheet" href="/css/bootstrap.min.css"><link rel="stylesheet" href="/css/font-awesome.min.css"><link rel="stylesheet" href="/css/style.css"><link rel="stylesheet" href="/css/custom.css"><link rel="alternate" type="application/atom+xml" title="ATOM 1.0" href="/atom.xml"><meta name="generator" content="Hexo 7.3.0"></head><body><div class="container" id="stage"><div class="row"><div class="col-sm-3 col-xs-12 side-container invisible" id="side-bar"><div class="vertical-text site-title"><h3 class="site-title-small" tabindex="-1"><a class="a-title" href="/">0xHanniba1's blog</a></h3><h1 class="site-title-large" tabindex="-1"><a class="a-title" href="/">慢就是快 ｜ 自律 ｜ 坚持</a></h1><!--h6(onclick="triggerSiteNav()") Trigger--></div><br class="visible-lg visible-md visible-sm"><div class="site-title-links" id="site-nav"><ul><li><a href="/">Home</a></li><li><a href="/archives">Archive</a></li><li><a href="/tags">Tags</a></li><li class="soc"><a href="https://github.com/0xHanniba1" target="_blank" rel="noopener noreferrer" aria-label="Github"><i class="fa fa-github">&nbsp;</i></a><a href="https://0xhanniba1.github.io/atom.xml" target="_blank" rel="noopener noreferrer" aria-label="RSS"><i class="fa fa-rss">&nbsp;</i></a></li></ul><div class="visible-lg visible-md visible-sm site-nav-footer"><br class="site-nav-footer-br"><footer><p>&copy;&nbsp;2026&nbsp;<a target="_blank" href="https://0xhanniba1.github.io" rel="noopener noreferrer">0xHanniba1</a></p><p>Theme&nbsp;<a target="_blank" href="https://github.com/SumiMakito/hexo-theme-typography" rel="noopener noreferrer">Typography</a>&nbsp;by&nbsp;<a target="_blank" href="https://www.keep.moe" rel="noopener noreferrer">Makito</a></p><p>Proudly published with&nbsp;<a target="_blank" href="https://hexo.io" rel="noopener noreferrer">Hexo</a></p></footer></div></div></div><div class="col-sm-9 col-xs-12 main-container invisible" id="main-container"><div class="autopagerize_page_element"><div class="content"><div class="post-page"><div class="post-container"><p class="post-title"><a>Linux常用命令</a></p><p class="post-meta"><span class="date meta-item">Posted at&nbsp;2025-09-27</span><span class="meta-item"><i class="fa fa-tag"></i><span>&nbsp;</span><a class="a-tag" href="/tags/测试/" title="测试">测试</a><span>&nbsp;</span></span></p><p class="post-abstract"><h3 id="第一部分：基础技能-构建可信赖的测试环境"><a href="#第一部分：基础技能-构建可信赖的测试环境" class="headerlink" title="第一部分：基础技能 - 构建可信赖的测试环境"></a><strong>第一部分：基础技能 - 构建可信赖的测试环境</strong></h3><p><strong>根本问题：</strong> 如何确保我的测试环境是干净、正确、且可重复的？ <strong>核心原则：</strong> 任何测试的有效性都建立在一个稳定且配置正确的环境之上。以下命令是构建和维护这种环境的基石。</p>
-<h4 id="A-文件系统：管理测试资产"><a href="#A-文件系统：管理测试资产" class="headerlink" title="A. 文件系统：管理测试资产"></a><strong>A. 文件系统：管理测试资产</strong></h4><p>这是我们的数字化工作台，存放着代码、数据、日志和脚本。</p>
+导"><meta name="twitter:site" content="韩老魔的博客"><meta name="twitter:title" content="Linux常用命令"><meta name="twitter:card" content="summary"><meta name="keywords" content=""><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="renderer" content="webkit"><link rel="short icon" href="/images/favicon.png" type="image/x-icon"><link rel="stylesheet" href="/css/bootstrap.min.css"><link rel="stylesheet" href="/css/font-awesome.min.css"><link rel="stylesheet" href="/css/style.css"><link rel="alternate" type="application/atom+xml" title="ATOM 1.0" href="/atom.xml"><meta name="generator" content="Hexo 7.3.0"></head><body><div class="container" id="stage"><div class="row"><div class="col-sm-3 col-xs-12 side-container invisible" id="side-bar"><div class="vertical-text site-title"><h3 class="site-title-small" tabindex="-1"><a class="a-title" href="/">0xHanniba1's blog</a></h3><h1 class="site-title-large" tabindex="-1"><a class="a-title" href="/">慢就是快 ｜ 自律 ｜ 坚持</a></h1><!--h6(onclick="triggerSiteNav()") Trigger--></div><br class="visible-lg visible-md visible-sm"><div class="site-title-links" id="site-nav"><ul><li><a href="/">Home</a></li><li><a href="/archives">Archive</a></li><li><a href="/tags">Tags</a></li><li class="soc"><a href="https://github.com/0xHanniba1" target="_blank" rel="noopener noreferrer" aria-label="Github"><i class="fa fa-github">&nbsp;</i></a><a href="https://0xhanniba1.github.io/atom.xml" target="_blank" rel="noopener noreferrer" aria-label="RSS"><i class="fa fa-rss">&nbsp;</i></a></li></ul><div class="visible-lg visible-md visible-sm site-nav-footer"><br class="site-nav-footer-br"><footer><p>&copy;&nbsp;2026&nbsp;<a target="_blank" href="https://0xhanniba1.github.io" rel="noopener noreferrer">0xHanniba1</a></p><p>Theme&nbsp;<a target="_blank" href="https://github.com/SumiMakito/hexo-theme-typography" rel="noopener noreferrer">Typography</a>&nbsp;by&nbsp;<a target="_blank" href="https://www.keep.moe" rel="noopener noreferrer">Makito</a></p><p>Proudly published with&nbsp;<a target="_blank" href="https://hexo.io" rel="noopener noreferrer">Hexo</a></p></footer></div></div></div><div class="col-sm-9 col-xs-12 main-container invisible" id="main-container"><div class="autopagerize_page_element"><div class="content"><div class="post-page"><div class="post-container"><p class="post-title"><a>Linux常用命令</a></p><p class="post-meta"><span class="date meta-item">Posted at&nbsp;2025-09-27</span><span class="meta-item"><i class="fa fa-tag"></i><span>&nbsp;</span><a class="a-tag" href="/tags/测试/" title="测试">测试</a><span>&nbsp;</span></span></p><p class="post-abstract"><h3 id="第一部分：基础技能-构建可信赖的测试环境"><strong>第一部分：基础技能 - 构建可信赖的测试环境</strong></h3>
+<p><strong>根本问题：</strong> 如何确保我的测试环境是干净、正确、且可重复的？ <strong>核心原则：</strong> 任何测试的有效性都建立在一个稳定且配置正确的环境之上。以下命令是构建和维护这种环境的基石。</p>
+<h4 id="A-文件系统：管理测试资产"><strong>A. 文件系统：管理测试资产</strong></h4>
+<p>这是我们的数字化工作台，存放着代码、数据、日志和脚本。</p>
 <ul>
-<li><strong>导航与检视 (我们在哪？这里有什么？)</strong><ul>
+<li><strong>导航与检视 (我们在哪？这里有什么？)</strong>
+<ul>
 <li><code>pwd</code> (Print Working Directory): 回答“我现在在哪里？”这个问题，获取当前位置的绝对路径。</li>
 <li><code>ls -lah</code> (List): 回答“这里有什么？”。 <code>-l</code> (长格式) 看权限和所有者，<code>-a</code> (所有) 看隐藏文件，<code>-h</code> (人类可读) 看文件大小。这是检查环境状态的第一步。</li>
 <li><code>cd</code> (Change Directory): 切换工作空间，去往你需要操作的地方。</li>
 </ul>
 </li>
-<li><strong>创建与组织 (搭建工作区)</strong><ul>
+<li><strong>创建与组织 (搭建工作区)</strong>
+<ul>
 <li><code>mkdir -p &lt;路径&gt;</code>: 创建目录。<code>-p</code> 选项能一次性创建多层嵌套的目录，非常适合组织测试结果，如 <code>mkdir -p test_results/run_20250927</code>。</li>
 <li><code>touch &lt;文件名&gt;</code>: 创建一个空文件，常用于脚本中创建锁文件或日志占位符。</li>
 </ul>
 </li>
-<li><strong>操作与管理 (移动和清理资产)</strong><ul>
+<li><strong>操作与管理 (移动和清理资产)</strong>
+<ul>
 <li><code>cp -r &lt;源&gt; &lt;目标&gt;</code>: 复制文件或目录。<code>-r</code> 用于递归复制整个目录，是准备测试数据的常用操作。</li>
-<li><code>mv &lt;源&gt; &lt;目标&gt;</code>: 移动或重命名文件&#x2F;目录。</li>
+<li><code>mv &lt;源&gt; &lt;目标&gt;</code>: 移动或重命名文件/目录。</li>
 <li><code>rm -rf &lt;文件/目录&gt;</code>: 删除文件或目录。<code>-r</code> 递归删除，<code>-f</code> 强制执行。<strong>这是一个高风险操作，使用前请三思。</strong></li>
 </ul>
 </li>
-<li><strong>精确定位 (大海捞针)</strong><ul>
-<li><code>find &lt;路径&gt; -name &quot;&lt;模式&gt;&quot;</code>: 在指定路径下根据名称、类型、修改时间等多种条件查找文件。<ul>
+<li><strong>精确定位 (大海捞针)</strong>
+<ul>
+<li><code>find &lt;路径&gt; -name &quot;&lt;模式&gt;&quot;</code>: 在指定路径下根据名称、类型、修改时间等多种条件查找文件。
+<ul>
 <li><strong>测试场景:</strong> <code>find /var/log -name &quot;*.log&quot; -mtime -1</code> -&gt; 查找过去24小时内被修改过的所有日志文件，是排查近期问题的利器。</li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
-<h4 id="B-权限管理：控制访问权限"><a href="#B-权限管理：控制访问权限" class="headerlink" title="B. 权限管理：控制访问权限"></a><strong>B. 权限管理：控制访问权限</strong></h4><p><strong>根本问题：</strong> 谁能对这个文件做什么？（读、写、执行） 这是导致自动化脚本失败最常见也最容易被忽略的原因之一。</p>
+<h4 id="B-权限管理：控制访问权限"><strong>B. 权限管理：控制访问权限</strong></h4>
+<p><strong>根本问题：</strong> 谁能对这个文件做什么？（读、写、执行） 这是导致自动化脚本失败最常见也最容易被忽略的原因之一。</p>
 <ul>
-<li><code>chmod</code> (Change Mode): 修改权限。<ul>
+<li><code>chmod</code> (Change Mode): 修改权限。
+<ul>
 <li><strong>场景:</strong> 自动化脚本无法执行？ -&gt; <code>chmod +x my_script.sh</code> (为脚本添加执行权限)。</li>
-<li><strong>两种模式:</strong><ul>
+<li><strong>两种模式:</strong>
+<ul>
 <li>符号模式 (易读): <code>u+x</code> (为所有者增加执行权限), <code>g-w</code> (为用户组移除写权限)。</li>
 <li>八进制模式 (高效): <code>755</code>, <code>644</code>。<code>755</code> 通常用于目录和脚本，<code>644</code> 用于普通文件。</li>
 </ul>
 </li>
 </ul>
 </li>
-<li><code>chown</code> (Change Owner): 更改文件&#x2F;目录的所有者和所属组。<ul>
+<li><code>chown</code> (Change Owner): 更改文件/目录的所有者和所属组。
+<ul>
 <li><strong>场景:</strong> 被测应用无法写入日志？ -&gt; 检查日志目录的所有者是否为运行该应用的用户，如果不是，使用 <code>chown -R app_user:app_group /var/log/app</code> 修正。</li>
 </ul>
 </li>
 </ul>
 <hr>
-<h3 id="第二部分：核心技能-从数据中提取洞见"><a href="#第二部分：核心技能-从数据中提取洞见" class="headerlink" title="第二部分：核心技能 - 从数据中提取洞见"></a><strong>第二部分：核心技能 - 从数据中提取洞见</strong></h3><p><strong>根本问题：</strong> 系统出错了，日志里记录了什么？海量日志中，哪一句是关键信息？ <strong>核心原则：</strong> 日志是系统行为的唯一事实来源。我们的任务不是“读”日志，而是“审问”日志，从中压榨出有价值的信息。</p>
-<h4 id="A-查看日志：初步侦查"><a href="#A-查看日志：初步侦查" class="headerlink" title="A. 查看日志：初步侦查"></a><strong>A. 查看日志：初步侦查</strong></h4><ul>
+<h3 id="第二部分：核心技能-从数据中提取洞见"><strong>第二部分：核心技能 - 从数据中提取洞见</strong></h3>
+<p><strong>根本问题：</strong> 系统出错了，日志里记录了什么？海量日志中，哪一句是关键信息？ <strong>核心原则：</strong> 日志是系统行为的唯一事实来源。我们的任务不是“读”日志，而是“审问”日志，从中压榨出有价值的信息。</p>
+<h4 id="A-查看日志：初步侦查"><strong>A. 查看日志：初步侦查</strong></h4>
+<ul>
 <li><code>cat</code>: 一次性显示整个文件（仅适用于小文件）。</li>
 <li><code>less</code>: <strong>查看大文件的正确方式。</strong> 交互式查看，支持搜索 (<code>/</code>) 和翻页，不消耗大量内存。</li>
-<li><code>head</code>&#x2F;<code>tail</code>: 查看文件的开头&#x2F;结尾。</li>
+<li><code>head</code>/<code>tail</code>: 查看文件的开头/结尾。</li>
 <li><code>tail -f &lt;文件名&gt;</code>: <strong>实时问题分析的王者。</strong> 持续监控文件末尾的新增内容，可以将测试操作与系统日志输出实时关联。</li>
 </ul>
-<h4 id="B-过滤与分析：沙里淘金"><a href="#B-过滤与分析：沙里淘金" class="headerlink" title="B. 过滤与分析：沙里淘金"></a><strong>B. 过滤与分析：沙里淘金</strong></h4><ul>
-<li><code>grep</code> (Global Regular Expression Print): <strong>文本搜索的瑞士军刀。</strong><ul>
+<h4 id="B-过滤与分析：沙里淘金"><strong>B. 过滤与分析：沙里淘金</strong></h4>
+<ul>
+<li><code>grep</code> (Global Regular Expression Print): <strong>文本搜索的瑞士军刀。</strong>
+<ul>
 <li><strong>核心功能:</strong> 筛选包含特定模式的行。<code>grep &quot;ERROR&quot; app.log</code>。</li>
-<li><strong>关键选项:</strong><ul>
+<li><strong>关键选项:</strong>
+<ul>
 <li><code>-i</code>: 忽略大小写。</li>
 <li><code>-C &lt;数字&gt;</code> (Context): 显示匹配行的上下文，理解错误背景至关重要。</li>
 <li><code>-v</code> (Invert): 反向匹配，排除无关信息。</li>
@@ -68,38 +88,47 @@ A. 文件系统：管理测试资产这是我们的数字化工作台，存放�
 </li>
 </ul>
 </li>
-<li><code>sed</code> (Stream Editor): <strong>行编辑器。</strong> 擅长对文本行进行批量<strong>替换、删除、插入</strong>。<ul>
-<li><strong>场景:</strong> <code>sed &#39;s/DEBUG/INFO/g&#39; log.txt</code> -&gt; 将日志中的 “DEBUG” 全部替换为 “INFO”，便于分析。</li>
+<li><code>sed</code> (Stream Editor): <strong>行编辑器。</strong> 擅长对文本行进行批量<strong>替换、删除、插入</strong>。
+<ul>
+<li><strong>场景:</strong> <code>sed 's/DEBUG/INFO/g' log.txt</code> -&gt; 将日志中的 “DEBUG” 全部替换为 “INFO”，便于分析。</li>
 </ul>
 </li>
-<li><code>awk</code> (Aho, Weinberger, and Kernaghan): <strong>列处理器。</strong> 擅长将一行文本分割成多个字段（列）并进行处理。<ul>
+<li><code>awk</code> (Aho, Weinberger, and Kernaghan): <strong>列处理器。</strong> 擅长将一行文本分割成多个字段（列）并进行处理。
+<ul>
 <li><strong>核心能力:</strong> 将非结构化或半结构化的日志<strong>数据化</strong>。</li>
-<li><strong>场景:</strong> 从访问日志中计算平均响应时间。 <code>grep &quot;200 OK&quot; access.log | awk &#39;&#123;sum+=$10&#125; END &#123;print sum/NR&#125;&#39;</code> -&gt; 筛选成功请求，并对第10列（响应大小）求和，最后打印平均值。</li>
+<li><strong>场景:</strong> 从访问日志中计算平均响应时间。 <code>grep &quot;200 OK&quot; access.log | awk '&#123;sum+=$10&#125; END &#123;print sum/NR&#125;'</code> -&gt; 筛选成功请求，并对第10列（响应大小）求和，最后打印平均值。</li>
 </ul>
 </li>
 </ul>
 <hr>
-<h3 id="第三部分：控制被测应用-管理进程生命周期"><a href="#第三部分：控制被测应用-管理进程生命周期" class="headerlink" title="第三部分：控制被测应用 - 管理进程生命周期"></a><strong>第三部分：控制被测应用 - 管理进程生命周期</strong></h3><p><strong>根本问题：</strong> 我的应用启动了吗？它运行得怎么样？如何安全地启停它？ <strong>核心原则：</strong> 建立一个“验证 -&gt; 观察 -&gt; 控制”的反馈回路来主动管理被测应用。</p>
+<h3 id="第三部分：控制被测应用-管理进程生命周期"><strong>第三部分：控制被测应用 - 管理进程生命周期</strong></h3>
+<p><strong>根本问题：</strong> 我的应用启动了吗？它运行得怎么样？如何安全地启停它？ <strong>核心原则：</strong> 建立一个“验证 -&gt; 观察 -&gt; 控制”的反馈回路来主动管理被测应用。</p>
 <ul>
 <li><strong><code>ps aux | grep &lt;应用名&gt;</code></strong>: <strong>验证 (Verify)</strong> 进程是否存在、状态如何。这是测试开始前的第一步检查。</li>
 <li><code>top</code>: <strong>观察 (Observe)</strong> 系统和进程的实时资源消耗（CPU、内存）。这是诊断性能问题的首选工具。</li>
-<li><code>kill</code>: <strong>控制 (Control)</strong> 进程的生命。<ul>
+<li><code>kill</code>: <strong>控制 (Control)</strong> 进程的生命。
+<ul>
 <li><code>kill &lt;PID&gt;</code>: 发送 SIGTERM (15) 信号，请求进程“优雅地”退出。</li>
 <li><code>kill -9 &lt;PID&gt;</code>: 发送 SIGKILL (9) 信号，强制终止进程。这是最后的手段。</li>
 </ul>
 </li>
 </ul>
 <hr>
-<h3 id="第四部分：高级诊断-深入性能与网络"><a href="#第四部分：高级诊断-深入性能与网络" class="headerlink" title="第四部分：高级诊断 - 深入性能与网络"></a><strong>第四部分：高级诊断 - 深入性能与网络</strong></h3><p><strong>根本问题：</strong> 系统为什么慢？是 CPU、内存、磁盘还是网络的问题？API 调用为何失败？</p>
-<h4 id="A-系统性能剖析"><a href="#A-系统性能剖析" class="headerlink" title="A. 系统性能剖析"></a><strong>A. 系统性能剖析</strong></h4><ul>
-<li><strong>宏观监控 (发现症状):</strong><ul>
+<h3 id="第四部分：高级诊断-深入性能与网络"><strong>第四部分：高级诊断 - 深入性能与网络</strong></h3>
+<p><strong>根本问题：</strong> 系统为什么慢？是 CPU、内存、磁盘还是网络的问题？API 调用为何失败？</p>
+<h4 id="A-系统性能剖析"><strong>A. 系统性能剖析</strong></h4>
+<ul>
+<li><strong>宏观监控 (发现症状):</strong>
+<ul>
 <li><code>free -h</code>: 查看内存和交换空间使用情况。</li>
-<li><code>vmstat</code>: 全面了解 CPU、内存、I&#x2F;O 的动态。</li>
-<li><code>iostat</code>: 深入分析磁盘 I&#x2F;O 性能。</li>
+<li><code>vmstat</code>: 全面了解 CPU、内存、I/O 的动态。</li>
+<li><code>iostat</code>: 深入分析磁盘 I/O 性能。</li>
 </ul>
 </li>
-<li><strong>微观剖析 (定位病因):</strong><ul>
-<li><code>perf</code>: <strong>专家的终极武器，能直接定位到代码函数级别的性能瓶颈。</strong><ul>
+<li><strong>微观剖析 (定位病因):</strong>
+<ul>
+<li><code>perf</code>: <strong>专家的终极武器，能直接定位到代码函数级别的性能瓶颈。</strong>
+<ul>
 <li><code>perf stat &lt;命令&gt;</code>: 快速获取一个操作的宏观性能指标。</li>
 <li><code>perf top</code>: 实时查看消耗 CPU 最多的函数。</li>
 <li><code>perf record</code> &amp; <code>perf report</code>: 记录详细数据并离线分析，找出导致性能问题的具体调用链。</li>
@@ -108,30 +137,36 @@ A. 文件系统：管理测试资产这是我们的数字化工作台，存放�
 </ul>
 </li>
 </ul>
-<h4 id="B-网络诊断与测试"><a href="#B-网络诊断与测试" class="headerlink" title="B. 网络诊断与测试"></a><strong>B. 网络诊断与测试</strong></h4><ul>
-<li><strong>基础连通性:</strong><ul>
+<h4 id="B-网络诊断与测试"><strong>B. 网络诊断与测试</strong></h4>
+<ul>
+<li><strong>基础连通性:</strong>
+<ul>
 <li><code>ping</code>: 检查两台主机之间网络是否通畅。</li>
 <li><code>traceroute</code>: 显示数据包经过的路由路径，定位网络延迟点。</li>
 <li><code>nslookup</code>: 验证域名解析是否正确。</li>
 </ul>
 </li>
-<li><strong>端口与连接:</strong><ul>
+<li><strong>端口与连接:</strong>
+<ul>
 <li><code>netstat -lntp</code>: 查看哪些进程在监听哪些 TCP 端口。验证服务是否成功启动并监听在正确端口上。</li>
 </ul>
 </li>
-<li><strong>API 交互:</strong><ul>
-<li><code>curl</code>: <strong>API 测试的命令行王者。</strong> 模拟各类 HTTP 请求。<ul>
+<li><strong>API 交互:</strong>
+<ul>
+<li><code>curl</code>: <strong>API 测试的命令行王者。</strong> 模拟各类 HTTP 请求。
+<ul>
 <li><code>-X &lt;方法&gt;</code>: 指定请求方法 (GET, POST, etc.)。</li>
-<li><code>-H &quot;&lt;头信息&gt;&quot;</code>: 添加请求头 (e.g., “Content-Type: application&#x2F;json”)。</li>
-<li><code>-d &#39;&lt;数据&gt;&#39;</code>: 发送请求体。</li>
+<li><code>-H &quot;&lt;头信息&gt;&quot;</code>: 添加请求头 (e.g., “Content-Type: application/json”)。</li>
+<li><code>-d '&lt;数据&gt;'</code>: 发送请求体。</li>
 <li><code>-v</code>: 显示详细的通信过程，用于调试。</li>
 <li><code>-o &lt;文件&gt;</code>: 将响应输出到文件。</li>
 </ul>
 </li>
 </ul>
 </li>
-<li><strong>安全文件传输:</strong><ul>
-<li><code>scp -r &lt;源&gt; &lt;目标&gt;</code>: 在本地和远程服务器之间安全地复制文件&#x2F;目录。用于部署构建包、上传测试数据、下载日志报告。</li>
+<li><strong>安全文件传输:</strong>
+<ul>
+<li><code>scp -r &lt;源&gt; &lt;目标&gt;</code>: 在本地和远程服务器之间安全地复制文件/目录。用于部署构建包、上传测试数据、下载日志报告。</li>
 </ul>
 </li>
 </ul>
