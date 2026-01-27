@@ -11,7 +11,7 @@ Clawdbot 是一个开源的个人 AI 助手，可以通过 Telegram、WhatsApp �
 <h2 id="1-购买-VPS">1. 购买 VPS</h2>
 <p>推荐 <a target="_blank" rel="noopener" href="https://www.dmit.io/">DMIT</a>，选择 <strong>Los Angeles + Premium 网络</strong>，国内访问质量好。</p>
 <p><strong>注意</strong>：开着代理时 SSH 可能无法连接，需要把 VPS IP 加到代理的直连规则中。</p>
-<img src="clawdbot/image-20260126224519319.png" alt="Shadowrocket 直连配置" style="zoom:50%;" />
+<img src="/Users/kerwin/my-blog/source/_posts/clawdbot/image-20260127085858242.png" alt="image-20260127085858242" style="zoom:50%;" />
 <h2 id="2-安装-Clawdbot">2. 安装 Clawdbot</h2>
 <p>SSH 登录 VPS 后执行：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 更新系统</span></span><br><span class="line">apt update &amp;&amp; apt upgrade -y</span><br><span class="line"></span><br><span class="line"><span class="comment"># 一键安装</span></span><br><span class="line">curl -fsSL https://clawd.bot/install.sh | bash</span><br></pre></td></tr></table></figure>
@@ -38,10 +38,10 @@ Clawdbot 是一个开源的个人 AI 助手，可以通过 Telegram、WhatsApp �
 <li>点击 <strong>Allow From</strong> 旁边的 <strong>+ Add</strong></li>
 <li>添加你的 Telegram User ID</li>
 </ol>
-<img src="clawdbot/image-20260126225329618.png" alt="添加授权用户"  />
+<img src="/Users/kerwin/my-blog/source/_posts/clawdbot/image-20260127085940145.png" alt="image-20260127085940145" style="zoom:50%;" />
 <h3 id="4-4-完成配对">4.4 完成配对</h3>
 <p>在 Telegram 给 Bot 发送 <code>/start</code>，会收到配对码：</p>
-<img src="clawdbot/image-20260126225028679.png" alt="配对信息" style="zoom:50%;" />
+<img src="/Users/kerwin/my-blog/source/_posts/clawdbot/image-20260127090007494.png" alt="image-20260127090007494" style="zoom:50%;" />
 <p>在 VPS 上执行配对命令：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">clawdbot pairing approve telegram 你的配对码</span><br></pre></td></tr></table></figure>
 <h2 id="5-模型选择">5. 模型选择</h2>
@@ -78,7 +78,7 @@ Clawdbot 是一个开源的个人 AI 助手，可以通过 Telegram、WhatsApp �
 </table>
 <p>推荐使用 <strong>OpenAI OAuth</strong>，可以利用 ChatGPT Plus 订阅额度。</p>
 <p>在 Web 管理页面 → Config → Models 中配置：</p>
-<img src="clawdbot/image-20260126224830859.png" alt="模型配置" style="zoom:50%;" />
+<img src="/Users/kerwin/my-blog/source/_posts/clawdbot/image-20260127090037152.png" alt="image-20260127090037152" style="zoom:50%;" />
 <h2 id="6-后台运行">6. 后台运行</h2>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 安装 pm2</span></span><br><span class="line">npm install -g pm2</span><br><span class="line"></span><br><span class="line"><span class="comment"># 启动并设置开机自启</span></span><br><span class="line">pm2 start clawdbot</span><br><span class="line">pm2 save</span><br><span class="line">pm2 startup</span><br></pre></td></tr></table></figure>
 <h2 id="常见问题">常见问题</h2>
