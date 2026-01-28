@@ -3,6 +3,28 @@
 	word-break: break-all;
 }
 
+.post-content table {
+	border-collapse: collapse;
+	width: 100%;
+	max-width: 100%;
+	margin: 1em 0;
+}
+.post-content table th,
+.post-content table td {
+	padding: 8px 16px;
+	border: 1px solid #e5e5e5;
+	text-align: left;
+	font-size: 1rem;
+}
+.post-content table th {
+	font-weight: bold;
+	background-color: #f6f8fa;
+	color: #2e405b;
+}
+.post-content table tbody tr:nth-child(odd) {
+	background-color: #f9f9f9;
+}
+
 #ds-thread {
 	margin: 0 30px!important
 }
