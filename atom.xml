@@ -6,7 +6,7 @@
   <link href="https://0xhanniba1.github.io/atom.xml" rel="self"/>
   
   <link href="https://0xhanniba1.github.io/"/>
-  <updated>2026-01-29T07:27:16.008Z</updated>
+  <updated>2026-01-29T08:56:42.804Z</updated>
   <id>https://0xhanniba1.github.io/</id>
   
   <author>
@@ -21,11 +21,22 @@
     <link href="https://0xhanniba1.github.io/2026/01/autotest-idea/"/>
     <id>https://0xhanniba1.github.io/2026/01/autotest-idea/</id>
     <published>2026-01-29T07:27:16.000Z</published>
-    <updated>2026-01-29T07:27:16.008Z</updated>
+    <updated>2026-01-29T08:56:42.804Z</updated>
+    
+    <content type="html"><![CDATA[<p>1.Jenkins 构建结果发给 clawdbot</p><p>思路：</p><img src="/2026/01/autotest-idea/image-20260129152850601.png" class="" alt="image-20260129152850601"><p>实现：</p><img src="/2026/01/autotest-idea/image-20260129165412577.png" class="" alt="image-20260129165412577"><img src="/2026/01/autotest-idea/image-20260129165635135.png" class="" alt="image-20260129165635135">]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;1.Jenkins 构建结果发给 clawdbot&lt;/p&gt;
+&lt;p&gt;思路：&lt;/p&gt;
+&lt;img src=&quot;/2026/01/autotest-idea/image-20260129152850601.png&quot; class=&quot;&quot; alt=&quot;image-20260129152850</summary>
+      
     
     
     
     
+    <category term="测试" scheme="https://0xhanniba1.github.io/tags/%E6%B5%8B%E8%AF%95/"/>
     
   </entry>
   
