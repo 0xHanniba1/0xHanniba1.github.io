@@ -6,7 +6,7 @@
   <link href="https://0xhanniba1.github.io/atom.xml" rel="self"/>
   
   <link href="https://0xhanniba1.github.io/"/>
-  <updated>2026-01-29T08:56:42.804Z</updated>
+  <updated>2026-01-30T14:01:53.912Z</updated>
   <id>https://0xhanniba1.github.io/</id>
   
   <author>
@@ -15,6 +15,19 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>llm-eval-learn</title>
+    <link href="https://0xhanniba1.github.io/2026/01/llm-eval-learn/"/>
+    <id>https://0xhanniba1.github.io/2026/01/llm-eval-learn/</id>
+    <published>2026-01-30T14:01:53.000Z</published>
+    <updated>2026-01-30T14:01:53.912Z</updated>
+    
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>autotest-idea</title>
@@ -483,31 +496,6 @@
     <category term="test" scheme="https://0xhanniba1.github.io/tags/test/"/>
     
     <category term="tpyora" scheme="https://0xhanniba1.github.io/tags/tpyora/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>testzk123</title>
-    <link href="https://0xhanniba1.github.io/2025/07/testzk/"/>
-    <id>https://0xhanniba1.github.io/2025/07/testzk/</id>
-    <published>2025-07-16T15:27:20.000Z</published>
-    <updated>2025-07-17T02:53:52.489Z</updated>
-    
-    <content type="html"><![CDATA[<p>1.新建文章</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new <span class="string">&quot;blog_operation_manual&quot;</span></span><br></pre></td></tr></table></figure><p>2.直接部署</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</span><br></pre></td></tr></table></figure><p>3.在 hexo-admin 中编辑文章内容</p><p>(1)hexo s -d</p><p>(2)进入localhost:4000/admin 页面编辑内容；setting 里设置图片存放在当前文章项目目录下</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;1.新建文章&lt;/p&gt;
-&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;</summary>
-      
-    
-    
-    
-    
-    <category term="test" scheme="https://0xhanniba1.github.io/tags/test/"/>
-    
-    <category term="Python" scheme="https://0xhanniba1.github.io/tags/Python/"/>
     
   </entry>
   
