@@ -383,6 +383,7 @@ body.theme-dark .search-results::-webkit-scrollbar-thumb {
 .topbar-search-kbd {
   display: flex;
   gap: 3px;
+  margin-left: auto;
 }
 .topbar-search-kbd kbd {
   display: inline-block;
