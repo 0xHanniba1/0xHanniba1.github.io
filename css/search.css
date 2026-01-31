@@ -365,7 +365,7 @@ body.theme-dark .search-results::-webkit-scrollbar-thumb {
   font-size: 13px;
   cursor: pointer;
   transition: background 0.2s ease, border-color 0.2s ease;
-  min-width: 400px;
+  min-width: 300px;
   text-decoration: none !important;
 }
 .topbar-search-trigger:hover {
