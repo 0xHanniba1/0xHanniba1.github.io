@@ -316,8 +316,8 @@ body.theme-dark .search-results::-webkit-scrollbar-thumb {
   right: 0;
   height: 50px;
   z-index: 9000;
-  background: #1e2d3d;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  background: #f5f5f5;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
   font-family: "Source Sans Pro", "Helvetica Neue", sans-serif;
 }
 .topbar-inner {
@@ -332,7 +332,7 @@ body.theme-dark .search-results::-webkit-scrollbar-thumb {
   flex-shrink: 0;
 }
 .topbar-brand {
-  color: #fff !important;
+  color: #2e405b !important;
   font-size: 15px;
   font-weight: 600;
   letter-spacing: 0.02em;
@@ -342,7 +342,7 @@ body.theme-dark .search-results::-webkit-scrollbar-thumb {
   white-space: nowrap;
 }
 .topbar-brand:hover {
-  color: rgba(255, 255, 255, 0.8) !important;
+  color: #1a2a3a !important;
   background: transparent !important;
   border-bottom: none !important;
 }
@@ -358,10 +358,10 @@ body.theme-dark .search-results::-webkit-scrollbar-thumb {
   gap: 10px;
   padding: 6px 14px;
   border-radius: 6px;
-  background: rgba(255, 255, 255, 0.08) !important;
-  border: 1px solid rgba(255, 255, 255, 0.1) !important;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
-  color: rgba(255, 255, 255, 0.5) !important;
+  background: rgba(0, 0, 0, 0.05) !important;
+  border: 1px solid rgba(0, 0, 0, 0.1) !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
+  color: rgba(0, 0, 0, 0.5) !important;
   font-size: 13px;
   cursor: pointer;
   transition: background 0.2s ease, border-color 0.2s ease;
@@ -369,9 +369,9 @@ body.theme-dark .search-results::-webkit-scrollbar-thumb {
   text-decoration: none !important;
 }
 .topbar-search-trigger:hover {
-  background: rgba(255, 255, 255, 0.12) !important;
-  border-color: rgba(255, 255, 255, 0.18) !important;
-  color: rgba(255, 255, 255, 0.7) !important;
+  background: rgba(0, 0, 0, 0.08) !important;
+  border-color: rgba(0, 0, 0, 0.15) !important;
+  color: rgba(0, 0, 0, 0.7) !important;
 }
 .topbar-search-trigger i {
   font-size: 13px;
@@ -389,10 +389,10 @@ body.theme-dark .search-results::-webkit-scrollbar-thumb {
   padding: 1px 5px;
   font-size: 11px;
   font-family: inherit;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(0, 0, 0, 0.08);
   border-radius: 3px;
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  color: rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  color: rgba(0, 0, 0, 0.5);
   line-height: 1.4;
 }
 .topbar-right {
@@ -408,7 +408,7 @@ body.theme-dark .search-results::-webkit-scrollbar-thumb {
   width: 34px;
   height: 34px;
   border-radius: 6px;
-  color: rgba(255, 255, 255, 0.6) !important;
+  color: rgba(0, 0, 0, 0.6) !important;
   border: none !important;
   border-bottom: none !important;
   background: transparent !important;
@@ -417,8 +417,8 @@ body.theme-dark .search-results::-webkit-scrollbar-thumb {
   cursor: pointer;
 }
 .topbar-icon:hover {
-  background: rgba(255, 255, 255, 0.1) !important;
-  color: #fff !important;
+  background: rgba(0, 0, 0, 0.08) !important;
+  color: #2e405b !important;
   border: none !important;
   border-bottom: none !important;
 }
