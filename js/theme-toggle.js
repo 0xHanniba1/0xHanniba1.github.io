@@ -4,18 +4,21 @@
   var toggleBtn = document.getElementById('topbar-theme-toggle');
   if (!toggleBtn) return;
 
-  var icon = toggleBtn.querySelector('i');
+  var sunIcon = toggleBtn.querySelector('.theme-icon-sun');
+  var moonIcon = toggleBtn.querySelector('.theme-icon-moon');
   var saved = localStorage.getItem('theme') || 'light';
 
   function applyTheme(theme) {
     if (theme === 'dark') {
       lightSheet.disabled = true;
       darkSheet.disabled = false;
-      icon.className = 'fa fa-moon-o';
+      if (sunIcon) sunIcon.style.display = 'none';
+      if (moonIcon) moonIcon.style.display = 'block';
     } else {
       lightSheet.disabled = false;
       darkSheet.disabled = true;
-      icon.className = 'fa fa-sun-o';
+      if (sunIcon) sunIcon.style.display = 'block';
+      if (moonIcon) moonIcon.style.display = 'none';
     }
     localStorage.setItem('theme', theme);
     if (theme === 'dark') {
