@@ -248,6 +248,55 @@
   letter-spacing: 0.03em;
 }
 
+/* Dark theme overrides */
+body.theme-dark .search-modal-overlay {
+  background: rgba(0, 0, 0, 0.5);
+}
+body.theme-dark .search-modal-content {
+  background: #2e405b url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAACJJREFUeNpi/P//Py8DpQCXISBxJlING4QaGEdDiQgAEGAAg8sST3LGZYoAAAAASUVORK5CYII=") repeat;
+  border-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.4);
+}
+body.theme-dark .search-header {
+  border-bottom-color: rgba(255, 255, 255, 0.2);
+}
+body.theme-dark .search-icon,
+body.theme-dark .search-input,
+body.theme-dark .search-close,
+body.theme-dark .search-empty,
+body.theme-dark .search-no-result,
+body.theme-dark .search-tip,
+body.theme-dark .search-result-title,
+body.theme-dark .search-result-content,
+body.theme-dark .search-result-meta .search-result-tag {
+  color: #e0e0e0;
+}
+body.theme-dark .search-input::placeholder {
+  color: #e0e0e0;
+}
+body.theme-dark .search-result-item:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-left-color: rgba(255, 255, 255, 0.2);
+}
+body.theme-dark .search-result-item.active {
+  background: rgba(255, 255, 255, 0.08);
+  border-left-color: #e0e0e0;
+}
+body.theme-dark .search-result-item + .search-result-item {
+  border-top-color: rgba(255, 255, 255, 0.06);
+}
+body.theme-dark .search-result-title .search-highlight,
+body.theme-dark .search-result-content .search-highlight {
+  color: #fff;
+  border-bottom-color: #fff;
+}
+body.theme-dark .search-footer {
+  border-top-color: rgba(255, 255, 255, 0.08);
+}
+body.theme-dark .search-results::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+}
+
 /* Mobile */
 @media (max-width: 768px) {
   .search-modal.active { padding-top: 6vh; }
