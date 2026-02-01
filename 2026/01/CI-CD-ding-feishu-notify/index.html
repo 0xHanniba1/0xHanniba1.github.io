@@ -16,15 +16,15 @@
 <li>根目录保留 <code>Jenkinsfile</code> 和 <code>requirements.txt</code>（如果有）。</li>
 </ol>
 <hr>
-<h3 id="第二步：配置群机器人-获取-Webhook">第二步：配置群机器人 (获取 Webhook)</h3>
-<h4 id="选项-A：钉钉-DingTalk">选项 A：钉钉 (DingTalk)</h4>
+<h3 id="第二步：配置群机器人-获取-webhook">第二步：配置群机器人 (获取 Webhook)</h3>
+<h4 id="选项-a：钉钉-dingtalk">选项 A：钉钉 (DingTalk)</h4>
 <ol>
 <li>进入钉钉群，点击右上角 <strong>群设置</strong> -&gt; <strong>智能群助手</strong>。</li>
 <li>点击 <strong>添加机器人</strong> -&gt; 选择 <strong>自定义 (通过Webhook接入)</strong>。</li>
 <li><strong>安全设置 (必选)</strong>：推荐选择 <strong>“自定义关键词”</strong>，填入 <strong>“构建通知”</strong> (或你脚本中定义的其他词)。</li>
 <li>完成添加，<strong>复制并保存 Webhook 地址</strong> (重点是 <code>access_token</code> 部分)。</li>
 </ol>
-<h4 id="选项-B：飞书-Feishu-Lark">选项 B：飞书 (Feishu/Lark)</h4>
+<h4 id="选项-b：飞书-feishu-lark">选项 B：飞书 (Feishu/Lark)</h4>
 <ol>
 <li>进入飞书群，点击右上角 <strong>设置</strong> -&gt; <strong>群机器人</strong>。</li>
 <li>点击 <strong>添加机器人</strong> -&gt; 选择 <strong>自定义机器人</strong>。</li>
@@ -32,7 +32,7 @@
 <li>完成添加，<strong>复制并保存 Webhook 地址</strong>。</li>
 </ol>
 <hr>
-<h3 id="第三步：脚本功能准备-Python-逻辑">第三步：脚本功能准备 (Python 逻辑)</h3>
+<h3 id="第三步：脚本功能准备-python-逻辑">第三步：脚本功能准备 (Python 逻辑)</h3>
 <p>你需要准备的脚本应具备以下逻辑（无需贴代码，确认功能即可）：</p>
 <ol>
 <li><strong>依赖库</strong>：使用 <code>requests</code> 库发送 HTTP 请求。</li>
@@ -47,7 +47,7 @@
 <li><strong>发送请求</strong>：将组装好的 JSON 数据 POST 给机器人的 Webhook 地址。</li>
 </ol>
 <hr>
-<h3 id="第四步：Jenkins-流水线集成-Jenkinsfile-逻辑">第四步：Jenkins 流水线集成 (Jenkinsfile 逻辑)</h3>
+<h3 id="第四步：jenkins-流水线集成-jenkinsfile-逻辑">第四步：Jenkins 流水线集成 (Jenkinsfile 逻辑)</h3>
 <p>在 Jenkinsfile 中配置以下流程：</p>
 <ol>
 <li><strong>Stage: 环境准备与测试</strong>

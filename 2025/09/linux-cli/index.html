@@ -10,7 +10,7 @@ A. 文件系统：管理测试资产
 
 导"><meta name="twitter:site" content="韩老魔的博客"><meta name="twitter:title" content="Linux常用命令"><meta name="twitter:card" content="summary"><meta name="keywords" content=""><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="renderer" content="webkit"><link rel="short icon" href="/images/favicon.png" type="image/x-icon"><link rel="stylesheet" href="/css/bootstrap.min.css"><link rel="stylesheet" href="/css/font-awesome.min.css"><link id="theme-light" rel="stylesheet" href="/css/style.css?v=20260131-1"><link id="theme-dark" rel="stylesheet" href="/css/style-dark.css?v=20260131-1" disabled><script>(function(){var t=localStorage.getItem('theme');if(t==='dark'){document.getElementById('theme-light').disabled=true;document.getElementById('theme-dark').disabled=false;}})();</script><link rel="stylesheet" href="/css/search.css?v=20260131-1"><link rel="alternate" type="application/atom+xml" title="ATOM 1.0" href="/atom.xml"><meta name="generator" content="Hexo 7.3.0"></head><body><nav class="topbar" id="topbar"><div class="topbar-inner"><div class="topbar-left"><a class="topbar-brand" href="/"><img class="topbar-favicon" src="/images/favicon.png" alt="favicon"> 韩老魔的博客</a></div><div class="topbar-center"><a class="topbar-search-trigger search-trigger" href="javascript:void(0)"><i class="fa fa-search"></i><span class="topbar-search-kbd"><kbd>Ctrl</kbd><kbd>K</kbd></span></a></div><div class="topbar-right"><a class="topbar-icon" id="topbar-theme-toggle" href="javascript:void(0)" aria-label="Toggle theme"><svg class="theme-icon-sun" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg><svg class="theme-icon-moon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg></a></div></div></nav><div class="container" id="stage"><div class="row"><div class="col-sm-3 col-xs-12 side-container invisible" id="side-bar"><div class="vertical-text site-title"><h3 class="site-title-small" tabindex="-1"><a class="a-title" href="/">0xHanniba1's blog</a></h3><h1 class="site-title-large" tabindex="-1"><a class="a-title" href="/">慢就是快 ｜ 自律 ｜ 坚持</a></h1><!--h6(onclick="triggerSiteNav()") Trigger--></div><br class="visible-lg visible-md visible-sm"><div class="site-title-links" id="site-nav"><ul><li><a href="/"><i class="fa fa-home">&nbsp;</i>Home</a></li><li><a href="/archives"><i class="fa fa-archive">&nbsp;</i>Archive</a></li><li><a href="/tags"><i class="fa fa-tags">&nbsp;</i>Tags</a></li><li class="soc"><a href="https://github.com/0xHanniba1" target="_blank" rel="noopener noreferrer" aria-label="Github"><i class="fa fa-github">&nbsp;</i></a><a href="https://0xhanniba1.github.io/atom.xml" target="_blank" rel="noopener noreferrer" aria-label="RSS"><i class="fa fa-rss">&nbsp;</i></a></li></ul><div class="visible-lg visible-md visible-sm site-nav-footer"><br class="site-nav-footer-br"><footer><p>&copy;&nbsp;2026&nbsp;<a target="_blank" href="https://0xhanniba1.github.io" rel="noopener noreferrer">0xHanniba1</a></p><p>Theme&nbsp;<a target="_blank" href="https://github.com/SumiMakito/hexo-theme-typography" rel="noopener noreferrer">Typography</a>&nbsp;by&nbsp;<a target="_blank" href="https://www.keep.moe" rel="noopener noreferrer">Makito</a></p><p>Proudly published with&nbsp;<a target="_blank" href="https://hexo.io" rel="noopener noreferrer">Hexo</a></p></footer></div></div></div><div class="col-sm-9 col-xs-12 main-container invisible" id="main-container"><div class="autopagerize_page_element"><div class="content"><div class="post-page"><div class="post-container"><p class="post-title"><a>Linux常用命令</a></p><p class="post-meta"><span class="date meta-item">Posted at&nbsp;2025-09-27</span><span class="meta-item"><i class="fa fa-tag"></i><span>&nbsp;</span><a class="a-tag" href="/tags/测试/" title="测试">测试</a><span>&nbsp;</span></span></p><div class="post-abstract"><h3 id="第一部分：基础技能-构建可信赖的测试环境"><strong>第一部分：基础技能 - 构建可信赖的测试环境</strong></h3>
 <p><strong>根本问题：</strong> 如何确保我的测试环境是干净、正确、且可重复的？ <strong>核心原则：</strong> 任何测试的有效性都建立在一个稳定且配置正确的环境之上。以下命令是构建和维护这种环境的基石。</p>
-<h4 id="A-文件系统：管理测试资产"><strong>A. 文件系统：管理测试资产</strong></h4>
+<h4 id="a-文件系统：管理测试资产"><strong>A. 文件系统：管理测试资产</strong></h4>
 <p>这是我们的数字化工作台，存放着代码、数据、日志和脚本。</p>
 <ul>
 <li><strong>导航与检视 (我们在哪？这里有什么？)</strong>
@@ -43,7 +43,7 @@ A. 文件系统：管理测试资产
 </ul>
 </li>
 </ul>
-<h4 id="B-权限管理：控制访问权限"><strong>B. 权限管理：控制访问权限</strong></h4>
+<h4 id="b-权限管理：控制访问权限"><strong>B. 权限管理：控制访问权限</strong></h4>
 <p><strong>根本问题：</strong> 谁能对这个文件做什么？（读、写、执行） 这是导致自动化脚本失败最常见也最容易被忽略的原因之一。</p>
 <ul>
 <li><code>chmod</code> (Change Mode): 修改权限。
@@ -66,14 +66,14 @@ A. 文件系统：管理测试资产
 <hr>
 <h3 id="第二部分：核心技能-从数据中提取洞见"><strong>第二部分：核心技能 - 从数据中提取洞见</strong></h3>
 <p><strong>根本问题：</strong> 系统出错了，日志里记录了什么？海量日志中，哪一句是关键信息？ <strong>核心原则：</strong> 日志是系统行为的唯一事实来源。我们的任务不是“读”日志，而是“审问”日志，从中压榨出有价值的信息。</p>
-<h4 id="A-查看日志：初步侦查"><strong>A. 查看日志：初步侦查</strong></h4>
+<h4 id="a-查看日志：初步侦查"><strong>A. 查看日志：初步侦查</strong></h4>
 <ul>
 <li><code>cat</code>: 一次性显示整个文件（仅适用于小文件）。</li>
 <li><code>less</code>: <strong>查看大文件的正确方式。</strong> 交互式查看，支持搜索 (<code>/</code>) 和翻页，不消耗大量内存。</li>
 <li><code>head</code>/<code>tail</code>: 查看文件的开头/结尾。</li>
 <li><code>tail -f &lt;文件名&gt;</code>: <strong>实时问题分析的王者。</strong> 持续监控文件末尾的新增内容，可以将测试操作与系统日志输出实时关联。</li>
 </ul>
-<h4 id="B-过滤与分析：沙里淘金"><strong>B. 过滤与分析：沙里淘金</strong></h4>
+<h4 id="b-过滤与分析：沙里淘金"><strong>B. 过滤与分析：沙里淘金</strong></h4>
 <ul>
 <li><code>grep</code> (Global Regular Expression Print): <strong>文本搜索的瑞士军刀。</strong>
 <ul>
@@ -116,7 +116,7 @@ A. 文件系统：管理测试资产
 <hr>
 <h3 id="第四部分：高级诊断-深入性能与网络"><strong>第四部分：高级诊断 - 深入性能与网络</strong></h3>
 <p><strong>根本问题：</strong> 系统为什么慢？是 CPU、内存、磁盘还是网络的问题？API 调用为何失败？</p>
-<h4 id="A-系统性能剖析"><strong>A. 系统性能剖析</strong></h4>
+<h4 id="a-系统性能剖析"><strong>A. 系统性能剖析</strong></h4>
 <ul>
 <li><strong>宏观监控 (发现症状):</strong>
 <ul>
@@ -137,7 +137,7 @@ A. 文件系统：管理测试资产
 </ul>
 </li>
 </ul>
-<h4 id="B-网络诊断与测试"><strong>B. 网络诊断与测试</strong></h4>
+<h4 id="b-网络诊断与测试"><strong>B. 网络诊断与测试</strong></h4>
 <ul>
 <li><strong>基础连通性:</strong>
 <ul>
