@@ -6,7 +6,7 @@
   <link href="https://0xhanniba1.github.io/atom.xml" rel="self"/>
   
   <link href="https://0xhanniba1.github.io/"/>
-  <updated>2026-01-30T14:13:24.616Z</updated>
+  <updated>2026-02-01T08:06:22.250Z</updated>
   <id>https://0xhanniba1.github.io/</id>
   
   <author>
@@ -15,6 +15,19 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>claude-code-guide</title>
+    <link href="https://0xhanniba1.github.io/2026/02/claude-code-guide/"/>
+    <id>https://0xhanniba1.github.io/2026/02/claude-code-guide/</id>
+    <published>2026-02-01T08:06:22.000Z</published>
+    <updated>2026-02-01T08:06:22.250Z</updated>
+    
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>LLM API 核心参数详解：Temperature、Top_p 与 Max_tokens</title>
@@ -486,32 +499,6 @@
     
     
     <category term="python" scheme="https://0xhanniba1.github.io/tags/python/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>配置并使用使用Typora编写文章</title>
-    <link href="https://0xhanniba1.github.io/2025/07/tpyora-writing-blog/"/>
-    <id>https://0xhanniba1.github.io/2025/07/tpyora-writing-blog/</id>
-    <published>2025-07-17T06:01:54.000Z</published>
-    <updated>2025-08-13T08:57:18.762Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="一、配置">一、配置</h2><p>1.配置 hexo 启动资源文件夹</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~/my-blog</span><br><span class="line">vi _config.yml</span><br></pre></td></tr></table></figure><p>修改和追加：</p><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">post_asset_folder:</span> <span class="literal">true</span>           <span class="comment"># 你已经启用，确认仍为 true</span></span><br><span class="line"></span><br><span class="line"><span class="attr">marked:</span></span><br><span class="line">  <span class="attr">prependRoot:</span> <span class="literal">true</span>               <span class="comment"># 给路径自动加站点根</span></span><br><span class="line">  <span class="attr">postAsset:</span> <span class="literal">true</span>                 <span class="comment"># &lt;—— 关键：让图片指向对应文章目录</span></span><br></pre></td></tr></table></figure><p>2.确认依赖</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm uninstall hexo-asset-image      <span class="comment"># 旧插件先卸掉，防止冲突</span></span><br><span class="line">npm install hexo-renderer-marked@latest --save</span><br></pre></td></tr></table></figure><p>3.配置 typora 图片设置</p><p>打开 typora-设置-图像：</p><p>(1)插入图片时：选择【复制到指定路径】</p><p>(2)图片存储路径：./${filename}</p><img src="/2025/07/tpyora-writing-blog/image-20250717144034933.png" class="" alt="image-20250717144034933"><h2 id="二、开写">二、开写</h2><p>1.新建文章</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new <span class="string">&quot;working_notes&quot;</span></span><br></pre></td></tr></table></figure><p>2.直接部署</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</span><br></pre></td></tr></table></figure><p>3.编辑内容</p><p>使用Typora打开working_notes.md文件编辑即可，创建文章时终端会显示md文件路径</p><img src="/2025/07/tpyora-writing-blog/image-20250809175727048.png" class="" alt="image-20250809175727048"><h2 id="三、额外配置">三、额外配置</h2><p>1.设置图标</p><p>(1)图标网站找一个图标，用 gpt 制作成32*32大小，将图片存在source/images/中，命名为favicon.png</p><img src="/2025/07/tpyora-writing-blog/image-20250811162013851.png" class="" alt="image-20250811162013851"><p>(2)编辑themes/typography/layout/partial/head.pug，原内容是href=“images/favicon.png, xxx”，添加一个/</p><img src="/2025/07/tpyora-writing-blog/image-20250811165900282.png" class="" alt="image-20250811165900282"><p>(3)去看看 <code>themes/typography/source/images</code> 里是否有 <code>favicon.png</code>；如果没有，就从现有图标处复制一份放进去</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h2 id=&quot;一、配置&quot;&gt;一、配置&lt;/h2&gt;
-&lt;p&gt;1.配置 hexo 启动资源文件夹&lt;/p&gt;
-&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/spa</summary>
-      
-    
-    
-    
-    
-    <category term="test" scheme="https://0xhanniba1.github.io/tags/test/"/>
-    
-    <category term="tpyora" scheme="https://0xhanniba1.github.io/tags/tpyora/"/>
     
   </entry>
   
