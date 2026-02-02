@@ -6,7 +6,7 @@
   <link href="https://0xhanniba1.github.io/atom.xml" rel="self"/>
   
   <link href="https://0xhanniba1.github.io/"/>
-  <updated>2026-02-01T08:53:48.039Z</updated>
+  <updated>2026-02-02T11:10:41.046Z</updated>
   <id>https://0xhanniba1.github.io/</id>
   
   <author>
@@ -15,6 +15,19 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>2026-W06</title>
+    <link href="https://0xhanniba1.github.io/2026/02/2026-W06/"/>
+    <id>https://0xhanniba1.github.io/2026/02/2026-W06/</id>
+    <published>2026-02-02T11:10:41.000Z</published>
+    <updated>2026-02-02T11:10:41.046Z</updated>
+    
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>Claude Code 完整使用指南</title>
@@ -440,9 +453,9 @@
     
     
     
-    <category term="x.com@dotey" scheme="https://0xhanniba1.github.io/tags/x-com-dotey/"/>
-    
     <category term="学习" scheme="https://0xhanniba1.github.io/tags/%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="x.com@dotey" scheme="https://0xhanniba1.github.io/tags/x-com-dotey/"/>
     
   </entry>
   
@@ -490,29 +503,6 @@
     
     
     <category term="学习" scheme="https://0xhanniba1.github.io/tags/%E5%AD%A6%E4%B9%A0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>工作杂记</title>
-    <link href="https://0xhanniba1.github.io/2025/08/working-notes/"/>
-    <id>https://0xhanniba1.github.io/2025/08/working-notes/</id>
-    <published>2025-08-09T09:40:45.000Z</published>
-    <updated>2025-08-10T08:39:25.629Z</updated>
-    
-    <content type="html"><![CDATA[<p>1.开启 shadowrocket 后，pip3 安装第三方包失败</p><img src="/2025/08/working-notes/image-20250809174528131.png" class="" alt="image-20250809174528131"><p>在终端执行运行(会调用官方安装包自带的证书修复脚本)：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">open <span class="string">&quot;/Applications/Python 3.13/Install Certificates.command&quot;</span></span><br></pre></td></tr></table></figure><p>2.设置悬停菜单常驻显示，方便元素定位</p><img src="/2025/08/working-notes/image-20250810163829116.png" class="" alt="image-20250810163829116">]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;1.开启 shadowrocket 后，pip3 安装第三方包失败&lt;/p&gt;
-&lt;img src=&quot;/2025/08/working-notes/image-20250809174528131.png&quot; class=&quot;&quot; alt=&quot;image-20250809174528131</summary>
-      
-    
-    
-    
-    
-    <category term="python" scheme="https://0xhanniba1.github.io/tags/python/"/>
     
   </entry>
   
