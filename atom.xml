@@ -6,7 +6,7 @@
   <link href="https://0xhanniba1.github.io/atom.xml" rel="self"/>
   
   <link href="https://0xhanniba1.github.io/"/>
-  <updated>2026-02-05T15:12:01.591Z</updated>
+  <updated>2026-02-06T14:54:07.446Z</updated>
   <id>https://0xhanniba1.github.io/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="https://0xhanniba1.github.io/2026/02/2026-W06/"/>
     <id>https://0xhanniba1.github.io/2026/02/2026-W06/</id>
     <published>2026-02-02T11:10:41.000Z</published>
-    <updated>2026-02-05T15:12:01.591Z</updated>
+    <updated>2026-02-06T14:54:07.446Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="本周概览-summary">本周概览 (Summary)</h2><ul><li><strong>一句话总结</strong>：</li><li><strong>进度</strong>：</li></ul><h2 id="每日记录-daily-log">每日记录 (Daily Log)</h2><h3 id="2026-02-02-周一">2026-02-02 (周一)</h3><ul><li><strong>随记</strong>：<ul class="contains-task-list"><li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox"> spotify 到期了，写一个本地音乐播放器</li><li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox"> llm-eval 学习模块 1-2</li></ul></li><li><strong>反思</strong>：<ul><li>有点焦虑，注意力不集中了</li></ul></li></ul><h3 id="2026-02-03-周二">2026-02-03 (周二)</h3><ul><li><strong>随记</strong>：<ul class="contains-task-list"><li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox"> 休息</li></ul></li><li><strong>反思</strong>：<ul><li>休息</li></ul></li></ul><h3 id="2026-02-04-周三">2026-02-04 (周三)</h3><ul><li><strong>随记</strong>：<ul class="contains-task-list"><li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox"> 学习了 BDD基础</li><li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox"> 安装了前端 skill：ui-ux-pro-max，做一个登录界面看看效果</li></ul></li><li><strong>反思</strong>：<ul><li>测试必须关注做什么，而不是怎么做</li><li>codex 和 claude code 马上又要发布新模型了，后续可以深入学习如何使用</li></ul></li></ul><h3 id="2026-02-05-周四">2026-02-05 (周四)</h3><ul><li><strong>随记</strong>：<ul class="contains-task-list"><li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox"> 继续学习 BDD</li></ul></li><li><strong>反思</strong>：<ul><li>没心思学习了</li></ul></li></ul><h2 id="本周复盘-weekly-review">本周复盘 (Weekly Review)</h2><ul><li><strong>Keep (继续保持)</strong>：*</li><li><strong>Improve (需要改进)</strong>：*</li><li><strong>Try (下周尝试)</strong>：*</li></ul>]]></content>
+    <content type="html"><![CDATA[<h2 id="本周概览-summary">本周概览 (Summary)</h2><ul><li><strong>一句话总结</strong>：</li><li><strong>进度</strong>：</li></ul><h2 id="每日记录-daily-log">每日记录 (Daily Log)</h2><h3 id="2026-02-02-周一">2026-02-02 (周一)</h3><ul><li><strong>随记</strong>：<ul class="contains-task-list"><li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox"> spotify 到期了，写一个本地音乐播放器</li><li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox"> llm-eval 学习模块 1-2</li></ul></li><li><strong>反思</strong>：<ul><li>有点焦虑，注意力不集中了</li></ul></li></ul><h3 id="2026-02-03-周二">2026-02-03 (周二)</h3><ul><li><strong>随记</strong>：<ul class="contains-task-list"><li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox"> 休息</li></ul></li><li><strong>反思</strong>：<ul><li>休息</li></ul></li></ul><h3 id="2026-02-04-周三">2026-02-04 (周三)</h3><ul><li><strong>随记</strong>：<ul class="contains-task-list"><li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox"> 学习了 BDD基础</li><li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox"> 安装了前端 skill：ui-ux-pro-max，做一个登录界面看看效果</li></ul></li><li><strong>反思</strong>：<ul><li>测试必须关注做什么，而不是怎么做</li><li>codex 和 claude code 马上又要发布新模型了，后续可以深入学习如何使用</li></ul></li></ul><h3 id="2026-02-05-周四">2026-02-05 (周四)</h3><ul><li><strong>随记</strong>：<ul class="contains-task-list"><li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox"> 继续学习 BDD</li></ul></li><li><strong>反思</strong>：<ul><li>没心思学习了</li></ul></li></ul><h3 id="2026-02-06-周五">2026-02-06 (周五)</h3><ul><li><strong>随记</strong>：<ul class="contains-task-list"><li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox"> 基于原来主题创建一个了新主题 hexo-theme-hanli</li><li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox"> 做了一个自然语言转成 SQL 的 vanna-demo</li></ul></li><li><strong>反思</strong>：<ul><li>需要读一下 claude code 官方使用文档</li></ul></li></ul><h2 id="本周复盘-weekly-review">本周复盘 (Weekly Review)</h2><ul><li><strong>Keep (继续保持)</strong>：*</li><li><strong>Improve (需要改进)</strong>：*</li><li><strong>Try (下周尝试)</strong>：*</li></ul>]]></content>
     
     
       
@@ -467,9 +467,9 @@
     
     
     
-    <category term="x.com@dotey" scheme="https://0xhanniba1.github.io/tags/x-com-dotey/"/>
-    
     <category term="学习" scheme="https://0xhanniba1.github.io/tags/%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="x.com@dotey" scheme="https://0xhanniba1.github.io/tags/x-com-dotey/"/>
     
   </entry>
   
