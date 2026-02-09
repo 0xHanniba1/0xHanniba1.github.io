@@ -6,7 +6,7 @@
   <link href="https://0xhanniba1.github.io/atom.xml" rel="self"/>
   
   <link href="https://0xhanniba1.github.io/"/>
-  <updated>2026-02-09T14:43:24.192Z</updated>
+  <updated>2026-02-09T14:48:19.657Z</updated>
   <id>https://0xhanniba1.github.io/</id>
   
   <author>
@@ -21,11 +21,25 @@
     <link href="https://0xhanniba1.github.io/2026/02/2026-W07/"/>
     <id>https://0xhanniba1.github.io/2026/02/2026-W07/</id>
     <published>2026-02-09T14:43:24.000Z</published>
-    <updated>2026-02-09T14:43:24.192Z</updated>
+    <updated>2026-02-09T14:48:19.657Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="本周概览-summary">本周概览 (Summary)</h2><ul><li><strong>一句话总结</strong>：</li><li><strong>进度</strong>：</li></ul><h2 id="每日记录-daily-log">每日记录 (Daily Log)</h2><h3 id="2026-02-09-周一">2026-02-09(周一)</h3><ul><li><strong>随记</strong>：<ul class="contains-task-list"><li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox"> 修改 claude code 的输出风格 output_style为白描美学</li><li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox"> 搭建 Obsidian，配置 Claude Code 通过 MCP 管理笔记</li><li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox"> 整理 Claude Skill 构建指南总结</li></ul></li><li><strong>反思</strong>：<ul><li>后续看看 obsidian 里文章怎么双向链接，构建自己的知识库</li></ul></li></ul><h2 id="本周复盘-weekly-review">本周复盘 (Weekly Review)</h2><ul><li><strong>Keep (继续保持)</strong>：*</li><li><strong>Improve (需要改进)</strong>：*</li><li><strong>Try (下周尝试)</strong>：*</li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;本周概览-summary&quot;&gt;本周概览 (Summary)&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;一句话总结&lt;/strong&gt;：&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;进度&lt;/strong&gt;：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;每日记录-daily-log&quot;&gt;</summary>
+      
     
     
     
     
+    <category term="2026zk" scheme="https://0xhanniba1.github.io/tags/2026zk/"/>
     
   </entry>
   
@@ -480,9 +494,9 @@
     
     
     
-    <category term="学习" scheme="https://0xhanniba1.github.io/tags/%E5%AD%A6%E4%B9%A0/"/>
-    
     <category term="x.com@dotey" scheme="https://0xhanniba1.github.io/tags/x-com-dotey/"/>
+    
+    <category term="学习" scheme="https://0xhanniba1.github.io/tags/%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
