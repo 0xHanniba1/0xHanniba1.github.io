@@ -6,7 +6,7 @@
   <link href="https://0xhanniba1.github.io/atom.xml" rel="self"/>
   
   <link href="https://0xhanniba1.github.io/"/>
-  <updated>2026-02-08T15:40:05.282Z</updated>
+  <updated>2026-02-09T14:43:24.192Z</updated>
   <id>https://0xhanniba1.github.io/</id>
   
   <author>
@@ -15,6 +15,19 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>2026-W07</title>
+    <link href="https://0xhanniba1.github.io/2026/02/2026-W07/"/>
+    <id>https://0xhanniba1.github.io/2026/02/2026-W07/</id>
+    <published>2026-02-09T14:43:24.000Z</published>
+    <updated>2026-02-09T14:43:24.192Z</updated>
+    
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>2026-W06</title>
@@ -467,9 +480,9 @@
     
     
     
-    <category term="x.com@dotey" scheme="https://0xhanniba1.github.io/tags/x-com-dotey/"/>
-    
     <category term="学习" scheme="https://0xhanniba1.github.io/tags/%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="x.com@dotey" scheme="https://0xhanniba1.github.io/tags/x-com-dotey/"/>
     
   </entry>
   
@@ -492,31 +505,6 @@
     
     
     <category term="工具" scheme="https://0xhanniba1.github.io/tags/%E5%B7%A5%E5%85%B7/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>使用 AI 学习</title>
-    <link href="https://0xhanniba1.github.io/2025/08/autotest-notes/"/>
-    <id>https://0xhanniba1.github.io/2025/08/autotest-notes/</id>
-    <published>2025-08-13T08:54:42.000Z</published>
-    <updated>2025-08-20T02:46:43.346Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>获取知识框架</strong></p><ul><li>先用 <em>Gemini DeepResearch</em> 总结常见面试中会被问到的八股知识点。</li><li>再交给 <em>Claude Code</em> 将这些知识点分解成系统性的知识框架。</li></ul><p><strong>任务细化与层级提升</strong></p><ul><li>把知识框架进一步拆解为微小的学习任务。</li><li>在每个小任务中设计从初级到高级的过渡路径，逐步提升理解深度与应用能力。</li></ul><p><strong>实践与模拟面试</strong></p><ul><li>为每个小任务的知识点设计相应的代码练习，自己动手实现一遍，加深概念理解。</li><li>模拟面试官的提问方式，边写边答，锻炼思维反应。</li></ul>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;获取知识框架&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;先用 &lt;em&gt;Gemini DeepResearch&lt;/em&gt; 总结常见面试中会被问到的八股知识点。&lt;/li&gt;
-&lt;li&gt;再交给 &lt;em&gt;Claude Code&lt;/em&gt; 将这些知识点分解成系统性的知识</summary>
-      
-    
-    
-    
-    
-    <category term="学习" scheme="https://0xhanniba1.github.io/tags/%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
