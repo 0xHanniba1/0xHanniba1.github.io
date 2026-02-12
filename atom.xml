@@ -6,7 +6,7 @@
   <link href="https://0xhanniba1.github.io/atom.xml" rel="self"/>
   
   <link href="https://0xhanniba1.github.io/"/>
-  <updated>2026-02-11T15:31:26.054Z</updated>
+  <updated>2026-02-12T14:38:18.194Z</updated>
   <id>https://0xhanniba1.github.io/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="https://0xhanniba1.github.io/2026/02/2026-W07/"/>
     <id>https://0xhanniba1.github.io/2026/02/2026-W07/</id>
     <published>2026-02-09T14:43:24.000Z</published>
-    <updated>2026-02-11T15:31:26.054Z</updated>
+    <updated>2026-02-12T14:38:18.194Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="本周概览-summary">本周概览 (Summary)</h2><ul><li><strong>一句话总结</strong>：</li><li><strong>进度</strong>：</li></ul><h2 id="每日记录-daily-log">每日记录 (Daily Log)</h2><h3 id="2026-02-09-周一">2026-02-09(周一)</h3><ul><li><strong>随记</strong>：<ul class="contains-task-list"><li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox"> 修改 claude code 的输出风格 output_style为白描美学</li><li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox"> 搭建 Obsidian，配置 Claude Code 通过 MCP 管理笔记</li><li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox"> 整理 Claude Skill 构建指南总结</li></ul></li><li><strong>反思</strong>：<ul><li>后续看看 obsidian 里文章怎么双向链接，构建自己的知识库</li></ul></li></ul><h3 id="2026-02-10-周二">2026-02-10(周二)</h3><ul><li><strong>随记</strong>：<ul class="contains-task-list"><li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox"> 整理文章2026 Agentic Coding Trends Report</li><li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox"> 学习openclaw 的核心引擎 Pi，Pi 拥有所有代理中最短的系统提示（system prompt），只4 个基本工具：Read、Write、Edit、Bash。</li><li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox"> <a href="https://github.com/forrestchang/andrej-karpathy-skills">andrej-karpathy-skills</a>避免 claude code 乱写代码</li></ul></li><li><strong>反思</strong>：<ul><li>Pi+skills 是否能构建垂直 agent</li></ul></li></ul><h3 id="2026-02-11-周三">2026-02-11(周三)</h3><ul><li><strong>随记</strong>：<ul class="contains-task-list"><li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox"> 收拾东西回家</li><li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox"> Obsidian 更新了 cli 版，后续可以更加方便使用 ai 控制</li></ul></li><li><strong>反思</strong>：<ul><li>后面还是搞个 mac mini</li></ul></li></ul><h2 id="本周复盘-weekly-review">本周复盘 (Weekly Review)</h2><ul><li><strong>Keep (继续保持)</strong>：*</li><li><strong>Improve (需要改进)</strong>：*</li><li><strong>Try (下周尝试)</strong>：*</li></ul>]]></content>
+    <content type="html"><![CDATA[<h2 id="本周概览-summary">本周概览 (Summary)</h2><ul><li><strong>一句话总结</strong>：</li><li><strong>进度</strong>：</li></ul><h2 id="每日记录-daily-log">每日记录 (Daily Log)</h2><h3 id="2026-02-09-周一">2026-02-09(周一)</h3><ul><li><strong>随记</strong>：<ul class="contains-task-list"><li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox"> 修改 claude code 的输出风格 output_style为白描美学</li><li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox"> 搭建 Obsidian，配置 Claude Code 通过 MCP 管理笔记</li><li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox"> 整理 Claude Skill 构建指南总结</li></ul></li><li><strong>反思</strong>：<ul><li>后续看看 obsidian 里文章怎么双向链接，构建自己的知识库</li></ul></li></ul><h3 id="2026-02-10-周二">2026-02-10(周二)</h3><ul><li><strong>随记</strong>：<ul class="contains-task-list"><li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox"> 整理文章2026 Agentic Coding Trends Report</li><li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox"> 学习openclaw 的核心引擎 Pi，Pi 拥有所有代理中最短的系统提示（system prompt），只4 个基本工具：Read、Write、Edit、Bash。</li><li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox"> <a href="https://github.com/forrestchang/andrej-karpathy-skills">andrej-karpathy-skills</a>避免 claude code 乱写代码</li></ul></li><li><strong>反思</strong>：<ul><li>Pi+skills 是否能构建垂直 agent</li></ul></li></ul><h3 id="2026-02-11-周三">2026-02-11(周三)</h3><ul><li><strong>随记</strong>：<ul class="contains-task-list"><li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox"> 收拾东西回家</li><li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox"> Obsidian 更新了 cli 版，后续可以更加方便使用 ai 控制</li></ul></li><li><strong>反思</strong>：<ul><li>后面还是搞个 mac mini</li></ul></li></ul><h3 id="2026-02-12-周四">2026-02-12(周四)</h3><ul><li><strong>随记</strong>：<ul class="contains-task-list"><li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox"> 终于是到家了</li></ul></li><li><strong>反思</strong>：<ul><li>OpenClaw接入类似小智esp32</li><li>Home Assistant</li></ul></li></ul><h2 id="本周复盘-weekly-review">本周复盘 (Weekly Review)</h2><ul><li><strong>Keep (继续保持)</strong>：*</li><li><strong>Improve (需要改进)</strong>：*</li><li><strong>Try (下周尝试)</strong>：*</li></ul>]]></content>
     
     
       
@@ -494,9 +494,9 @@
     
     
     
-    <category term="x.com@dotey" scheme="https://0xhanniba1.github.io/tags/x-com-dotey/"/>
-    
     <category term="学习" scheme="https://0xhanniba1.github.io/tags/%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="x.com@dotey" scheme="https://0xhanniba1.github.io/tags/x-com-dotey/"/>
     
   </entry>
   
