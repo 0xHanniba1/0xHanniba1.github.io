@@ -6,7 +6,7 @@
   <link href="https://0xhanniba1.github.io/atom.xml" rel="self"/>
   
   <link href="https://0xhanniba1.github.io/"/>
-  <updated>2026-03-02T05:32:29.771Z</updated>
+  <updated>2026-03-02T15:16:08.426Z</updated>
   <id>https://0xhanniba1.github.io/</id>
   
   <author>
@@ -21,11 +21,26 @@
     <link href="https://0xhanniba1.github.io/2026/03/2026-W10/"/>
     <id>https://0xhanniba1.github.io/2026/03/2026-W10/</id>
     <published>2026-03-02T05:32:29.000Z</published>
-    <updated>2026-03-02T05:32:29.771Z</updated>
+    <updated>2026-03-02T15:16:08.426Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="每日记录">每日记录</h2><h3 id="2026-03-02-周一">2026-03-02(周一)</h3><ul><li><p><strong>随记</strong>：</p><ul class="contains-task-list"><li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox"> 调研监护仪自动化测试方法</li><li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox"> 面试被鸽了</li></ul></li><li><p><strong>反思</strong>：</p><ul><li>MCP is dead. Long live the CLI</li><li>如果用 Claude code + MCP 来控制监护仪？</li></ul></li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;每日记录&quot;&gt;每日记录&lt;/h2&gt;
+&lt;h3 id=&quot;2026-03-02-周一&quot;&gt;2026-03-02(周一)&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;随记&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul class=&quot;contains-task-list&quot;&gt;
+&lt;li</summary>
+      
     
     
     
     
+    <category term="2026zk" scheme="https://0xhanniba1.github.io/tags/2026zk/"/>
     
   </entry>
   
