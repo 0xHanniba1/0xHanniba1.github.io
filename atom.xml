@@ -6,7 +6,7 @@
   <link href="https://0xhanniba1.github.io/atom.xml" rel="self"/>
   
   <link href="https://0xhanniba1.github.io/"/>
-  <updated>2026-03-04T15:11:22.263Z</updated>
+  <updated>2026-03-06T15:16:55.531Z</updated>
   <id>https://0xhanniba1.github.io/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="https://0xhanniba1.github.io/2026/03/2026-W10/"/>
     <id>https://0xhanniba1.github.io/2026/03/2026-W10/</id>
     <published>2026-03-02T05:32:29.000Z</published>
-    <updated>2026-03-04T15:11:22.263Z</updated>
+    <updated>2026-03-06T15:16:55.531Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="每日记录">每日记录</h2><h3 id="2026-03-02-周一">2026-03-02(周一)</h3><ul><li><strong>随记</strong>：<ul class="contains-task-list"><li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox"> 调研监护仪自动化测试方法</li><li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox"> 面试被鸽了</li></ul></li><li><strong>反思</strong>：<ul><li>MCP is dead. Long live the CLI</li><li>如果用 Claude code + MCP 来控制监护仪？</li></ul></li></ul><h3 id="2026-03-03-周二">2026-03-03(周二)</h3><ul><li><strong>随记</strong>：<ul class="contains-task-list"><li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox"> 完成监护仪UI 自动化项目：Monitor-eye</li></ul></li><li><strong>反思</strong>：<ul><li>如果监护仪无法使用 VNC 远程控制，得另想办法</li></ul></li></ul><h3 id="2026-03-04-周三">2026-03-04(周三)</h3><ul><li><strong>随记</strong>：<ul class="contains-task-list"><li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox"> 收到 offer，整理入职材料</li></ul></li><li><strong>反思</strong>：<ul><li>得开始构建 soulwork 测试用例集以及落地接口自动化</li></ul></li></ul>]]></content>
+    <content type="html"><![CDATA[<h2 id="每日记录">每日记录</h2><h3 id="2026-03-02-周一">2026-03-02(周一)</h3><ul><li><strong>随记</strong>：<ul class="contains-task-list"><li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox"> 调研监护仪自动化测试方法</li><li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox"> 面试被鸽了</li></ul></li><li><strong>反思</strong>：<ul><li>MCP is dead. Long live the CLI</li><li>如果用 Claude code + MCP 来控制监护仪？</li></ul></li></ul><h3 id="2026-03-03-周二">2026-03-03(周二)</h3><ul><li><strong>随记</strong>：<ul class="contains-task-list"><li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox"> 完成监护仪UI 自动化项目：Monitor-eye</li></ul></li><li><strong>反思</strong>：<ul><li>如果监护仪无法使用 VNC 远程控制，得另想办法</li></ul></li></ul><h3 id="2026-03-04-周三">2026-03-04(周三)</h3><ul><li><strong>随记</strong>：<ul class="contains-task-list"><li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox"> 收到 offer，整理入职材料</li></ul></li><li><strong>反思</strong>：<ul><li>得开始构建 soulwork 测试用例集以及落地接口自动化</li></ul></li></ul><h3 id="2026-03-06-周五">2026-03-06(周五)</h3><ul><li><strong>随记</strong>：<ul class="contains-task-list"><li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox"> 体检</li><li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox"> 通过 mitmproxy 抓包导出所有接口，进行测试</li></ul></li><li><strong>反思</strong>：<ul><li>梳理测试大架构，后续怎么从 0 到 1 开展</li></ul></li></ul>]]></content>
     
     
       
