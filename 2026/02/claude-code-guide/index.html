@@ -21,17 +21,451 @@ Plan Mode 规划模式
 CLAUDE.md 记忆文件
 自定义 Skills
 自主修 Bug"><meta name="twitter:site" content="韩老魔的博客"><meta name="twitter:title" content="Claude Code 完整使用指南"><meta name="twitter:card" content="summary"><meta name="keywords" content=""><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="renderer" content="webkit"><link rel="short icon" href="/images/favicon.png" type="image/x-icon"><script>(function(){try{var t=localStorage.getItem('theme');if(t==='paper'||t==='ink'){document.documentElement.setAttribute('data-theme',t);}else{document.documentElement.setAttribute('data-theme','ink');}}catch(e){}})();
-</script><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600&amp;family=JetBrains+Mono:wght@300;400;500&amp;display=swap"><link rel="stylesheet" href="/css/font-awesome.min.css"><link rel="stylesheet" href="/css/typo.css?v=20260418-13"><link rel="stylesheet" href="/css/custom.css?v=20260418-13"><link rel="stylesheet" href="/css/search.css?v=20260418-13"><link rel="alternate" type="application/atom+xml" title="ATOM 1.0" href="/atom.xml"><meta name="generator" content="Hexo 7.3.0"></head><body><div class="page"><header class="topbar"><a class="brand" href="/"><div class="brand-seal">韩</div><div class="brand-text"><span class="zh">韩老魔的博客</span><span class="en">0XHANNIBA1 · NOTES</span></div></a><button class="search-trigger" type="button" aria-label="搜索"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.5-3.5"></path></svg><span>搜索 · Search</span><span class="hint"><span class="kbd">⌘</span><span class="kbd">K</span></span></button><div class="top-actions"><a class="icon-btn" href="https://0xhanniba1.github.io/atom.xml" target="_blank" rel="noopener noreferrer" aria-label="RSS"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1.5"></circle></svg></a><a class="icon-btn" href="https://github.com/0xHanniba1" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.1.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.1-1.47-1.1-1.47-.9-.62.07-.6.07-.6 1 .07 1.52 1.03 1.52 1.03.89 1.52 2.34 1.08 2.9.82.1-.64.35-1.08.63-1.33-2.22-.25-4.55-1.11-4.55-4.94 0-1.1.39-2 1.03-2.7-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02a9.58 9.58 0 0 1 5 0c1.9-1.3 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.6 1.03 2.7 0 3.84-2.34 4.68-4.57 4.93.36.3.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2z"></path></svg></a><div class="theme-toggle" role="tablist" aria-label="主题切换"><span class="slider" id="themeSlider"></span><button class="opt" id="themeInk" type="button" aria-pressed="true" title="夜 · Ink"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"></path></svg></button><button class="opt" id="themePaper" type="button" aria-pressed="false" title="昼 · Paper"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><circle cx="12" cy="12" r="4"></circle><path d="M12 3v2M12 19v2M3 12h2M19 12h2M5.6 5.6l1.4 1.4M17 17l1.4 1.4M5.6 18.4 7 17M17 7l1.4-1.4"></path></svg></button></div></div></header><main class="main"><aside class="rail"><div class="rail-card"><div class="rail-head">导航 · Menu</div><nav class="rail-nav"><a href="/"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 11l9-8 9 8"></path><path d="M5 10v10h14V10"></path></svg><span class="label-zh">首页</span><span class="count">HOME</span></a><a href="/archives"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="18" height="4" rx="1"></rect><path d="M5 8v12h14V8"></path><path d="M10 12h4"></path></svg><span class="label-zh">归档</span><span class="count">26</span></a><a href="/tags"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20 12 12 20l-8-8L12 4h8z"></path><circle cx="15" cy="9" r="1.5" fill="currentColor"></circle></svg><span class="label-zh">标签</span><span class="count">16</span></a><a href="/tags/2026zk/"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 4h12l4 4v12H4z"></path><path d="M8 8h6M8 12h8M8 16h5"></path></svg><span class="label-zh">周志</span><span class="count">W10</span></a><a href="/about/"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"></path></svg><span class="label-zh">关于</span><span class="count">ABOUT</span></a></nav></div><div class="rail-card"><div class="rail-head">高频标签 · Tags</div><div class="tags-cloud"><a class="tag-chip" href="/tags/2026zk/" title="2026zk" data-size="lg"><span class="dot"></span>2026zk</a><a class="tag-chip" href="/tags/%E6%B5%8B%E8%AF%95/" title="测试" data-size="lg"><span class="dot"></span>测试</a><a class="tag-chip" href="/tags/AI/" title="AI"><span class="dot"></span>AI</a><a class="tag-chip" href="/tags/%E5%AD%A6%E4%B9%A0/" title="学习"><span class="dot"></span>学习</a><a class="tag-chip" href="/tags/Claude-Code/" title="Claude Code"><span class="dot"></span>Claude Code</a><a class="tag-chip" href="/tags/test/" title="test"><span class="dot"></span>test</a><a class="tag-chip" href="/tags/x-com-dotey/" title="x.com@dotey"><span class="dot"></span>x.com@dotey</a><a class="tag-chip" href="/tags/git-worktree/" title="git worktree"><span class="dot"></span>git worktree</a><a class="tag-chip" href="/tags/VPS/" title="VPS"><span class="dot"></span>VPS</a><a class="tag-chip" href="/tags/Telegram/" title="Telegram"><span class="dot"></span>Telegram</a></div></div><div class="rail-card"><div class="rail-head">年度 · 2026</div><div class="heatmap"><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="2"></i><i data-l="0"></i><i data-l="0"></i><i data-l="1"></i><i data-l="1"></i><i data-l="1"></i><i data-l="0"></i><i data-l="1"></i><i data-l="0"></i><i data-l="0"></i><i data-l="1"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="4"></i><i data-l="2"></i><i data-l="1"></i><i data-l="3"></i><i data-l="2"></i><i data-l="1"></i><i data-l="0"></i><i data-l="1"></i><i data-l="1"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i></div></div></aside><section class="stream"><div class="autopagerize_page_element"><div class="content"><div class="post-page"><article class="post"><div class="post-date"><span class="day">01</span><span class="month">Feb</span><span class="year">2026</span></div><div class="post-body"><div class="post-kicker"><span class="read-time">17 min read</span></div><a class="title-link" href="/2026/02/claude-code-guide/"><h2 class="post-title">Claude Code 完整使用指南</h2></a><p class="post-excerpt">Claude Code 完整使用指南
-
-来源：Boris Cherny (@bcherny) - Claude Code 团队成员分享的 10 个高效技巧
-
-
-目录
-
-Git Worktree 并行开发
-Plan Mode 规划模式
-CLAUDE.md 记忆文件
-自定义 Skills
-自主修 Bug
-提升 Promp…</p><div class="post-foot"><div class="tags"><a class="tag" href="/tags/Claude-Code/">Claude Code</a><a class="tag" href="/tags/git-worktree/">git worktree</a></div></div></div></article><div class="share"><span>Share</span>&nbsp;<span class="soc"><a class="fa fa-bookmark" href="javascript:(function(){EN_CLIP_HOST='http://www.evernote.com';try{var%20x=document.createElement('SCRIPT');x.type='text/javascript';x.src=EN_CLIP_HOST+'/public/bookmarkClipper.js?'+(new%20Date().getTime()/100000);document.getElementsByTagName('head')[0].appendChild(x);}catch(e){location.href=EN_CLIP_HOST+'/clip.action?url='+encodeURIComponent(location.href)+'&amp;title='+encodeURIComponent(document.title);}})();" ref="nofollow" target="_blank"></a></span><span class="soc"><a class="fa fa-weibo" href="javascript:void((function(s,d,e){try{}catch(e){}var f='http://service.weibo.com/share/share.php?',u=d.location.href,p=['url=',e(u),'&amp;title=',e(d.title),'&amp;appkey=2924220432'].join('');function a(){if(!window.open([f,p].join(''),'mb',['toolbar=0,status=0,resizable=1,width=620,height=450,left=',(s.width-620)/2,',top=',(s.height-450)/2].join('')))u.href=[f,p].join('');};if(/Firefox/.test(navigator.userAgent)){setTimeout(a,0)}else{a()}})(screen,document,encodeURIComponent));"></a></span><span class="soc"><a class="fa fa-twitter" target="_blank" rel="noopener" href="http://twitter.com/home?status=https://0xhanniba1.github.io/2026/02/claude-code-guide/%20韩老魔的博客%20Claude Code 完整使用指南"></a></span></div><div class="pagination"><p class="clearfix"><span class="pre pagbuttons"><a role="navigation" href="/2026/02/2026-W06/" title="2026-W06"><i class="fa fa-angle-double-left"></i>&nbsp;Previous post: 2026-W06</a></span><span>&nbsp;</span><span class="next pagbuttons"><a role="navigation" href="/2026/01/llm-eval-learn/" title="LLM API 核心参数详解：Temperature、Top_p 与 Max_tokens">Next post: LLM API 核心参数详解：Temperature、Top_p 与 Max_tokens&nbsp;<i class="fa fa-angle-double-right"></i></a></span></p></div></div></div></div></section><aside class="aside"><div class="verticals"><div class="v-line v-sub">0xHanniba1's blog</div><div class="v-line v-slogan">慢就是快<span class="sep">／</span>自律<span class="sep">／</span>坚持</div><div class="v-brush"></div></div><div class="aside-info"><div class="label">此刻 · Now Playing</div><div class="now-playing playable" role="button" tabindex="0" aria-label="播放 / 暂停"><div class="np-cover"><span class="np-play-icon"></span></div><div class="np-text"><div class="t">unravel</div><div class="a">TK from 凛として時雨</div></div><div class="np-bars"><i></i><i></i><i></i><i></i></div><audio class="np-audio" src="/audio/unravel.mp3" preload="none" loop></audio></div><div class="divider"></div><div class="label">数据 · Stats</div><div class="stat-grid"><div class="stat"><div class="n">26</div><div class="l">文章</div></div><div class="stat"><div class="n">16</div><div class="l">标签</div></div><div class="stat"><div class="n">0</div><div class="l">分类</div></div><div class="stat"><div class="n">1</div><div class="l">页面</div></div></div><div class="divider"></div><div class="label">连接 · Links</div><div class="aside-socials"><a href="https://github.com/0xHanniba1" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa fa-github"></i></a><a href="https://0xhanniba1.github.io/atom.xml" target="_blank" rel="noopener noreferrer" aria-label="RSS"><i class="fa fa-rss"></i></a></div></div></aside></main></div><footer class="foot"><p>© 2026&nbsp;<a target="_blank" href="https://0xhanniba1.github.io" rel="noopener noreferrer">0xHanniba1</a>&nbsp;·&nbsp;<span class="han">以心写心，以慢磨快</span></p><div class="foot-right"><a href="/">Theme: 墨 / Ink</a><a target="_blank" href="https://hexo.io" rel="noopener noreferrer">Powered by Hexo</a><a href="https://0xhanniba1.github.io/atom.xml" target="_blank" rel="noopener noreferrer">RSS</a></div></footer><div class="sp-overlay" id="sp-overlay" hidden><div class="sp-modal" role="dialog" aria-label="搜索"><div class="sp-header"><div class="sp-input-row"><span class="sp-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.5-3.5"></path></svg></span><input class="sp-input" id="sp-input" type="text" placeholder="搜索文章、标签、页面 · Search everything…" autocomplete="off" spellcheck="false"><span class="sp-query-meta" id="sp-count"><span class="num">0</span> / 0</span><button class="sp-close" id="sp-close" type="button" aria-label="关闭"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6 6 18"></path></svg></button></div><div class="sp-scope" id="sp-scope"><span class="lbl">Scope</span><button class="on" type="button" data-scope="all">全部<span class="n">0</span></button><button type="button" data-scope="post">文章<span class="n">0</span></button><button type="button" data-scope="tag"># 标签<span class="n">0</span></button><button type="button" data-scope="page">页面<span class="n">0</span></button><span class="spacer"></span><span class="timing"><span class="dot"></span>实时检索 · Live</span></div></div><div class="sp-body"><div class="sp-results" id="sp-results"></div><aside class="sp-preview" id="sp-preview"></aside></div><div class="sp-footer"><span class="sp-foot-item"><span class="sp-kk arrow">↑</span><span class="sp-kk arrow">↓</span> 导航</span><span class="sp-foot-item"><span class="sp-kk">⏎</span> 打开</span><span class="sp-foot-item"><span class="sp-kk">Tab</span> 切换范围</span><span class="sp-foot-item"><span class="sp-kk">Esc</span> 关闭</span><span class="sp-foot-spacer"></span><span class="sp-foot-brand">慢就是快<span class="sep">·</span>自律<span class="sep">·</span>坚持<span class="sep">·</span><span class="accent">0XHANNIBA1</span></span></div></div></div><script>window.searchPath = '/search.json';
+</script><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600&amp;family=JetBrains+Mono:wght@300;400;500&amp;display=swap"><link rel="stylesheet" href="/css/font-awesome.min.css"><link rel="stylesheet" href="/css/typo.css?v=20260418-13"><link rel="stylesheet" href="/css/custom.css?v=20260418-13"><link rel="stylesheet" href="/css/search.css?v=20260418-13"><link rel="alternate" type="application/atom+xml" title="ATOM 1.0" href="/atom.xml"><meta name="generator" content="Hexo 7.3.0"></head><body><div class="page"><header class="topbar"><a class="brand" href="/"><div class="brand-seal">韩</div><div class="brand-text"><span class="zh">韩老魔的博客</span><span class="en">0XHANNIBA1 · NOTES</span></div></a><button class="search-trigger" type="button" aria-label="搜索"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.5-3.5"></path></svg><span>搜索 · Search</span><span class="hint"><span class="kbd">⌘</span><span class="kbd">K</span></span></button><div class="top-actions"><a class="icon-btn" href="https://0xhanniba1.github.io/atom.xml" target="_blank" rel="noopener noreferrer" aria-label="RSS"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1.5"></circle></svg></a><a class="icon-btn" href="https://github.com/0xHanniba1" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.1.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.1-1.47-1.1-1.47-.9-.62.07-.6.07-.6 1 .07 1.52 1.03 1.52 1.03.89 1.52 2.34 1.08 2.9.82.1-.64.35-1.08.63-1.33-2.22-.25-4.55-1.11-4.55-4.94 0-1.1.39-2 1.03-2.7-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02a9.58 9.58 0 0 1 5 0c1.9-1.3 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.6 1.03 2.7 0 3.84-2.34 4.68-4.57 4.93.36.3.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2z"></path></svg></a><div class="theme-toggle" role="tablist" aria-label="主题切换"><span class="slider" id="themeSlider"></span><button class="opt" id="themeInk" type="button" aria-pressed="true" title="夜 · Ink"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"></path></svg></button><button class="opt" id="themePaper" type="button" aria-pressed="false" title="昼 · Paper"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><circle cx="12" cy="12" r="4"></circle><path d="M12 3v2M12 19v2M3 12h2M19 12h2M5.6 5.6l1.4 1.4M17 17l1.4 1.4M5.6 18.4 7 17M17 7l1.4-1.4"></path></svg></button></div></div></header><main class="main"><aside class="rail"><div class="rail-card"><div class="rail-head">导航 · Menu</div><nav class="rail-nav"><a href="/"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 11l9-8 9 8"></path><path d="M5 10v10h14V10"></path></svg><span class="label-zh">首页</span><span class="count">HOME</span></a><a href="/archives"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="18" height="4" rx="1"></rect><path d="M5 8v12h14V8"></path><path d="M10 12h4"></path></svg><span class="label-zh">归档</span><span class="count">26</span></a><a href="/tags"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20 12 12 20l-8-8L12 4h8z"></path><circle cx="15" cy="9" r="1.5" fill="currentColor"></circle></svg><span class="label-zh">标签</span><span class="count">16</span></a><a href="/tags/2026zk/"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 4h12l4 4v12H4z"></path><path d="M8 8h6M8 12h8M8 16h5"></path></svg><span class="label-zh">周志</span><span class="count">W10</span></a><a href="/about/"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"></path></svg><span class="label-zh">关于</span><span class="count">ABOUT</span></a></nav></div><div class="rail-card"><div class="rail-head">高频标签 · Tags</div><div class="tags-cloud"><a class="tag-chip" href="/tags/2026zk/" title="2026zk" data-size="lg"><span class="dot"></span>2026zk</a><a class="tag-chip" href="/tags/%E6%B5%8B%E8%AF%95/" title="测试" data-size="lg"><span class="dot"></span>测试</a><a class="tag-chip" href="/tags/AI/" title="AI"><span class="dot"></span>AI</a><a class="tag-chip" href="/tags/%E5%AD%A6%E4%B9%A0/" title="学习"><span class="dot"></span>学习</a><a class="tag-chip" href="/tags/Claude-Code/" title="Claude Code"><span class="dot"></span>Claude Code</a><a class="tag-chip" href="/tags/test/" title="test"><span class="dot"></span>test</a><a class="tag-chip" href="/tags/x-com-dotey/" title="x.com@dotey"><span class="dot"></span>x.com@dotey</a><a class="tag-chip" href="/tags/git-worktree/" title="git worktree"><span class="dot"></span>git worktree</a><a class="tag-chip" href="/tags/VPS/" title="VPS"><span class="dot"></span>VPS</a><a class="tag-chip" href="/tags/Telegram/" title="Telegram"><span class="dot"></span>Telegram</a></div></div><div class="rail-card"><div class="rail-head">年度 · 2026</div><div class="heatmap"><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="2"></i><i data-l="0"></i><i data-l="0"></i><i data-l="1"></i><i data-l="1"></i><i data-l="1"></i><i data-l="0"></i><i data-l="1"></i><i data-l="0"></i><i data-l="0"></i><i data-l="1"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="4"></i><i data-l="2"></i><i data-l="1"></i><i data-l="3"></i><i data-l="2"></i><i data-l="1"></i><i data-l="0"></i><i data-l="1"></i><i data-l="1"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i><i data-l="0"></i></div></div></aside><section class="stream"><div class="post-page"><article class="post-hero"><nav class="crumbs"><a href="/">Home</a><span class="sep">/</span><span>Claude Code 完整使用指南</span></nav><h1 class="post-h1">Claude Code 完整使用指南</h1><div class="post-meta-row"><span class="mi"><i class="fa fa-calendar-o"></i>2026-02-01</span><span class="dot"></span><span class="mi"><i class="fa fa-clock-o"></i>17 min read · 6902 字</span><span class="dot"></span><span class="mi"><i class="fa fa-tags"></i><a href="/tags/Claude-Code/">Claude Code</a>&nbsp;<a href="/tags/git-worktree/">git worktree</a>&nbsp;</span></div></article><section class="article"><div class="prose"><h1 id="claude-code-完整使用指南">Claude Code 完整使用指南</h1>
+<blockquote>
+<p>来源：Boris Cherny (@bcherny) - Claude Code 团队成员分享的 10 个高效技巧</p>
+</blockquote>
+<hr>
+<h2 id="目录">目录</h2>
+<ol>
+<li><a href="#git-worktree">Git Worktree 并行开发</a></li>
+<li><a href="#plan-mode">Plan Mode 规划模式</a></li>
+<li><a href="#claude-md">CLAUDE.md 记忆文件</a></li>
+<li><a href="#skills">自定义 Skills</a></li>
+<li><a href="#fix-bug">自主修 Bug</a></li>
+<li><a href="#prompting">提升 Prompting 技巧</a></li>
+<li><a href="#terminal">终端与环境配置</a></li>
+<li><a href="#subagents">使用 Subagents</a></li>
+<li><a href="#data-analysis">数据分析</a></li>
+<li><a href="#learning">用 Claude 学习</a></li>
+</ol>
+<hr>
+<p><a id="git-worktree"></a></p>
+<h1 id="1-git-worktree-并行开发">1. Git Worktree 并行开发</h1>
+<h2 id="核心理念">核心理念</h2>
+<blockquote>
+<p><strong>同时开启多个 worktree，每个运行独立的 Claude 会话，并行工作效率翻倍。</strong></p>
+</blockquote>
+<h2 id="什么是-git-worktree？">什么是 Git Worktree？</h2>
+<p>通常一个 git 仓库只有一个工作目录。<strong>Worktree 允许你从同一个仓库创建多个工作目录</strong>，每个目录可以切换到不同的分支。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">普通方式：</span><br><span class="line">my-project/          ← 只能同时在一个分支工作</span><br><span class="line"></span><br><span class="line">使用 Worktree：</span><br><span class="line">my-project/                    ← 主目录，在 main 分支</span><br><span class="line">my-project/.claude/worktrees/</span><br><span class="line">├── feature-a/                 ← 在 feature-a 分支</span><br><span class="line">├── feature-b/                 ← 在 feature-b 分支</span><br><span class="line">└── bugfix/                    ← 在 bugfix 分支</span><br></pre></td></tr></table></figure>
+<h2 id="为什么配合-claude-code-很强？">为什么配合 Claude Code 很强？</h2>
+<p><strong>传统工作流：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">让 Claude 做任务 A → 等待完成 → 再做任务 B → 等待完成 → 再做任务 C</span><br></pre></td></tr></table></figure>
+<p><strong>Worktree + Claude 并行工作流：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">终端1: cd worktree-a &amp;&amp; claude &quot;实现用户登录&quot;     ← 同时进行</span><br><span class="line">终端2: cd worktree-b &amp;&amp; claude &quot;修复支付 bug&quot;    ← 同时进行</span><br><span class="line">终端3: cd worktree-c &amp;&amp; claude &quot;写单元测试&quot;      ← 同时进行</span><br></pre></td></tr></table></figure>
+<p>三个独立的 Claude 会话，互不干扰，同时工作。</p>
+<h2 id="实际操作">实际操作</h2>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 1. 创建 worktree（基于 main 分支）</span></span><br><span class="line">git worktree add .claude/worktrees/feature-login origin/main</span><br><span class="line"></span><br><span class="line"><span class="comment"># 2. 进入并启动 Claude</span></span><br><span class="line"><span class="built_in">cd</span> .claude/worktrees/feature-login</span><br><span class="line">claude</span><br><span class="line"></span><br><span class="line"><span class="comment"># 3. 查看所有 worktree</span></span><br><span class="line">git worktree list</span><br><span class="line"></span><br><span class="line"><span class="comment"># 4. 删除 worktree（完成后清理）</span></span><br><span class="line">git worktree remove .claude/worktrees/feature-login</span><br></pre></td></tr></table></figure>
+<h2 id="设置快捷别名">设置快捷别名</h2>
+<p>在 <code>~/.zshrc</code> 添加：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">alias</span> za=<span class="string">&#x27;cd ~/projects/my-app/.claude/worktrees/a &amp;&amp; claude&#x27;</span></span><br><span class="line"><span class="built_in">alias</span> zb=<span class="string">&#x27;cd ~/projects/my-app/.claude/worktrees/b &amp;&amp; claude&#x27;</span></span><br><span class="line"><span class="built_in">alias</span> zc=<span class="string">&#x27;cd ~/projects/my-app/.claude/worktrees/c &amp;&amp; claude&#x27;</span></span><br></pre></td></tr></table></figure>
+<hr>
+<p><a id="plan-mode"></a></p>
+<h1 id="2-plan-mode-规划模式">2. Plan Mode 规划模式</h1>
+<h2 id="核心理念-2">核心理念</h2>
+<blockquote>
+<p><strong>把精力花在计划上，让 Claude 一次性完成实现。</strong></p>
+</blockquote>
+<h2 id="什么是-plan-mode？">什么是 Plan Mode？</h2>
+<p>Claude Code 的一种工作模式。在这个模式下，Claude <strong>只做规划，不写代码</strong>，直到你确认计划后才开始实现。</p>
+<p>按 <code>Shift+Tab</code> 可以切换模式。</p>
+<h2 id="为什么要用-plan-mode？">为什么要用 Plan Mode？</h2>
+<p><strong>不用 Plan Mode：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">你：重构 cli.tsx</span><br><span class="line">Claude：好的，我来改...（改了一堆）...出问题了...再改...又出问题...</span><br><span class="line">结果：来回折腾，浪费时间和 token</span><br></pre></td></tr></table></figure>
+<p><strong>用 Plan Mode：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">你：[Plan Mode] 重构 cli.tsx</span><br><span class="line">Claude：这是我的计划：</span><br><span class="line">  1. 先拆分 A 模块</span><br><span class="line">  2. 再抽取 B 函数</span><br><span class="line">  3. 最后更新 C 接口</span><br><span class="line">你：确认 / 调整计划</span><br><span class="line">Claude：按计划一次性完成</span><br></pre></td></tr></table></figure>
+<h2 id="团队的实战技巧">团队的实战技巧</h2>
+<h3 id="技巧-1：双-claude-审核">技巧 1：双 Claude 审核</h3>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Claude A (Plan Mode)  →  写计划</span><br><span class="line">                ↓</span><br><span class="line">Claude B              →  以 Staff Engineer 身份审核计划</span><br><span class="line">                ↓</span><br><span class="line">Claude A              →  执行审核后的计划</span><br></pre></td></tr></table></figure>
+<h3 id="技巧-2：出问题立刻回到-plan-mode">技巧 2：出问题立刻回到 Plan Mode</h3>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">执行中发现问题 → 不要硬推 → 立刻切回 Plan Mode → 重新规划</span><br></pre></td></tr></table></figure>
+<h3 id="技巧-3：验证步骤也要规划">技巧 3：验证步骤也要规划</h3>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">不只是规划&quot;怎么构建&quot;</span><br><span class="line">还要规划&quot;怎么验证&quot;：</span><br><span class="line">- 跑哪些测试</span><br><span class="line">- 检查哪些边界情况</span><br><span class="line">- 如何确认功能正常</span><br></pre></td></tr></table></figure>
+<hr>
+<p><a id="claude-md"></a></p>
+<h1 id="3-claude-md-记忆文件">3. <a target="_blank" rel="noopener" href="http://CLAUDE.md">CLAUDE.md</a> 记忆文件</h1>
+<h2 id="核心理念-3">核心理念</h2>
+<blockquote>
+<p><strong><a target="_blank" rel="noopener" href="http://CLAUDE.md">CLAUDE.md</a> 是你和 Claude 的共享知识库。投入时间维护它，Claude 的表现会越来越好。</strong></p>
+</blockquote>
+<h2 id="什么是-claude-md？">什么是 <a target="_blank" rel="noopener" href="http://CLAUDE.md">CLAUDE.md</a>？</h2>
+<p><a target="_blank" rel="noopener" href="http://CLAUDE.md">CLAUDE.md</a> 是 Claude Code 的「记忆文件」。每次启动时，Claude 会自动读取这个文件，了解项目背景和你的偏好。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">~/.claude/CLAUDE.md          ← 全局配置，所有项目生效</span><br><span class="line">项目目录/CLAUDE.md           ← 项目配置，仅当前项目生效</span><br></pre></td></tr></table></figure>
+<h2 id="核心用法：让-claude-自己写规则">核心用法：让 Claude 自己写规则</h2>
+<p><strong>关键技巧</strong>：每次纠正 Claude 后，说：</p>
+<blockquote>
+<p>“更新 <a target="_blank" rel="noopener" href="http://CLAUDE.md">CLAUDE.md</a>，确保你不再犯这个错误”</p>
+</blockquote>
+<p>Claude 非常擅长为自己写规则。让它自己总结教训，比你手写更有效。</p>
+<h2 id="实战技巧">实战技巧</h2>
+<h3 id="技巧-1：持续迭代">技巧 1：持续迭代</h3>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">发现问题 → 纠正 Claude → 让它更新 CLAUDE.md → 错误率下降</span><br></pre></td></tr></table></figure>
+<h3 id="技巧-2：项目笔记目录">技巧 2：项目笔记目录</h3>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">项目/</span><br><span class="line">├── CLAUDE.md              ← 指向 notes 目录</span><br><span class="line">└── notes/</span><br><span class="line">    ├── architecture.md    ← 架构说明</span><br><span class="line">    ├── api-conventions.md ← API 规范</span><br><span class="line">    └── pr-notes.md        ← 每次 PR 后更新</span><br></pre></td></tr></table></figure>
+<h3 id="技巧-3：分层配置">技巧 3：分层配置</h3>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">~/.claude/CLAUDE.md     → 你的通用偏好（代码风格、语言等）</span><br><span class="line">项目/CLAUDE.md          → 项目特定规则（框架、约定等）</span><br></pre></td></tr></table></figure>
+<h2 id="claude-md-示例内容"><a target="_blank" rel="noopener" href="http://CLAUDE.md">CLAUDE.md</a> 示例内容</h2>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="section"># 项目：电商后台</span></span><br><span class="line"></span><br><span class="line"><span class="section">## 技术栈</span></span><br><span class="line"><span class="bullet">-</span> Next.js 14 + TypeScript</span><br><span class="line"><span class="bullet">-</span> Prisma + PostgreSQL</span><br><span class="line"><span class="bullet">-</span> TailwindCSS</span><br><span class="line"></span><br><span class="line"><span class="section">## 代码规范</span></span><br><span class="line"><span class="bullet">-</span> 使用中文注释</span><br><span class="line"><span class="bullet">-</span> 组件用 PascalCase</span><br><span class="line"><span class="bullet">-</span> 工具函数用 camelCase</span><br><span class="line"><span class="bullet">-</span> 禁止使用 any 类型</span><br><span class="line"></span><br><span class="line"><span class="section">## 常见错误（Claude 请注意）</span></span><br><span class="line"><span class="bullet">-</span> 不要用 moment.js，用 dayjs</span><br><span class="line"><span class="bullet">-</span> API 路由必须做权限校验</span><br><span class="line"><span class="bullet">-</span> 表单必须有 loading 状态</span><br></pre></td></tr></table></figure>
+<h2 id="查看当前记忆">查看当前记忆</h2>
+<p>在 Claude Code 中输入 <code>/memory</code> 可以查看当前加载的记忆文件和 token 占用。</p>
+<hr>
+<p><a id="skills"></a></p>
+<h1 id="4-自定义-skills">4. 自定义 Skills</h1>
+<h2 id="核心理念-4">核心理念</h2>
+<blockquote>
+<p><strong>如果一件事你每天做超过一次，就把它变成 Skill。</strong></p>
+</blockquote>
+<h2 id="什么是-skills？">什么是 Skills？</h2>
+<p>Skills 是 Claude Code 的自定义命令/工作流。你可以把常用操作封装成 <code>/xxx</code> 命令，一键执行。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">/techdebt    → 自动查找重复代码</span><br><span class="line">/sync        → 同步 Slack、GitHub 等信息</span><br><span class="line">/review      → 按团队规范审查代码</span><br></pre></td></tr></table></figure>
+<h2 id="skills-存放位置">Skills 存放位置</h2>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">~/.claude/skills/           ← 全局 skills，所有项目可用</span><br><span class="line">项目/.claude/skills/        ← 项目 skills，仅当前项目可用</span><br></pre></td></tr></table></figure>
+<h2 id="创建一个-skill">创建一个 Skill</h2>
+<p><strong>示例：/techdebt 技术债务检查</strong></p>
+<p>创建文件 <code>~/.claude/skills/techdebt.md</code>：</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">name: techdebt</span><br><span class="line"><span class="section">description: 查找并清理技术债务</span></span><br><span class="line"><span class="section">---</span></span><br><span class="line"></span><br><span class="line"><span class="section"># 技术债务检查</span></span><br><span class="line"></span><br><span class="line">请执行以下检查：</span><br><span class="line"></span><br><span class="line"><span class="section">## 1. 重复代码</span></span><br><span class="line"><span class="bullet">-</span> 查找相似度高的代码块</span><br><span class="line"><span class="bullet">-</span> 建议抽取公共函数</span><br><span class="line"></span><br><span class="line"><span class="section">## 2. 未使用代码</span></span><br><span class="line"><span class="bullet">-</span> 查找未使用的变量、函数、导入</span><br><span class="line"><span class="bullet">-</span> 列出可以安全删除的代码</span><br><span class="line"></span><br><span class="line"><span class="section">## 3. TODO/FIXME</span></span><br><span class="line"><span class="bullet">-</span> 列出所有 TODO 和 FIXME 注释</span><br><span class="line"><span class="bullet">-</span> 按优先级排序</span><br></pre></td></tr></table></figure>
+<h2 id="分享-skills">分享 Skills</h2>
+<p>把 <code>.claude/skills/</code> 目录提交到 Git，团队共享：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git add .claude/skills/</span><br><span class="line">git commit -m <span class="string">&quot;添加团队 skills&quot;</span></span><br></pre></td></tr></table></figure>
+<hr>
+<p><a id="fix-bug"></a></p>
+<h1 id="5-自主修-bug">5. 自主修 Bug</h1>
+<h2 id="核心理念-5">核心理念</h2>
+<blockquote>
+<p><strong>不要微观管理 Claude。给它目标，让它自己搞定。</strong></p>
+</blockquote>
+<h2 id="方法-1：slack-mcp-集成">方法 1：Slack MCP 集成</h2>
+<p>启用 Slack MCP 后，可以直接丢 Slack 链接给 Claude：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">你：fix this https://ant.slack.com/archives/C07VBSH...</span><br><span class="line">Claude：（自动读取 Slack 讨论）→ 理解问题 → 定位代码 → 修复</span><br></pre></td></tr></table></figure>
+<h2 id="方法-2：直接指向-ci">方法 2：直接指向 CI</h2>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">你：Go fix the failing CI tests</span><br><span class="line">Claude：（查看 CI 日志）→ 分析失败原因 → 修复代码 → 重新验证</span><br></pre></td></tr></table></figure>
+<h2 id="方法-3：docker-日志排查">方法 3：Docker 日志排查</h2>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">你：分析这个 docker 日志，找出问题并修复</span><br><span class="line">Claude：（读取日志）→ 定位错误 → 追踪到源码 → 修复</span><br></pre></td></tr></table></figure>
+<h2 id="实战工作流对比">实战工作流对比</h2>
+<p><strong>传统方式：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">1. 看到 Slack 报 bug</span><br><span class="line">2. 复制错误信息</span><br><span class="line">3. 打开代码编辑器</span><br><span class="line">4. 粘贴给 Claude</span><br><span class="line">5. 解释上下文</span><br><span class="line">6. 来回沟通</span><br><span class="line">7. 最终修复</span><br></pre></td></tr></table></figure>
+<p><strong>高效方式：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1. 看到 Slack 报 bug</span><br><span class="line">2. 丢链接给 Claude，说 &quot;fix&quot;</span><br><span class="line">3. 完成</span><br></pre></td></tr></table></figure>
+<h2 id="关键心态">关键心态</h2>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">❌ &quot;先看第 45 行，然后检查那个函数，可能是类型问题...&quot;</span><br><span class="line">✅ &quot;fix this&quot;</span><br></pre></td></tr></table></figure>
+<p><strong>相信 Claude 的能力，给它空间自主工作。</strong></p>
+<hr>
+<p><a id="prompting"></a></p>
+<h1 id="6-提升-prompting-技巧">6. 提升 Prompting 技巧</h1>
+<h2 id="核心理念-6">核心理念</h2>
+<blockquote>
+<p><strong>你的 prompt 质量决定 Claude 的输出质量。</strong></p>
+</blockquote>
+<h2 id="技巧-a：让-claude-当你的审查者">技巧 A：让 Claude 当你的审查者</h2>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">你：Grill me on these changes and don&#x27;t make a PR until I pass your test.</span><br><span class="line">（严格审查这些改动，在我通过你的测试之前不要创建 PR）</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">你：Prove to me this works</span><br><span class="line">（证明给我看这能正常工作）</span><br></pre></td></tr></table></figure>
+<h2 id="技巧-b：不满意就重来">技巧 B：不满意就重来</h2>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">你：Knowing everything you know now, scrap this and implement the elegant solution</span><br><span class="line">（基于你现在掌握的所有信息，推翻这个方案，实现一个优雅的解决方案）</span><br></pre></td></tr></table></figure>
+<p>为什么有效：</p>
+<ul>
+<li>Claude 第一次尝试时在「探索」问题</li>
+<li>探索完成后，它对问题有了更深理解</li>
+<li>第二次实现通常更简洁、更优雅</li>
+</ul>
+<h2 id="技巧-c：详细的-spec-减少歧义">技巧 C：详细的 Spec 减少歧义</h2>
+<p><strong>模糊：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">你：添加一个登录功能</span><br></pre></td></tr></table></figure>
+<p><strong>具体：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">你：添加用户登录功能：</span><br><span class="line">- 使用 email + 密码登录</span><br><span class="line">- 密码至少 8 位，包含大小写和数字</span><br><span class="line">- 登录失败显示具体错误</span><br><span class="line">- 成功后跳转到 /dashboard</span><br><span class="line">- 使用现有的 AuthContext</span><br></pre></td></tr></table></figure>
+<h2 id="高效-prompt-速查表">高效 Prompt 速查表</h2>
+<table>
+<thead>
+<tr>
+<th>场景</th>
+<th>Prompt</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>让 Claude 审查</td>
+<td>“Grill me on this, don’t let me merge bad code”</td>
+</tr>
+<tr>
+<td>要求证明</td>
+<td>“Prove to me this works”</td>
+</tr>
+<tr>
+<td>重做更好版本</td>
+<td>“Knowing everything you know now, implement the elegant solution”</td>
+</tr>
+<tr>
+<td>质疑方案</td>
+<td>“What are 3 ways this could fail?”</td>
+</tr>
+<tr>
+<td>要求简化</td>
+<td>“This is too complex. Simplify.”</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p><a id="terminal"></a></p>
+<h1 id="7-终端与环境配置">7. 终端与环境配置</h1>
+<h2 id="核心理念-7">核心理念</h2>
+<blockquote>
+<p><strong>好的工具配置让你更高效。终端是你和 Claude 交互的界面，值得投入时间优化。</strong></p>
+</blockquote>
+<h2 id="推荐终端：ghostty">推荐终端：Ghostty</h2>
+<table>
+<thead>
+<tr>
+<th>特性</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>同步渲染</td>
+<td>不会闪烁、撕裂</td>
+</tr>
+<tr>
+<td>24-bit 真彩色</td>
+<td>代码高亮更准确</td>
+</tr>
+<tr>
+<td>完整 Unicode</td>
+<td>支持各种符号和 emoji</td>
+</tr>
+<tr>
+<td>高性能</td>
+<td>GPU 加速，响应快</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install --cask ghostty</span><br></pre></td></tr></table></figure>
+<h2 id="状态栏配置：-statusline">状态栏配置：/statusline</h2>
+<p>使用 <code>/statusline</code> 命令自定义 Claude Code 状态栏：</p>
+<ul>
+<li><strong>Context 使用量</strong> - 知道还剩多少上下文空间</li>
+<li><strong>当前 Git 分支</strong> - 确认在正确的分支工作</li>
+</ul>
+<h2 id="语音输入：说比打字快-3-倍">语音输入：说比打字快 3 倍</h2>
+<p><strong>快捷键</strong>：连按两次 <code>fn</code> 键（macOS）</p>
+<p>优势：</p>
+<ul>
+<li>说话速度是打字的 3 倍</li>
+<li>更自然地表达复杂需求</li>
+<li>prompt 会更详细、更清晰</li>
+</ul>
+<h2 id="完整环境配置清单">完整环境配置清单</h2>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 1. 安装 Ghostty</span></span><br><span class="line">brew install --cask ghostty</span><br><span class="line"></span><br><span class="line"><span class="comment"># 2. 安装好看的字体</span></span><br><span class="line">brew install --cask font-fira-code-nerd-font</span><br><span class="line"></span><br><span class="line"><span class="comment"># 3. 配置 Ghostty (~/.config/ghostty/config)</span></span><br><span class="line">font-family = <span class="string">&quot;FiraCode Nerd Font Mono&quot;</span></span><br><span class="line">font-size = 14</span><br><span class="line"></span><br><span class="line"><span class="comment"># 4. 开启语音输入</span></span><br><span class="line"><span class="comment"># 系统设置 → 键盘 → 听写 → 开启</span></span><br></pre></td></tr></table></figure>
+<hr>
+<p><a id="subagents"></a></p>
+<h1 id="8-使用-subagents">8. 使用 Subagents</h1>
+<h2 id="核心理念-8">核心理念</h2>
+<blockquote>
+<p><strong>Subagents 让你用多个 Claude 并行工作，同时保持主会话的上下文干净。</strong></p>
+</blockquote>
+<h2 id="什么是-subagents？">什么是 Subagents？</h2>
+<p>主 Claude 可以同时启动多个子代理，每个专注于不同任务：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">主 Claude</span><br><span class="line">    ├── Subagent 1: 探索入口文件</span><br><span class="line">    ├── Subagent 2: 探索组件结构</span><br><span class="line">    ├── Subagent 3: 探索工具实现</span><br><span class="line">    ├── Subagent 4: 探索状态管理</span><br><span class="line">    └── Subagent 5: 探索测试基础设施</span><br></pre></td></tr></table></figure>
+<h2 id="技巧-a：加-“use-subagents”-触发并行计算">技巧 A：加 “use subagents” 触发并行计算</h2>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">你：explore the codebase, use subagents</span><br><span class="line">你：分析这个项目的架构，use subagents</span><br><span class="line">你：找出所有 API 端点，use subagents</span><br></pre></td></tr></table></figure>
+<h2 id="技巧-b：卸载任务，保持主上下文干净">技巧 B：卸载任务，保持主上下文干净</h2>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">主 Claude                          Subagent</span><br><span class="line">   │                                  │</span><br><span class="line">   ├── &quot;去分析 auth 模块&quot; ──────────→ │</span><br><span class="line">   │                                  ├── 读取文件</span><br><span class="line">   │   （主上下文保持干净）              ├── 分析代码</span><br><span class="line">   │                                  ├── 总结发现</span><br><span class="line">   │ ←─────────── 返回分析结果 ────────┤</span><br><span class="line">   │</span><br><span class="line">   └── 基于结果制定重构方案</span><br></pre></td></tr></table></figure>
+<h2 id="常用-subagent-命令">常用 Subagent 命令</h2>
+<table>
+<thead>
+<tr>
+<th>任务</th>
+<th>命令示例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>探索代码库</td>
+<td><code>use 5 subagents to explore the codebase</code></td>
+</tr>
+<tr>
+<td>并行搜索</td>
+<td><code>search for all usages of AuthContext, use subagents</code></td>
+</tr>
+<tr>
+<td>批量分析</td>
+<td><code>analyze all API endpoints, use subagents</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="快捷键">快捷键</h2>
+<table>
+<thead>
+<tr>
+<th>快捷键</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Ctrl+O</code></td>
+<td>展开查看 subagent 详情</td>
+</tr>
+<tr>
+<td><code>Ctrl+B</code></td>
+<td>将 subagent 放到后台运行</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p><a id="data-analysis"></a></p>
+<h1 id="9-数据分析">9. 数据分析</h1>
+<h2 id="核心理念-9">核心理念</h2>
+<blockquote>
+<p><strong>让 Claude 帮你写 SQL、跑查询、分析数据。你可以 6 个月不写一行 SQL。</strong></p>
+</blockquote>
+<h2 id="工作方式">工作方式</h2>
+<p>Claude Code 可以直接使用数据库 CLI 工具：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">你：查一下过去 7 天的日活用户数</span><br><span class="line">Claude：（自动用 bq 命令查询 BigQuery）</span><br><span class="line">       结果：DAU 平均 12,450，周环比 +8%</span><br></pre></td></tr></table></figure>
+<p>支持任何有 CLI、MCP 或 API 的数据库：</p>
+<ul>
+<li><strong>BigQuery</strong> → <code>bq</code> CLI</li>
+<li><strong>PostgreSQL</strong> → <code>psql</code></li>
+<li><strong>MySQL</strong> → <code>mysql</code></li>
+<li><strong>MongoDB</strong> → <code>mongosh</code></li>
+</ul>
+<h2 id="实战示例">实战示例</h2>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">你：查一下昨天注册转化率</span><br><span class="line">Claude：执行 bq query &quot;SELECT ...&quot;</span><br><span class="line">       结果：注册转化率 3.2%，比前天提升 0.5%</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">你：检查昨天有没有异常数据</span><br><span class="line">Claude：（自动跑多个查询，发现异常点）</span><br><span class="line">       发现：支付成功率在 14:00-15:00 下降到 85%</span><br></pre></td></tr></table></figure>
+<h2 id="好处">好处</h2>
+<table>
+<thead>
+<tr>
+<th>传统方式</th>
+<th>Claude 方式</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>打开数据库客户端</td>
+<td>直接在终端问</td>
+</tr>
+<tr>
+<td>手写 SQL</td>
+<td>用自然语言描述</td>
+</tr>
+<tr>
+<td>复制结果到表格分析</td>
+<td>Claude 直接分析</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p><a id="learning"></a></p>
+<h1 id="10-用-claude-学习">10. 用 Claude 学习</h1>
+<h2 id="核心理念-10">核心理念</h2>
+<blockquote>
+<p><strong>Claude 不只是工具，还是你的学习伙伴。让它解释代码、画图、帮你理解新概念。</strong></p>
+</blockquote>
+<h2 id="技巧-a：开启解释模式">技巧 A：开启解释模式</h2>
+<p>在 <code>/config</code> 中设置输出风格为 <code>Explanatory</code> 或 <code>Learning</code>：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Claude：我要修改这个函数...</span><br><span class="line"></span><br><span class="line">       **为什么这样改：**</span><br><span class="line">       原来的实现有 N+1 查询问题，每次循环都会请求数据库。</span><br><span class="line">       改用批量查询可以减少 99% 的数据库调用。</span><br></pre></td></tr></table></figure>
+<h2 id="技巧-b：生成-html-演示文稿">技巧 B：生成 HTML 演示文稿</h2>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">你：生成一个 HTML 演示文稿，解释这个模块的工作原理</span><br></pre></td></tr></table></figure>
+<p>Claude 会创建带有清晰章节、代码高亮、流程图的专业演示。</p>
+<h2 id="技巧-c：用-ascii-图理解架构">技巧 C：用 ASCII 图理解架构</h2>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">你：画一个 ASCII 图解释这个系统的数据流</span><br></pre></td></tr></table></figure>
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">┌─────────┐    ┌─────────┐    ┌─────────┐</span><br><span class="line">│  Client │───→│   API   │───→│   DB    │</span><br><span class="line">└─────────┘    └────┬────┘    └─────────┘</span><br><span class="line">                    │</span><br><span class="line">                    ▼</span><br><span class="line">              ┌─────────┐</span><br><span class="line">              │  Cache  │</span><br><span class="line">              └─────────┘</span><br></pre></td></tr></table></figure>
+<h2 id="技巧-d：间隔重复学习">技巧 D：间隔重复学习</h2>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">你：/learn React 的 fiber 架构</span><br><span class="line"></span><br><span class="line">Claude：请先解释你目前对 fiber 的理解。</span><br><span class="line"></span><br><span class="line">你：fiber 是一种新的调度算法...</span><br><span class="line"></span><br><span class="line">Claude：基本正确，但有几点需要补充...</span><br><span class="line">       问题：fiber 如何处理优先级中断？</span><br></pre></td></tr></table></figure>
+<h2 id="学习场景速查">学习场景速查</h2>
+<table>
+<thead>
+<tr>
+<th>场景</th>
+<th>命令</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>理解代码</td>
+<td>“解释这个函数，假设我是新手”</td>
+</tr>
+<tr>
+<td>学习架构</td>
+<td>“画 ASCII 图解释这个系统”</td>
+</tr>
+<tr>
+<td>深入原理</td>
+<td>“为什么要这样设计？有什么替代方案？”</td>
+</tr>
+<tr>
+<td>制作分享</td>
+<td>“生成 HTML 演示文稿解释这个模块”</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h1 id="总结">总结</h1>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>技巧</th>
+<th>核心要点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Git Worktree</td>
+<td>多个 worktree 并行开发</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Plan Mode</td>
+<td>先规划再执行，一次到位</td>
+</tr>
+<tr>
+<td>3</td>
+<td><a target="_blank" rel="noopener" href="http://CLAUDE.md">CLAUDE.md</a></td>
+<td>让 Claude 记住你的偏好</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Skills</td>
+<td>封装常用工作流</td>
+</tr>
+<tr>
+<td>5</td>
+<td>自主修 Bug</td>
+<td>给目标，不微观管理</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Prompting</td>
+<td>挑战、重做、写清 spec</td>
+</tr>
+<tr>
+<td>7</td>
+<td>终端配置</td>
+<td>Ghostty + 语音输入</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Subagents</td>
+<td>并行计算，保持上下文干净</td>
+</tr>
+<tr>
+<td>9</td>
+<td>数据分析</td>
+<td>自然语言查数据库</td>
+</tr>
+<tr>
+<td>10</td>
+<td>学习</td>
+<td>解释、画图、巩固理解</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<blockquote>
+<p><strong>最重要的一点：Claude 能力很强，给它空间自主发挥。你的时间应该花在思考和决策上，把执行交给 Claude。</strong></p>
+</blockquote>
+</div><aside class="toc-wrap"><div class="toc"><div class="toc-head">目录 · Contents</div><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#claude-code-%E5%AE%8C%E6%95%B4%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97"><span class="toc-text">Claude Code 完整使用指南</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%9B%AE%E5%BD%95"><span class="toc-text">目录</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#1-git-worktree-%E5%B9%B6%E8%A1%8C%E5%BC%80%E5%8F%91"><span class="toc-text">1. Git Worktree 并行开发</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A0%B8%E5%BF%83%E7%90%86%E5%BF%B5"><span class="toc-text">核心理念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF-git-worktree%EF%BC%9F"><span class="toc-text">什么是 Git Worktree？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E9%85%8D%E5%90%88-claude-code-%E5%BE%88%E5%BC%BA%EF%BC%9F"><span class="toc-text">为什么配合 Claude Code 很强？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%9E%E9%99%85%E6%93%8D%E4%BD%9C"><span class="toc-text">实际操作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%BE%E7%BD%AE%E5%BF%AB%E6%8D%B7%E5%88%AB%E5%90%8D"><span class="toc-text">设置快捷别名</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-plan-mode-%E8%A7%84%E5%88%92%E6%A8%A1%E5%BC%8F"><span class="toc-text">2. Plan Mode 规划模式</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A0%B8%E5%BF%83%E7%90%86%E5%BF%B5-2"><span class="toc-text">核心理念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF-plan-mode%EF%BC%9F"><span class="toc-text">什么是 Plan Mode？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E7%94%A8-plan-mode%EF%BC%9F"><span class="toc-text">为什么要用 Plan Mode？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%A2%E9%98%9F%E7%9A%84%E5%AE%9E%E6%88%98%E6%8A%80%E5%B7%A7"><span class="toc-text">团队的实战技巧</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8A%80%E5%B7%A7-1%EF%BC%9A%E5%8F%8C-claude-%E5%AE%A1%E6%A0%B8"><span class="toc-text">技巧 1：双 Claude 审核</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8A%80%E5%B7%A7-2%EF%BC%9A%E5%87%BA%E9%97%AE%E9%A2%98%E7%AB%8B%E5%88%BB%E5%9B%9E%E5%88%B0-plan-mode"><span class="toc-text">技巧 2：出问题立刻回到 Plan Mode</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8A%80%E5%B7%A7-3%EF%BC%9A%E9%AA%8C%E8%AF%81%E6%AD%A5%E9%AA%A4%E4%B9%9F%E8%A6%81%E8%A7%84%E5%88%92"><span class="toc-text">技巧 3：验证步骤也要规划</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-claude-md-%E8%AE%B0%E5%BF%86%E6%96%87%E4%BB%B6"><span class="toc-text">3. CLAUDE.md 记忆文件</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A0%B8%E5%BF%83%E7%90%86%E5%BF%B5-3"><span class="toc-text">核心理念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF-claude-md%EF%BC%9F"><span class="toc-text">什么是 CLAUDE.md？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A0%B8%E5%BF%83%E7%94%A8%E6%B3%95%EF%BC%9A%E8%AE%A9-claude-%E8%87%AA%E5%B7%B1%E5%86%99%E8%A7%84%E5%88%99"><span class="toc-text">核心用法：让 Claude 自己写规则</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%9E%E6%88%98%E6%8A%80%E5%B7%A7"><span class="toc-text">实战技巧</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8A%80%E5%B7%A7-1%EF%BC%9A%E6%8C%81%E7%BB%AD%E8%BF%AD%E4%BB%A3"><span class="toc-text">技巧 1：持续迭代</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8A%80%E5%B7%A7-2%EF%BC%9A%E9%A1%B9%E7%9B%AE%E7%AC%94%E8%AE%B0%E7%9B%AE%E5%BD%95"><span class="toc-text">技巧 2：项目笔记目录</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8A%80%E5%B7%A7-3%EF%BC%9A%E5%88%86%E5%B1%82%E9%85%8D%E7%BD%AE"><span class="toc-text">技巧 3：分层配置</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#claude-md-%E7%A4%BA%E4%BE%8B%E5%86%85%E5%AE%B9"><span class="toc-text">CLAUDE.md 示例内容</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8B%E5%BD%93%E5%89%8D%E8%AE%B0%E5%BF%86"><span class="toc-text">查看当前记忆</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-%E8%87%AA%E5%AE%9A%E4%B9%89-skills"><span class="toc-text">4. 自定义 Skills</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A0%B8%E5%BF%83%E7%90%86%E5%BF%B5-4"><span class="toc-text">核心理念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF-skills%EF%BC%9F"><span class="toc-text">什么是 Skills？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#skills-%E5%AD%98%E6%94%BE%E4%BD%8D%E7%BD%AE"><span class="toc-text">Skills 存放位置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA-skill"><span class="toc-text">创建一个 Skill</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%86%E4%BA%AB-skills"><span class="toc-text">分享 Skills</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#5-%E8%87%AA%E4%B8%BB%E4%BF%AE-bug"><span class="toc-text">5. 自主修 Bug</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A0%B8%E5%BF%83%E7%90%86%E5%BF%B5-5"><span class="toc-text">核心理念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%B9%E6%B3%95-1%EF%BC%9Aslack-mcp-%E9%9B%86%E6%88%90"><span class="toc-text">方法 1：Slack MCP 集成</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%B9%E6%B3%95-2%EF%BC%9A%E7%9B%B4%E6%8E%A5%E6%8C%87%E5%90%91-ci"><span class="toc-text">方法 2：直接指向 CI</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%B9%E6%B3%95-3%EF%BC%9Adocker-%E6%97%A5%E5%BF%97%E6%8E%92%E6%9F%A5"><span class="toc-text">方法 3：Docker 日志排查</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%9E%E6%88%98%E5%B7%A5%E4%BD%9C%E6%B5%81%E5%AF%B9%E6%AF%94"><span class="toc-text">实战工作流对比</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B3%E9%94%AE%E5%BF%83%E6%80%81"><span class="toc-text">关键心态</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#6-%E6%8F%90%E5%8D%87-prompting-%E6%8A%80%E5%B7%A7"><span class="toc-text">6. 提升 Prompting 技巧</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A0%B8%E5%BF%83%E7%90%86%E5%BF%B5-6"><span class="toc-text">核心理念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8A%80%E5%B7%A7-a%EF%BC%9A%E8%AE%A9-claude-%E5%BD%93%E4%BD%A0%E7%9A%84%E5%AE%A1%E6%9F%A5%E8%80%85"><span class="toc-text">技巧 A：让 Claude 当你的审查者</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8A%80%E5%B7%A7-b%EF%BC%9A%E4%B8%8D%E6%BB%A1%E6%84%8F%E5%B0%B1%E9%87%8D%E6%9D%A5"><span class="toc-text">技巧 B：不满意就重来</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8A%80%E5%B7%A7-c%EF%BC%9A%E8%AF%A6%E7%BB%86%E7%9A%84-spec-%E5%87%8F%E5%B0%91%E6%AD%A7%E4%B9%89"><span class="toc-text">技巧 C：详细的 Spec 减少歧义</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%AB%98%E6%95%88-prompt-%E9%80%9F%E6%9F%A5%E8%A1%A8"><span class="toc-text">高效 Prompt 速查表</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#7-%E7%BB%88%E7%AB%AF%E4%B8%8E%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE"><span class="toc-text">7. 终端与环境配置</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A0%B8%E5%BF%83%E7%90%86%E5%BF%B5-7"><span class="toc-text">核心理念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8E%A8%E8%8D%90%E7%BB%88%E7%AB%AF%EF%BC%9Aghostty"><span class="toc-text">推荐终端：Ghostty</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%8A%B6%E6%80%81%E6%A0%8F%E9%85%8D%E7%BD%AE%EF%BC%9A-statusline"><span class="toc-text">状态栏配置：&#x2F;statusline</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%AD%E9%9F%B3%E8%BE%93%E5%85%A5%EF%BC%9A%E8%AF%B4%E6%AF%94%E6%89%93%E5%AD%97%E5%BF%AB-3-%E5%80%8D"><span class="toc-text">语音输入：说比打字快 3 倍</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%8C%E6%95%B4%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE%E6%B8%85%E5%8D%95"><span class="toc-text">完整环境配置清单</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#8-%E4%BD%BF%E7%94%A8-subagents"><span class="toc-text">8. 使用 Subagents</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A0%B8%E5%BF%83%E7%90%86%E5%BF%B5-8"><span class="toc-text">核心理念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF-subagents%EF%BC%9F"><span class="toc-text">什么是 Subagents？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8A%80%E5%B7%A7-a%EF%BC%9A%E5%8A%A0-%E2%80%9Cuse-subagents%E2%80%9D-%E8%A7%A6%E5%8F%91%E5%B9%B6%E8%A1%8C%E8%AE%A1%E7%AE%97"><span class="toc-text">技巧 A：加 “use subagents” 触发并行计算</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8A%80%E5%B7%A7-b%EF%BC%9A%E5%8D%B8%E8%BD%BD%E4%BB%BB%E5%8A%A1%EF%BC%8C%E4%BF%9D%E6%8C%81%E4%B8%BB%E4%B8%8A%E4%B8%8B%E6%96%87%E5%B9%B2%E5%87%80"><span class="toc-text">技巧 B：卸载任务，保持主上下文干净</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8-subagent-%E5%91%BD%E4%BB%A4"><span class="toc-text">常用 Subagent 命令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BF%AB%E6%8D%B7%E9%94%AE"><span class="toc-text">快捷键</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#9-%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90"><span class="toc-text">9. 数据分析</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A0%B8%E5%BF%83%E7%90%86%E5%BF%B5-9"><span class="toc-text">核心理念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B7%A5%E4%BD%9C%E6%96%B9%E5%BC%8F"><span class="toc-text">工作方式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%9E%E6%88%98%E7%A4%BA%E4%BE%8B"><span class="toc-text">实战示例</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A5%BD%E5%A4%84"><span class="toc-text">好处</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#10-%E7%94%A8-claude-%E5%AD%A6%E4%B9%A0"><span class="toc-text">10. 用 Claude 学习</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A0%B8%E5%BF%83%E7%90%86%E5%BF%B5-10"><span class="toc-text">核心理念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8A%80%E5%B7%A7-a%EF%BC%9A%E5%BC%80%E5%90%AF%E8%A7%A3%E9%87%8A%E6%A8%A1%E5%BC%8F"><span class="toc-text">技巧 A：开启解释模式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8A%80%E5%B7%A7-b%EF%BC%9A%E7%94%9F%E6%88%90-html-%E6%BC%94%E7%A4%BA%E6%96%87%E7%A8%BF"><span class="toc-text">技巧 B：生成 HTML 演示文稿</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8A%80%E5%B7%A7-c%EF%BC%9A%E7%94%A8-ascii-%E5%9B%BE%E7%90%86%E8%A7%A3%E6%9E%B6%E6%9E%84"><span class="toc-text">技巧 C：用 ASCII 图理解架构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8A%80%E5%B7%A7-d%EF%BC%9A%E9%97%B4%E9%9A%94%E9%87%8D%E5%A4%8D%E5%AD%A6%E4%B9%A0"><span class="toc-text">技巧 D：间隔重复学习</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%A6%E4%B9%A0%E5%9C%BA%E6%99%AF%E9%80%9F%E6%9F%A5"><span class="toc-text">学习场景速查</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-text">总结</span></a></li></ol></div></aside></section><nav class="pn-nav"><a class="pn-card prev" href="/2026/02/2026-W06/" title="2026-W06"><span class="lbl"><i class="fa fa-angle-left"></i>&nbsp;Previous post</span><span class="t">2026-W06</span></a><a class="pn-card next" href="/2026/01/llm-eval-learn/" title="LLM API 核心参数详解：Temperature、Top_p 与 Max_tokens"><span class="lbl">Next post&nbsp;<i class="fa fa-angle-right"></i></span><span class="t">LLM API 核心参数详解：Temperature、Top_p 与 Max_tokens</span></a></nav><section class="comments-sec"></section></div></section><aside class="aside"><div class="verticals"><div class="v-line v-sub">0xHanniba1's blog</div><div class="v-line v-slogan">慢就是快<span class="sep">／</span>自律<span class="sep">／</span>坚持</div><div class="v-brush"></div></div><div class="aside-info"><div class="label">此刻 · Now Playing</div><div class="now-playing playable" role="button" tabindex="0" aria-label="播放 / 暂停"><div class="np-cover"><span class="np-play-icon"></span></div><div class="np-text"><div class="t">unravel</div><div class="a">TK from 凛として時雨</div></div><div class="np-bars"><i></i><i></i><i></i><i></i></div><audio class="np-audio" src="/audio/unravel.mp3" preload="none" loop></audio></div><div class="divider"></div><div class="label">数据 · Stats</div><div class="stat-grid"><div class="stat"><div class="n">26</div><div class="l">文章</div></div><div class="stat"><div class="n">16</div><div class="l">标签</div></div><div class="stat"><div class="n">0</div><div class="l">分类</div></div><div class="stat"><div class="n">1</div><div class="l">页面</div></div></div><div class="divider"></div><div class="label">连接 · Links</div><div class="aside-socials"><a href="https://github.com/0xHanniba1" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa fa-github"></i></a><a href="https://0xhanniba1.github.io/atom.xml" target="_blank" rel="noopener noreferrer" aria-label="RSS"><i class="fa fa-rss"></i></a></div></div></aside></main></div><footer class="foot"><p>© 2026&nbsp;<a target="_blank" href="https://0xhanniba1.github.io" rel="noopener noreferrer">0xHanniba1</a>&nbsp;·&nbsp;<span class="han">以心写心，以慢磨快</span></p><div class="foot-right"><a href="/">Theme: 墨 / Ink</a><a target="_blank" href="https://hexo.io" rel="noopener noreferrer">Powered by Hexo</a><a href="https://0xhanniba1.github.io/atom.xml" target="_blank" rel="noopener noreferrer">RSS</a></div></footer><div class="sp-overlay" id="sp-overlay" hidden><div class="sp-modal" role="dialog" aria-label="搜索"><div class="sp-header"><div class="sp-input-row"><span class="sp-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.5-3.5"></path></svg></span><input class="sp-input" id="sp-input" type="text" placeholder="搜索文章、标签、页面 · Search everything…" autocomplete="off" spellcheck="false"><span class="sp-query-meta" id="sp-count"><span class="num">0</span> / 0</span><button class="sp-close" id="sp-close" type="button" aria-label="关闭"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6 6 18"></path></svg></button></div><div class="sp-scope" id="sp-scope"><span class="lbl">Scope</span><button class="on" type="button" data-scope="all">全部<span class="n">0</span></button><button type="button" data-scope="post">文章<span class="n">0</span></button><button type="button" data-scope="tag"># 标签<span class="n">0</span></button><button type="button" data-scope="page">页面<span class="n">0</span></button><span class="spacer"></span><span class="timing"><span class="dot"></span>实时检索 · Live</span></div></div><div class="sp-body"><div class="sp-results" id="sp-results"></div><aside class="sp-preview" id="sp-preview"></aside></div><div class="sp-footer"><span class="sp-foot-item"><span class="sp-kk arrow">↑</span><span class="sp-kk arrow">↓</span> 导航</span><span class="sp-foot-item"><span class="sp-kk">⏎</span> 打开</span><span class="sp-foot-item"><span class="sp-kk">Tab</span> 切换范围</span><span class="sp-foot-item"><span class="sp-kk">Esc</span> 关闭</span><span class="sp-foot-spacer"></span><span class="sp-foot-brand">慢就是快<span class="sep">·</span>自律<span class="sep">·</span>坚持<span class="sep">·</span><span class="accent">0XHANNIBA1</span></span></div></div></div><script>window.searchPath = '/search.json';
 </script><button class="tweaks-trigger" id="tweaks-trigger" type="button" aria-label="主题微调" title="主题微调"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg></button><div class="tweaks" id="tweaks"><h4>Tweaks<button class="close" id="tweaks-close" type="button" aria-label="关闭">×</button></h4><div class="tw-row"><label>强调色 · Accent</label><div class="tw-opts" data-key="accent"><button type="button" data-v="gold">暖金</button><button type="button" data-v="jade">青瓷</button><button type="button" data-v="seal">朱砂</button></div></div><div class="tw-row"><label>底纹 · Texture</label><div class="tw-opts" data-key="texture"><button type="button" data-v="dots">点阵</button><button type="button" data-v="grid">格纹</button><button type="button" data-v="none">无</button></div></div></div><script src="/js/theme-toggle.js?v=20260418"></script><script src="/js/tweaks.js?v=20260418"></script><script src="/js/now-playing.js?v=20260418-12"></script><script src="/js/search.js?v=20260418-12"></script></body></html>
